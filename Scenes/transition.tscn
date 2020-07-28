@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/UI/TransitionUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/lab_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Images/prog-bar-red.jpg" type="Texture" id=3]
+[ext_resource path="res://Images/prog-bar.jpg" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.352
+anchor_top = 0.788
+anchor_right = 0.649
+anchor_bottom = 0.928
+margin_left = 46.552
+margin_top = 19.2
+margin_right = -32.576
+margin_bottom = 0.199951
+theme = ExtResource( 2 )
+text = "tap"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.349
+anchor_top = 0.597
+anchor_right = 0.643
+anchor_bottom = 0.69
+margin_left = 35.7934
+margin_top = 15.5541
+margin_right = -23.2626
+margin_bottom = -0.245941
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_top = 12.0
+margin_right = 43.0
+margin_bottom = 26.0
+text = "totalsc"
+align = 1
+valign = 1
+
+[node name="val" type="Label" parent="HBoxContainer"]
+margin_left = 47.0
+margin_top = 12.0
+margin_right = 51.0
+margin_bottom = 26.0
+text = ":"
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_left = 0.333
+anchor_top = 0.695
+anchor_right = 0.661
+anchor_bottom = 0.748
+margin_left = 33.008
+margin_top = -3.05176e-05
+margin_right = -22.864
+margin_bottom = 0.199982
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

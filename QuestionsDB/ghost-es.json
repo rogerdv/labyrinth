@@ -1,0 +1,302 @@
+﻿ [
+        {
+            "question": "La II Guerra Mundial se inició el:",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"25 de Agosto de 1941","correct":"no"},
+                {"answer":"3 de Julio de 1939","correct":"no"},
+                {"answer":"12 de abril de 1945","correct":"no"},
+               {"answer": "1 de septiembre de 1939","correct":"yes"}
+            ]
+        },
+        {
+            "question": "El Trastorno Esquizoide de la Personalidad se caracteriza por:",
+            "topic": "Medicina",
+            "choices": [
+                {"answer":"Falta de interés en relacionarse socialmente y restricción de la expresión emocional","correct":"yes"},
+                {"answer":"Impulsos agresivos","correct":"no"},
+                {"answer":"Escuchan voces y tienen alucinaciones","correct":"no"},
+                {"answer":"Imposibilidad de expresarse adecuadamente","correct":"no"}
+            ]
+        },
+        {
+            "question": "Famoso general alemán, conocido como El Zorro del Desierto:",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Erwin Rommel","correct":"yes"},
+                {"answer":"Heinrich Himmel","correct":"no"},
+                {"answer":"Heinz Guderian","correct":"no"},
+                {"answer":"Herman Göring","correct":"no"}
+            ]
+        },
+        {
+            "question": "Compositor, director de orquesta y pianista alemán, autor de la Novena Sinfonía:",
+            "topic": "Música",
+            "choices": [
+                {"answer":"Ludwig van Beethoven","correct":"yes"},
+                {"answer":"Wolfgang Amadeus Mozart","correct":"no"},
+                {"answer":"Franz Liszt","correct":"no"},
+                {"answer":"Johann Wolfgang von Goethe","correct":"no"}
+            ]
+        },
+        {
+            "question": "Un parsec equivale a:",
+            "topic": "Astronomía",
+            "choices": [
+                {"answer":"3.2616 años luz","correct":"yes"},
+                {"answer":"3*10^20 m","correct":"no"},
+                {"answer":"27 años luz","correct":"no"},
+                {"answer": "1,250,000 km","correct":"no"}
+            ]
+        },
+        {
+            "question": "La Batalla de Waterloo enfrentó a los ejércitos de:",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Napoleón vs Wellington","correct":"yes"},
+                {"answer":"Francia y Alemania","correct":"no"},
+                {"answer":"Napoleón y el Rey Carlos II","correct":"no"},
+                {"answer":"Ricardo Corazón de León y Saladino","correct":"no"}
+            ]
+        },
+        {
+            "question": "Cuál es el significado de ninjutsu?",
+            "topic": "Artes Marciales",
+            "choices": [
+                {"answer":"Arte del sigilo","correct":"yes"},
+                {"answer":"Arte marcial ninja","correct":"no"},
+                {"answer":"Técnica ninja","correct":"no"},
+                {"answer":"Arte del vacío","correct":"no"}
+            ]
+        },
+        {
+            "question": "Primer hombre en romper la barrera del sonido en una aeronave:",
+            "topic": "Aeronáutica",
+            "choices": [
+                {"answer":"Chuck Yeager","correct":"yes"},
+                {"answer":"Scott Crossfield","correct":"no"},
+                {"answer":"Victor Pugachev","correct":"no"},
+                {"answer":"Neil Armstrong","correct":"no"}
+            ]
+        },
+        {
+            "question": "Sección cónica con excentricidad igual a 1",
+            "topic": "Matemática",
+            "choices": [
+                {"answer":"Parábola","correct":"yes"},
+                {"answer":"Círculo","correct":"no"},
+                {"answer":"Semicono","correct":"no"},
+                {"answer":"Redondel","correct":"no"}
+            ]            
+        },
+        {
+            "question": "Sistema de escritura creado por los antiguo sumerios:",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Cuneiforme","correct":"yes"},
+                {"answer":"Jeroglíficos","correct":"no"},
+                {"answer":"Ideogramas","correct":"no"},
+                {"answer":"Alfabeto","correct":"no"}
+            ]
+        },
+        {
+            "question": "Ip Man es un artista marcial, conocido por ser maestro de Bruce Lee. Su estilo era:",
+            "topic": "Artes Marciales",
+            "choices": [
+                {"answer":"Wing Tsung","correct":"yes"},
+                {"answer":"Mantis","correct":"no"},
+                {"answer":"Kung fu Shaolin","correct":"no"},
+                {"answer":"Hung Gar","correct":"no"}
+            ]
+        },
+        {
+            "question": "El primer teléfono celular fue desarrollado por:",
+            "topic": "Telefonía",
+            "choices": [
+                {"answer":"Motorola","correct":"yes"},
+                {"answer":"Nokia","correct":"no"},
+                {"answer": "Apple","correct":"no"},
+                {"answer": "Bell","correct":"no"}
+            ]
+        },
+        {
+            "question": "Sombrero usado por os cardenales en la actualidad",
+            "topic": "Religión",
+            "choices": [
+                {"answer":"Capelo cardenalicio","correct":"no"},
+                {"answer":"Gorra","correct":"no"},
+                {"answer":"Bonete","correct":"yes"},
+                {"answer":"Birreta","correct":"no"}
+            ]
+        },
+        {
+            "question": "Raíz cuadrada de -2:",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"1,41421356 i","correct":"yes"},
+                {"answer":"-1,5","correct":"no"},
+                {"answer":"-1.2","correct":"no"},
+                {"answer":"2","correct":"no"},
+            ]
+        },
+        {
+            "question": "Programador, fundador de  ID Software, creador del motor de Doom, Quake y otros juegos:",
+            "topic": "Videojuegos",
+            "choices": [
+                {"answer":"John Carmack","correct":"yes"},
+                {"answer":"John Romero","correct":"no"},
+                {"answer":"Alan Turing","correct":"no"},
+                {"answer":"Edward Dykstra","correct":"no"}
+            ]
+        },
+        {
+            "question": "Si dos ángulos de un triángulo equilátero miden Pi/3 radianes, cuánto mide el tercer ángulo?",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"60 grados","correct":"yes"},
+                {"answer":"90 grados","correct":"no"},
+                {"answer":"Pi/2 radianes","correct":"no"},
+                {"answer":"3 x Pi/2 radianes","correct":"no"}
+            ]
+        },
+        {
+            "question": "Sucesión de Fibonacci:",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"0, 1, 1, 2, 3, 5, 8, 13...","correct":"yes"},
+                {"answer":"0, 1, 2, 3, 4, 5, 6...","correct":"no"},
+                {"answer":"1, 3, 5, 7, 11...","correct":"no"},
+                {"answer":"1, 3, 5, 7, 9, 11, 13...","correct":"no"}
+            ]
+        },
+        {
+            "question": "Primer Ministro británico que dirigió el Reino Unido durante a II Guerra Mundial",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"Winston Churchill","correct":"yes"},
+                {"answer":"Neville Chamberlain","correct":"no"},
+                {"answer":"George Washington","correct":"no"},
+                {"answer":"John Adams","correct":"no"},
+            ]
+        },
+        {
+            "question": "Primero de los 12 Trabajos de Hércules:",
+            "topic": "Mitología",
+            "choices": [
+                {"answer":"Matar al León de Nemea","correct":"yes"},
+                {"answer":"Limpiar los establos de Augías","correct":"no"},
+                {"answer":"Matar a la hidra","correct":"no"},
+                {"answer":"Robar las manzanas del Jardín de las Hespérides","correct":"no"}
+            ]
+        },
+        {
+            "question": "País sin costas, rodeado de países sin costas.",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Uzbekistán","correct":"yes"},
+                {"answer":"Bolivia","correct":"no"},
+                {"answer":"Swazilandia","correct":"no"},
+                {"answer":"Baviera","correct":"no"}
+            ]
+        },
+        {
+            "question": "País sin costas, rodeado de países sin costas.",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Liechtenstein","correct":"yes"},
+                {"answer":"Bolivia","correct":"no"},
+                {"answer":"Perú","correct":"no"},
+                {"answer":"El Vaticano","correct":"no"}
+            ]
+        },
+        {
+            "question": "Composición de una legión romana, luego de la reforma de Cayo Mario ",
+            "topic": "Militar",
+            "choices": [
+                {"answer":"Cohortes, divididas en tres manípulos","correct":"yes"},
+                {"answer":"Centurias de 100 hombres","correct":"no"},
+                {"answer":"Escuadrones","correct":"no"},
+                {"answer":"Falanges","correct":"no"}
+            ]
+        },
+        {
+            "question": "Enfermera británica, conocida como la Dama de la Lámpara",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Florence Nightingale","correct":"yes"},
+                {"answer":"Ada Byron","correct":"no"},
+                {"answer":"La Reina Isabel","correct":"no"},
+                {"answer":"Mary Shelley","correct":"no"}
+            ]
+        },
+        {
+            "question": "En el hinduismo, casta de guerreros y políticos",
+            "topic": "Religión",
+            "choices": [
+                {"answer":"Chatrias","correct":"yes"},
+                {"answer":"Shudras","correct":"no"}, 
+                {"answer":"Vaisya","correct":"no"},
+                {"answer":"Brahmanes","correct":"no"}
+            ]
+        },
+        {
+            "question": "Discontinuidad de Moho",
+            "topic": "Geología",
+            "choices": [
+                {"answer":"Zona de transición entre la corteza y el manto terrestre","correct":"yes"},
+                {"answer":"Capa que cubre el fondo oceánico","correct":"no"},
+                {"answer":"Separación entre dos placas tectónicas","correct":"no"},
+                {"answer":"Capa entre el manto y el núcleo terrestre","correct":"no"}
+            ]
+        },
+        {
+            "question": "En qué batalla murió Napoleón?",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Murió envenenado, no en batalla","correct":"yes"},
+                {"answer":"Austerlitz","correct":"no"},
+                {"answer":"Waterloo","correct":"no"},
+                {"answer":"Berlín","correct":"no"}
+            ]
+        },
+        {
+            "question": "Nombre verdadero de Hércules",
+            "topic": "Mitología",
+            "choices": [
+                {"answer":"Alceo","correct":"yes"},
+                {"answer":"Hércules","correct":"no"},
+                {"answer":"Herakles","correct":"no"},
+                {"answer":"Alción","correct":"no"}
+            ]
+        },
+        {
+            "question": "Compuesto químico formado por dos átomos de hidrógeno y uno de oxígeno",
+            "topic": "Química",
+            "choices": [
+                {"answer":"Agua","correct":"yes"},
+                {"answer":"Hidróxido","correct":"no"},
+                {"answer":"Peróxido de hidrógeno","correct":"no"},
+                {"answer":"Alcohol","correct":"no"}
+            ]
+        },
+        {
+            "question": "Estrella polar en el hemisferio norte",
+            "topic": "Astronomía",
+            "choices": [
+                {"answer":"Alfa Ursae Minoris","correct":"yes"},
+                {"answer":"Thuban","correct":"no"},
+                {"answer":"Sirio","correct":"no"},
+                {"answer":"Orión","correct":"no"}
+            ]
+        },
+        {
+            "question": "La estrella polar del hemisferio sur es Sigma Octantis, pero es más sencillo utilizar una constelación:",
+            "topic": "Astronomía",
+            "choices": [
+                {"answer":"Cruz del Sur","correct":"yes"},
+                {"answer":"Andrómeda","correct":"no"},
+                {"answer":"Osa Mayor","correct":"no"},
+                {"answer":"Musca","correct":"no"}
+            ]
+        }
+    ]

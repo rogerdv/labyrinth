@@ -1,0 +1,674 @@
+{
+    "questions": [
+        {
+            "question": "What is Android?",
+            "topic": "Technology",
+            "choices": [
+                {"answer":"A robot","correct":"no"},
+                {"answer":"An operative system oriented to mobile devices","correct":"yes"},
+                {"answer":"A brand of vacuum cleaners","correct":"no"},
+                {"answer":"A tree with white leaves that grows in the north pole","correct":"no"}
+            ]
+        },
+        {
+            "question": "Whats the square root of 4?",
+            "topic": "Math",
+            "choices": [
+                {"answer":"2.1","correct":"no"},
+                {"answer":"1","correct":"no"},
+                {"answer":"2","correct":"yes"},
+                {"answer":"1.2","correct":"no"},
+            ]
+        },
+        {
+            "question": "What was the birth name of Pope John Paul II?",
+            "topic": "Religion",
+            "choices": [
+                {"answer":"John Paul Revere","correct":"no"},
+                {"answer":"Karol Wojtyla","correct":"yes"},
+                {"answer":"Albert Gresin","correct":"no"},
+                {"answer":"Leonard Francis","correct":"no"}
+            ]
+        },
+        {
+            "question": "Who was the first roman emperor?",
+            "topic": "History",
+            "choices": [
+                {"answer":"Julius Caesar","correct":"no"},
+                {"answer":"Augustus","correct":"yes"},
+                {"answer":"Alexander the Great","correct":"no"},
+                {"answer":"Achilles","correct":"no"}
+            ]
+        },
+        {
+            "question": "Lionel Messi is:",
+            "topic": "Celebrities",
+            "choices": [
+                {"answer":"An actor","correct":"no"},
+                {"answer":"A football player","correct":"yes"},
+                {"answer":"A writer","correct":"no"},
+                {"answer":"A painter","correct":"no"}
+            ]
+        },
+        {
+            "question": "Indiana Jones and the Kingdom of the Crystal Skull was directed by:",
+            "topic": "Movies and TV",
+            "choices": [
+                {"answer":"George Lucas","correct":"no"},
+                {"answer":"J. J. Abrams","correct":"no"},
+                {"answer":"Steven Spielberg","correct":"yes"},
+                {"answer":"Francis Ford Coppola","correct":"no"}
+            ]
+        },
+        {
+            "question": "Steve Jobs was the founder of Apple, together with:",
+            "topic": "Technology",
+            "choices": [
+                {"answer":"Bill Gates","correct":"no"},
+                {"answer":"Larry Page","correct":"no"},
+                {"answer":"Alan Wayne","correct":"no"},
+                {"answer":"Steve Wozniak","correct":"yes"}
+            ]
+        },
+        {
+            "question": "What is the capital of Egypt?",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Lima","correct":"no"},
+                {"answer":"Ryad","correct":"no"},
+                {"answer":"Cairo","correct":"yes"},
+                {"answer":"Casablanca","correct":"no"}
+            ]
+        },
+        {
+            "question": "Which is the largest pyramid?",
+            "topic": "History",
+            "choices": [
+                {"answer":"The Pyramid of Cheops","correct":"yes"},
+                {"answer":"The Pyramid of Tutankhamun","correct":"no"},
+                {"answer":"The Pyramid of Khafre","correct":"no"},
+                {"answer":"The Pyramid of Menkaure","correct":"no"}
+            ]
+        },
+        {
+            "question": "Who was the creator of WWW?",
+            "topic": "Technology",
+            "choices": [
+                {"answer":"Steve Jobs","correct":"no"},
+                {"answer":"Bill Gates","correct":"no"},
+                {"answer":"Facebook","correct":"no"},
+                {"answer":"Time Berners Lee","correct":"yes"}
+            ]
+        },
+        {
+            "question": "Who discovered penicillin?",
+            "topic": "Medicine",
+            "choices": [
+                {"answer":"Alexander Fleming","correct":"yes"},
+                {"answer":"Louis Pasteur","correct":"no"},
+                {"answer":"Albert Einstein","correct":"no"},
+                {"answer":"Alfred Nobel","correct":"no"}
+            ]
+        },
+        {
+            "question": "Who invented the dinamite?",
+            "topic": "Chemistry",
+            "choices": [
+                {"answer":"Alfred Nobel","correct":"no"},
+                {"answer":"Albert Einstein","correct":"no"},
+                {"answer":"Hiram Stevens Maxim","correct":"no"},
+                {"answer":"Samuel Colt","correct":"no"}
+            ]
+        },
+        {
+            "question": "Founder of buddism:",
+            "topic": "Religion",
+            "choices": [
+                {"answer":"Sidarta Gautama","correct":"yes"},
+                {"answer":"Budda","correct":"no"},
+                {"answer":"Jesus","correct":"no"},
+                {"answer":"Mahatma Ghandi","correct":"no"}
+            ]
+        },
+        {
+            "question": "Inventor of the first machinegun:",
+            "topic": "Military",
+            "choices": [
+                {"answer":"Hiram Stevens Maxim","correct":"yes"},
+                {"answer":"Samuel Colt","correct":"no"},
+                {"answer":"Mijail Kalashnikov","correct":"no"},
+                {"answer":"Thomas Alva Edison","correct":"no"}
+            ]
+        },
+        {
+            "question": "Captain America's real name:",
+            "topic": "Comics",
+            "choices": [
+                {"answer":"Bruce Wayne","correct":"no"},
+                {"answer":"Steve Rogers","correct":"yes"},
+                {"answer":"Clark Kent","correct":"no"},
+                {"answer":"Unknown","correct":"no"},
+            ]
+        },
+        {
+            "question": "Square root of 4",
+            "topic": "Math",
+            "choices": [
+                {"answer":"2","correct":"yes"},
+                {"answer":"1","correct":"no"},
+                {"answer":"2.5","correct":"no"},
+                {"answer":"3.14", "correct":"no"},
+            ]
+        },
+        {
+            "question": "Author of The Lord of the Rings",
+            "topic": "Literature",
+            "choices": [
+                {"answer":"J. R. R. Tolkien","correct":"yes"},
+                {"answer":"George R. R. Martin","correct":"no"},
+                {"answer":"Peter Jackson","correct":"no"},
+                {"answer":"Stephen King","correct":"no"}
+            ]
+        },
+        {
+            "question": "What is a megalomaniac?",
+            "topic": "Vocabulary",
+            "choices": [
+                {"answer":"A pathological egotist with delusions of grandeur","correct":"yes"},
+                {"answer":"Who loves the music","correct":"no"},
+                {"answer":"A liar","correct":"no"},
+                {"answer":"Somebody obsessed with large things","correct":"no"}
+            ]
+        },
+        {
+            "question": "Author of A Song of Ice and Fire",
+            "topic": "Literature",
+            "choices": [
+                {"answer":"George R. R. Martin","correct":"yes"},
+                {"answer":"J. R. R. Tolkien","correct":"no"},
+                {"answer":"Patrick Rothfuss","correct":"no"},
+                {"answer":"Orson Scott Card","correct":"no"}
+            ]
+        },
+        {
+            "question": "Famous british writer, author of Romeo and Juliet",
+            "topic": "Literature",
+            "choices": [
+                {"answer":"William Shakespeare","correct":"yes"},
+                {"answer":"Lord Byron","correct":"no"},
+                {"answer":"Winston Churchill","correct":"no"},
+                {"answer":"Robert de Niro","correct":"no"}
+            ]
+        },
+        {
+            "question": "Highest mountain of the world:",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Everest","correct":"yes"},
+                {"answer":"Fuji","correct":"no"},
+                {"answer":"Elbrus","correct":"no"},
+                {"answer":"Aconcagua","correct":"no"}
+            ]
+        },
+        {
+            "question": "Longest river of the world",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Nilo","correct":"no"},
+                {"answer":"Amazonas","correct":"yes"},
+                {"answer":"Danube","correct":"no"},
+                {"answer":"Ganges","correct":"no"}
+            ]
+        },
+        {
+            "question": "One of the 12 Disciples, the one who betrayed Jesus:",
+            "topic": "Religion",
+            "choices": [
+                {"answer":"Judas","correct":"yes"},
+                {"answer":"Paul","correct":"no"},
+                {"answer":"Matthew","correct":"no"},
+                {"answer":"Peter","correct":"no"},
+            ]
+        },
+        {
+            "question": "Civilian supersonic plane that had a service life of 27 years",
+            "topic": "Aeronautic",
+            "choices": [
+                {"answer":"Concorde","correct":"yes"},
+                {"answer":"TU-144","correct":"no"},
+                {"answer":"Boeing 777","correct":"no"},
+                {"answer":"Airbus A380","correct":"no"},
+            ]
+        },
+        {
+            "question": "Light speed on the void",
+            "topic": "Physics",
+            "choices": [
+                {"answer":"299,792,458 m/s","correct":"yes"},
+                {"answer":"300,000 km/s","correct":"no"},
+                {"answer":"290,792,458 m/s","correct":"no"},
+                {"answer":"299,000 km/s","correct":"no"},
+            ]
+        },
+        {
+            "question": "One light year equals to:",
+            "topic": "Astronomy",
+            "choices": [
+                {"answer":"Aproximately 9,46 × 10^12 km","correct":"yes"},
+                {"answer":"4 arc seconds","correct":"no"},
+                {"answer":"0.5 UA","correct":"no"},
+                {"answer":"300,000 km","correct":"no"},
+            ]
+        },
+        {
+            "question": "First man who flew to the space:",
+            "topic": "Aeronautics",
+            "choices": [
+                {"answer":"Yuri Gagarin","correct":"yes"},
+                {"answer":"Neil Alden Armstrong","correct":"no"},
+                {"answer":"John Glenn","correct":"no"},
+                {"answer":"Alan Sheppard","correct":"no"},
+            ]
+        },
+        {
+            "question": "Which of these coutries has no access to the sea?",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Bolivia","correct":"yes"},
+                {"answer":"France","correct":"no"},
+                {"answer":"Chile","correct":"no"},
+                {"answer":"Angola","correct":"no"},
+            ]
+        },
+        {
+            "question": "The spiders are:",
+            "topic": "Biology",
+            "choices": [
+                {"answer":"Arthropods","correct":"yes"},
+                {"answer":"Insects","correct":"no"},
+                {"answer":"Bugs","correct":"no"},
+                {"answer":"Octapods","correct":"no"},
+            ]
+        },
+        {
+            "question": "Which of the following is not a rock band?",
+            "topic": "Music",
+            "choices": [
+                {"answer":"'N Sync","correct":"yes"},
+                {"answer":"Metallica","correct":"no"},
+                {"answer":"Megadeth","correct":"no"},
+                {"answer":"Guns n Roses","correct":"no"}
+            ]
+        },
+        {
+            "question": "Gaming console created by Microsoft, launched on 2001",
+            "topic": "Hardware",
+            "choices": [
+                {"answer":"Xbox","correct":"yes"},
+                {"answer":"Xbox 360","correct":"no"},
+                {"answer":"Dreamcast","correct":"no"},
+                {"answer":"Gamecube","correct":"no"}
+            ]
+        },
+        {
+            "question": "James Bond favorite car brand",
+            "topic": "Automobile",
+            "choices": [
+                {"answer":"Aston Martin","correct":"yes"},
+                {"answer":"Lamborghini","correct":"no"},
+                {"answer":"McLaren","correct":"no"},
+                {"answer":"Ferrari","correct":"no"}
+            ]
+        },
+        {
+            "question": "Cocktail made with gin and vermut, garnished with an olive:",
+            "topic": "Drinks",
+            "choices": [
+                {"answer":"Martini","correct":"yes"},
+                {"answer":"Bloody Mary","correct":"no"},
+                {"answer":"Margarita","correct":"no"},
+                {"answer":"Alexander","correct":"no"}
+            ]
+        },
+        {
+            "question": "Company specialized in electric cars:",
+            "topic": "Automobile",
+            "choices": [
+                {"answer":"Tesla Motors","correct":"yes"},
+                {"answer":"General Electric","correct":"no"},
+                {"answer":"Ford","correct":"no"},
+                {"answer":"Toyota","correct":"no"}
+            ]
+        },
+        {
+            "question": "One of the following is not a macronutrient:",
+            "topic": "Nutrition",
+            "choices": [
+                {"answer":"Calories","correct":"yes"},
+                {"answer":"Fats","correct":"no"},
+                {"answer":"Carbohydrates","correct":"no"},
+                {"answer":"Proteins","correct":"no"}
+            ]
+        },
+        {
+            "question": "Who created Mickey Mouse:",
+            "topic": "Movies and TV",
+            "choices": [
+                {"answer":"Walt Disney","correct":"yes"},
+                {"answer":"Stan Lee","correct":"no"},
+                {"answer":"Steven Spielberg","correct":"no"},
+                {"answer":"Alan Moore","correct":"no"}
+            ]
+        },
+        {
+            "question": "To win a volleyball match you must:",
+            "topic": "",
+            "choices": [
+                {"answer":"Win 3 sets","correct":"yes"},
+                {"answer":"Win 2 of 3 sets","correct":"no"},
+                {"answer":"Score 15 points","correct":"no"},
+                {"answer":"Score more points in 45 minutes","correct":"no"},
+            ]
+        },
+        {
+            "question": "What formula is used to calculate the perimetter of a triangle with sides A, B and C?",
+            "topic": "Maths",
+            "choices": [
+                {"answer":"AB+BC+CA","correct":"yes"},
+                {"answer":"A+B+C","correct":"no"},
+                {"answer":"(A+B+C)x2","correct":"no"},
+                {"answer":"2 x A","correct":"no"}
+            ]
+        },
+        {
+            "question": "Egg-layin mammal:",
+            "topic": "Biology",
+            "choices": [
+                {"answer":"Platypus","correct":"yes"},
+                {"answer":"Dolphin","correct":"no"},
+                {"answer":"Chicken","correct":"no"},
+                {"answer":"Snake","correct":"no"}
+            ]
+        },
+        {
+            "question": "Capital of USA:",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Washington","correct":"yes"},
+                {"answer":"New York","correct":"no"},
+                {"answer":"Los Angeles","correct":"no"},
+                {"answer":"California","correct":"no"}
+            ]
+        },
+        {
+            "question": "Dinosaur whose name in latin means \"swift seizer\":",
+            "topic": "",
+            "choices": [
+                {"answer":"Velociraptor","correct":"yes"},
+                {"answer":"Rapisaur","correct":"no"},
+                {"answer":"Velocacosaur","correct":"no"},
+                {"answer":"Diplodocus","correct":"no"}
+            ]
+        },
+        {
+            "question": "Water boiling temperature, at sea level:",
+            "topic": "Physics",
+            "choices": [
+                {"answer":"100 C","correct":"yes"},
+                {"answer":"90.1 C","correct":"no"},
+                {"answer":"98.5 C","correct":"no"},
+                {"answer":"87 C","correct":"no"}
+            ]
+        },
+        {
+            "question": "Official language of the Islamic Republic of Iran:",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Farsi","correct":"yes"},
+                {"answer":"Arab","correct":"no"},
+                {"answer":"English","correct":"no"},
+                {"answer":"Iranian","correct":"no"}
+            ]
+        },
+        {
+            "question": "Martial art, recognized as russian national sport:",
+            "topic": "Sports",
+            "choices": [
+                {"answer":"Sambo","correct":"yes"},
+                {"answer":"Wrestling","correct":"no"},
+                {"answer":"Systema","correct":"no"},
+                {"answer":"Judo","correct":"no"}
+            ]
+        },
+        {
+            "question": "Creator of the General Relativity Theory:",
+            "topic": "Physics",
+            "choices": [
+                {"answer":"Albert Einstein","correct":"yes"},
+                {"answer":"Niels Bohr","correct":"no"},
+                {"answer":"Stephen Hawkins","correct":"no"},
+                {"answer":"Louis Pasteur","correct":"no"}
+            ]
+        },
+        {
+            "question": "298712 * 2 = ?",
+            "topic": "Mathematics",
+            "choices": [
+                {"answer":"597424","correct":"yes"},
+                {"answer":"597421","correct":"no"},
+                {"answer":"6982123","correct":"no"},
+                {"answer":"113825","correct":"no"}
+            ]
+        },
+        {
+            "question": "Roman military and politician, conqueror of the Gauls:",
+            "topic": "History",
+            "choices": [
+                {"answer":"Gaius Julius Caesar","correct":"yes"},
+                {"answer":"Cicero","correct":"no"},
+                {"answer":"Nero","correct":"no"},
+                {"answer":"Plato","correct":"no"}
+            ]
+        },
+        {
+            "question": "Genovese sailor, who discovered America",
+            "topic": "History",
+            "choices": [
+                {"answer":"Christopher Columbus","correct":"yes"},
+                {"answer":"Amerigo Vespucci","correct":"no"},
+                {"answer":"Hernan Cortes","correct":"no"},
+                {"answer":"Vasco de Gama","correct":"no"},
+            ]
+        },
+        {
+            "question": "First president of the United States of America",
+            "topic": "History",
+            "choices": [
+                {"answer":"George Washington","correct":"yes"},
+                {"answer":"Benjamin Franklin","correct":"no"},
+                {"answer":"Abraham Lincoln","correct":"no"},
+                {"answer":"Thomas Jefferson","correct":"no"}
+            ]
+        },
+        {
+            "question": "Battle of the end of the wolrd in the norse mithology:",
+            "topic": "Mithology",
+            "choices": [
+                {"answer":"Ragnarök","correct":"yes"},
+                {"answer":"Armaggedon","correct":"no"},
+                {"answer":"Apocalypsis","correct":"no"},
+                {"answer":"Valhalla","correct":"no"}
+            ]
+        },
+        {
+            "question": "In the greek mithology, the father of the gods and men:",
+            "topic": "Mithology",
+            "choices": [
+                {"answer":"Zeus","correct":"yes"},
+                {"answer":"Poseidon","correct":"no"},
+                {"answer":"Apollo","correct":"no"},
+                {"answer":"Hermes","correct":"no"}
+            ]
+        },
+        {
+            "question": "German engineer, creator of the diesel engine.",
+            "topic": "Engineering",
+            "choices": [
+                {"answer":"Rudolf Diesel","correct":"yes"},
+                {"answer":"Adolf Diesel","correct":"no"},
+                {"answer":"Ivan Diesel","correct":"no"},
+                {"answer":"Diesel Gorman","correct":"no"}
+            ]
+        },
+        {
+            "question": "Inventor and engineer, known for his contributions to the field of electricity and electromagnetism",
+            "topic": "Engineering",
+            "choices": [
+                {"answer":"Nikola Tesla","correct":"yes"},
+                {"answer":"Alexander Graham Bell","correct":"no"},
+                {"answer":"Benjamin Franklin","correct":"no"},
+                {"answer":"Alfred Nobel","correct":"no"}
+            ]
+        },
+        {
+            "question": "Process used by plants to convert the light energy into chemical energy",
+            "topic": "Biology",
+            "choices": [
+                {"answer":"Photosynthesis","correct":"yes"},
+                {"answer":"Breathing","correct":"no"},
+                {"answer":"Reproduction","correct":"no"},
+                {"answer":"Nutrition","correct":"no"}
+            ]
+        },
+        {
+            "question": "Largest island in the world",
+            "topic": "Geography",
+            "choices": [
+                {"answer":"Greenland","correct":"yes"},
+                {"answer":"Australia","correct":"no"},
+                {"answer":"Madagascar","correct":"no"},
+                {"answer":"Iceland","correct":"no"}
+            ]
+        },
+        {
+            "question": "Distance between any point of the circle and its center",
+            "topic": "Math",
+            "choices": [
+                {"answer":"Radius","correct":"no"},
+                {"answer":"Diameter","correct":"no"},
+                {"answer":"Pi","correct":"no"},
+                {"answer":"Rect", "correct":"no"}
+            ]
+        },
+        {
+            "question": "Brahman",
+            "topic": "Religion",
+            "choices": [
+                {"answer":"Hindi priest","correct":"no"},
+                {"answer":"Follower of brahmanism","correct":"no"},
+                {"answer":"Follower of hinduism","correct":"no"},
+                {"answer":"Celtic priest","correct":"no"}
+            ]
+        },
+        {
+            "question": "Nearest star to the sun",
+            "topic": "Astronomy",
+            "choices": [
+                {"answer":"Alpha Centauri C","correct":"yes"},
+                {"answer":"Alpha Centauri","correct":"no"},
+               {"answer": "Orion","correct":"no"},
+                {"answer":"Sirius","correct":"no"}
+            ]
+        },
+        {
+            "question": "Circle area",
+            "topic": "Math",
+            "choices": [
+                {"answer":"Pi by Square of Radius","correct":"yes"},
+                {"answer":"Pi by Square of Diameter","correct":"no"},
+                {"answer":"2 by Radius","correct":"no"},
+                {"answer":"Square of Radius","correct":"no"}
+            ]
+        },
+        {
+            "question": "Which of these numbers is not a power of 2?",
+            "topic": "Math",
+            "choices": [
+                {"answer":"28","correct":"yes"},
+                {"answer":"64","correct":"no"},
+                {"answer":"128","correct":"no"},
+                {"answer":"8","correct":"no"}
+            ]
+        },
+        {
+            "question": "In a 20 sided dice, whats the probability of getting a 2?",
+            "topic": "Math",
+            "choices": [
+                {"answer":"5 percent","correct":"yes"},
+                {"answer":"20 percent","correct":"no"},
+                {"answer":"2 / 20","correct":"no"},
+                {"answer":"10 percent","correct":"no"},
+            ]
+        },
+        {
+            "question": "The most famous greek hero, son of Zeus and Alcmena",
+            "topic": "Mithology",
+            "choices": [
+                {"answer":"Herakles","correct":"yes"},
+                {"answer":"Perseus","correct":"no"},
+                {"answer":"Prometheus","correct":"no"},
+                {"answer":"Theseus","correct":"no"},
+            ]
+        },
+        {
+            "question": "Chemical compound formed by a metal and an OH group",
+            "topic": "Chemestry",
+            "choices": [
+                {"answer":"Hydroxide","correct":"yes"},
+                {"answer":"Acid","correct":"no"},
+                {"answer":"Salt","correct":"no"},
+                {"answer":"Oxide","correct":"no"}
+            ]
+        },
+        {
+            "question": "Chemical formula of common salt",
+            "topic": "Chemestry",
+            "choices": [
+                {"answer":"NaCl","correct":"yes"},
+                {"answer":"H2O","correct":"no"},
+                {"answer":"KCl","correct":"no"},
+                {"answer":"NaOH","correct":"no"},
+            ]
+        },
+        {
+            "question": "Creator of the AK-47",
+            "topic": "Weapons",
+            "choices": [
+                {"answer":"Mikhail Kalashnikov","correct":"yes"},
+                {"answer":"Arkady Kovalenko","correct":"no"},
+                {"answer":"Vladimir Putin","correct":"no"},
+                {"answer":"Samuel Colt","correct":"no"}
+            ]
+        },
+        {
+            "question": "Alcoholic beverage made from the fermented juice of apples:",
+            "topic": "Drinks",
+            "choices": [
+                {"answer":"Cider","correct":"yes"},
+                {"answer":"Wine","correct":"no"},
+                {"answer":"Rum","correct":"no"},
+                {"answer":"Beer","correct":"no"}
+            ]
+        },
+        {
+            "question": "Resistance of any physical object to any change in its speed, or direction of motion:",
+            "topic": "Physics",
+            "choices": [
+                {"answer":"Inertia","correct":"yes"},
+                {"answer":"Gravity","correct":"no"},
+                {"answer":"Acceleration","correct":"no"},
+                {"answer":"Mass","correct":"no"}
+            ]
+        }
+    ]
+}

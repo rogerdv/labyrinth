@@ -1,0 +1,674 @@
+﻿[
+        {
+            "question": "¿Qué es Android?",
+            "topic": "Tecnología",
+            "choices": [
+                {"answer":"Un robot","correct":"no"},
+                {"answer":"Un sistema operativo para teléfonos móviles","correct":"yes"},
+                {"answer":"Una marca de aspiradoras","correct":"no"},
+                {"answer":"Un árbol con hojas que solo crece en el Polo Norte","correct":"no"}
+            ]
+        },
+        {
+            "question": "Autor del El Quijote",
+            "topic": "Literatura",
+            "choices": [
+                {"answer":"Sancho Panza","correct":"no"},
+                {"answer":"Miguel de Cervantes","correct":"yes"},
+                {"answer":"Shakespeare","correct":"no"},
+                {"answer":"Arturo Pérez-Reverte","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Quién fue el primer Emperador de Roma?",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Julio César","correct":"no"},
+                {"answer":"Marco Antonio","correct":"no"},
+                {"answer":"Augusto","correct":"yes"},
+                {"answer":"Alejandro Magno","correct":"no"}
+            ]
+        },
+        {
+            "question": "Célebre arquitecto, escultor y pintor del Renacimiento, autor de la Capilla Sixtina",
+            "topic": "Arte",
+            "choices": [
+                {"answer":"Leonardo da Vinci","correct":"no"},
+                {"answer":"Michelangelo Buonarroti","correct":"yes"},
+                {"answer":"Marco Polo","correct":"no"},
+                {"answer":"Donatello","correct":"no"}
+            ]
+        },
+        {
+            "question": "Steve Jobs fundó Apple junto con:",
+            "topic": "Tecnología",
+            "choices": [
+                {"answer":"Bill Gates","correct":"no"},
+                {"answer":"Steve Wozniak","correct":"yes"},
+                {"answer":"Larry Page","correct":"no"},
+                {"answer":"Alan Wayne","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Quién fue el director de Indiana Jones y la Ultima Cruzada?",
+            "topic": "Cine",
+            "choices": [
+                {"answer":"Steven Spielberg","correct":"yes"},
+                {"answer":"George Lucas","correct":"no"},
+                {"answer":"Francis Ford Coppola","correct":"no"},
+                {"answer":"Quentin Tarantino","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Cuál es la capital de Egipto?",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"El Cairo","correct":"yes"},
+                {"answer":"Casablanca","correct":"no"},
+                {"answer":"Ryad","correct":"no"},
+                {"answer":"Teheran","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Cuál es la pirámide de Egipto más grande?",
+            "topic": "Arqueología",
+            "choices": [
+                {"answer":"La de Keops","correct":"yes"},
+                {"answer":"La de Tutankamon","correct":"no"},
+                {"answer":"La de Khafre","correct":"no"},
+                {"answer":"La de Menkaura","correct":"no"},
+            ]
+        },
+        {
+            "question": "¿Quién fue el creador de la WWW?",
+            "topic": "Tecnología",
+            "choices": [
+                {"answer":"Tim Berners Lee","correct":"yes"},
+                {"answer":"Steve Jobs","correct":"no"},
+                {"answer":"Bill Gates","correct":"no"},
+                {"answer":"Facebook","correct":"no"},
+            ]
+        },
+        {
+            "question": "¿Cuá es el nombre del Papa Juan Pablo II?",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Karol Wojtyla","correct":"yes"},
+                {"answer":"Juan Pablo","correct":"no"},
+                {"answer":"Albert Gresin","correct":"no"},
+                {"answer":"John Martin","correct":"no"},
+            ]
+        },
+        {
+            "question": "Leo Messi es:",
+            "topic": "Celebridades",
+            "choices": [
+                {"answer":"Un jugador de fútbol","correct":"yes"},
+                {"answer":"Un actor","correct":"no"},
+                {"answer":"Escritor","correct":"no"},
+                {"answer":"Médico","correct":"no"}
+            ]            
+        },
+        {
+            "question": "¿Quién es el descubridor de la penicilina?",
+            "topic": "Medicina",
+            "choices": [
+                {"answer":"Alexander Fleming","correct":"yes"},
+                {"answer":"Alfred Nobel","correct":"no"},
+                {"answer":"Albert Einstein","correct":"no"},
+                {"answer":"Louis Pasteur","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Quién es el inventor de la dinamita?",
+            "topic": "Química",
+            "choices": [
+                {"answer":"Alfred Nobel","correct":"yes"},
+                {"answer":"Hiram Stevens Maxim","correct":"no"},
+                {"answer":"Samuel Colt","correct":"no"},
+                {"answer":"Julio Verne","correct":"no"}
+            ]
+        },
+        {
+            "question": "Sabio fundador del budismo:",
+            "topic": "Religión",
+            "choices": [
+                {"answer":"Sidarta Gautama","correct":"yes"},
+                {"answer":"Buda","correct":"no"},
+                {"answer":"Jesús","correct":"no"},
+                {"answer":"Mahatma Ghandi","correct":"no"}
+            ]
+        },
+        {
+            "question": "Nombre real del Capitán América:",
+            "topic": "Historietas",
+            "choices": [
+                {"answer":"Steve Rogers","correct":"yes"},
+                {"answer":"Bruce Wayne","correct":"no"},
+                {"answer":"Desconocido","correct":"no"},
+                {"answer":"Clark Kent","correct":"no"}
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es la raíz cuadrada de 4?",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"2","correct":"yes"},
+                {"answer":"2.1","correct":"no"},
+                {"answer":"3.14","correct":"no"},
+                {"answer":"1.5","correct":"no"}
+            ]
+        },
+        {
+            "question": "Autor de la saga Canción de Hielo y Fuego",
+            "topic": "Literatura",
+            "choices": [
+                {"answer":"George R.R. Martin","correct":"yes"},
+                {"answer":"J.R.R Tolkien","correct":"no"},
+                {"answer":"Stephen King","correct":"no"},
+                {"answer":"Orson Scott Card","correct":"no"}
+            ]
+        },
+        {
+            "question": "Autor de El Señor de los Anillos",
+            "topic": "Literatura",
+            "choices": [
+                {"answer":"J.R.R Tolkien","correct":"yes"},
+                {"answer":"George R.R. Martin","correct":"no"},
+                {"answer":"Stephen King","correct":"no"},
+                {"answer":"Peter Jackson","correct":"no"}
+            ]
+        },
+        {
+            "question": "Megalómano es quien:",
+            "topic": "Vocabulario",
+            "choices": [
+                {"answer":"Tiene delirios de grandeza","correct":"yes"},
+                {"answer":"Ama la música","correct":"no"},
+                {"answer":"Le gustan las cosas grandes","correct":"no"},
+                {"answer":"Tiene manos enormes","correct":"no"}
+            ]
+        },
+        {
+            "question": "Famoso escritor británico, autor de Romeo y Julieta",
+            "topic": "Literatura",
+            "choices": [
+                {"answer":"William Shakespeare","correct":"yes"},
+                {"answer":"J. R.R Tolkien","correct":"no"},
+                {"answer":"Lord Byron","correct":"no"},
+                {"answer":"H. G. Wells","correct":"no"}
+            ]
+        },
+        {
+            "question": "La montaña más alta del mundo es:",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"El monte Everest","correct":"yes"},
+                {"answer":"El monte Fuji","correct":"no"},
+                {"answer":"El Aconcagua","correct":"no"},
+                {"answer":"El monte Elbrus","correct":"no"}
+            ]
+        },
+        {
+            "question": "Río más largo del mundo:",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Amazonas","correct":"yes"},
+                {"answer":"Nilo","correct":"no"},
+                {"answer":"Danubio","correct":"no"},
+                {"answer":"Ganges","correct":"no"}
+            ]
+        },
+        {
+            "question": "Uno de los Doce Discípulos, el que traicionó a Jesús:",
+            "topic": "Religión",
+            "choices": [
+                {"answer":"Judas","correct":"yes"},
+                {"answer":"Pedro","correct":"no"},
+                {"answer":"Pablo","correct":"no"},
+                {"answer":"Mateo","correct":"no"}
+            ]
+        },
+        {
+            "question": "Avión supersónico de pasajeros que estuvo en servicio duante 27 años:",
+            "topic": "Aviación",
+            "choices": [
+                {"answer":"Concorde","correct":"yes"},
+                {"answer":"TU-144","correct":"no"},
+                {"answer":"Boeing 777","correct":"no"},
+                {"answer":"Airbus A380","correct":"no"}
+            ]
+        },
+        {
+            "question": "Velocidad de la luz en el vacío:",
+            "topic": "Física",
+            "choices": [
+                {"answer":"299,792,458 m/s","correct":"yes"},
+                {"answer":"300,000 km/s","correct":"no"},
+                {"answer": "290,792,458 m/s","correct":"no"},
+                {"answer":"299,000 km/s","correct":"no"}
+            ]
+        },
+        {
+            "question": "Un año luz equivale a:",
+            "topic": "Astronomía",
+            "choices": [
+                {"answer":"Aproximadamente 9,46 × 10^12 km","correct":"no"},
+                {"answer":"4 segundos de arco","correct":"no"},
+                {"answer":"0.5 UA","correct":"no"},
+                {"answer":"300,000 km","correct":"no"}
+            ]
+        },
+        {
+            "question": "Primer hombre en volar al espacio",
+            "topic": "Aeronáutica",
+            "choices": [
+                {"answer":"Yuri Gagarin","correct":"yes"},
+                {"answer":"Alan Sheppard","correct":"no"},
+                {"answer":"Chuck Yeager","correct":"no"},
+                {"answer":"Neil Alden Armstrong","correct":"no"},
+            ]
+        },
+        {
+            "question": "¿Cuál de estos países no tiene salida al mar?",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Bolivia","correct":"yes"},
+                {"answer":"Chile","correct":"no"},
+                {"answer":"Alemania","correct":"no"},
+                {"answer":"Angola","correct":"no"}
+            ]
+        },
+        {
+            "question": "Las arañas son:",
+            "topic": "Biología",
+            "choices": [
+                {"answer":"Artrópodos","correct":"yes"},
+                {"answer":"Insectos","correct":"no"},
+                {"answer":"Bichos","correct":"no"},
+                {"answer":"Octápodos","correct":"no"}
+            ]
+        },
+        {
+            "question": "¿Cuál de las siguientes no es una banda de rock?",
+            "topic": "Música",
+            "choices": [
+                {"answer":"'N Sync","correct":"yes"},
+                {"answer":"Metallica","correct":"no"},
+                {"answer":"Megadeth","correct":"no"},
+                {"answer":"Guns n Roses","correct":"no"}
+            ]
+        },
+        {
+            "question": "Consola de juegos creada por Microsoft, presentada en el año 2001",
+            "topic": "Hardware",
+            "choices": [
+                {"answer":"Xbox","correct":"yes"},
+                {"answer":"Dreamcast","correct":"no"},
+                {"answer":"Gamecube","correct":"no"},
+                {"answer":"Xbox 360","correct":"no"}
+            ]
+        },
+        {
+            "question": "Marca de auto utilizado por James Bond",
+            "topic": "Automóviles",
+            "choices": [
+                {"answer":"Aston Martin","correct":"yes"},
+                {"answer":"Lamborghini","correct":"no"},
+                {"answer":"Ferrari","correct":"no"},
+                {"answer":"McLaren", "correct":"no"},
+            ]
+        },
+        {
+            "question": "Coctel compuesto de ginebra y vermú, adornado con una aceituna",
+            "topic": "Bebidas",
+            "choices": [
+                {"answer":"Martini","correct":"yes"},
+                {"answer":"Margarita","correct":"no"},
+                {"answer":"Bloody Mary","correct":"no"},
+                {"answer":"Alexander","correct":"no"},
+            ]
+        },
+        {
+            "question": "Compañía especializada en autos eléctricos:",
+            "topic": "Automóviles",
+            "choices": [
+                {"answer":"Tesla Motors","correct":"yes"},
+                {"answer":"General Electric","correct":"no"},
+                {"answer":"Ford","correct":"no"},
+                {"answer":"Toyota","correct":"no"},
+            ]
+        },
+        {
+            "question": "De los siguientes, uno no es un macronutriente:",
+            "topic": "Nutrición",
+            "choices": [
+                {"answer":"Calorías","correct":"yes"},
+                {"answer": "Proteínas","correct":"no"},
+                {"answer":"Carbohidratos","correct":"no"},
+                {"answer":"Lípidos","correct":"no"},
+            ]
+        },
+        {
+            "question": "Creador del personaje Mickey Mouse:",
+            "topic": "Cine y tv",
+            "choices": [
+                {"answer":"Walt Disney","correct":"yes"},
+                {"answer":"Stan Lee","correct":"no"},
+                {"answer":"Steven Spielberg","correct":"no"},
+                {"answer":"Alan Moore","correct":"no"},
+            ]
+        },
+        {
+            "question": "Para ganar un juego de voleibol se necesita:",
+            "topic": "Deporte",
+            "choices": [
+                {"answer":"Ganar tres sets","correct":"yes"},
+                {"answer":"Ganar dos de tres sets","correct":"no"},
+                {"answer":"Anotar 15 puntos","correct":"no"},
+                {"answer":"Anotar más puntos en 45 minutos","correct":"no"},
+            ]
+        },
+        {
+            "question": "El perímetro de un triángulo de lados A, B y C se calcula mediante la fórmula:",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"AB+BC+CA","correct":"yes"},
+                {"answer":"A+B+C","correct":"no"},
+                {"answer":"2 x A","correct":"no"},
+                {"answer":"(A+B+C)*2","correct":"no"}
+            ]
+        },
+        {
+            "question": "Mamífero que pone huevos",
+            "topic": "Biología",
+            "choices": [
+                {"answer":"Ornitorrinco","correct":"yes"},
+                {"answer":"Delfín","correct":"no"},
+                {"answer":"Gallina","correct":"no"},
+                {"answer":"Serpiente","correct":"no"}
+            ]
+        },
+        {
+            "question": "Capital de los EUA:",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Washington","correct":"yes"},
+                {"answer":"New York","correct":"no"},
+                {"answer":"Los Angeles","correct":"no"},
+                {"answer":"California","correct":"no"}
+            ]
+        },
+        {
+            "question": "Dinosaurio cuyo nombre en latín significa \"ladrón veloz\":",
+            "topic": "Biología",
+            "choices": [
+                {"answer":"Velociraptor","correct":"yes"},
+                {"answer":"Diplodocus","correct":"no"},
+                {"answer":"Rapisaurio","correct":"no"},
+                {"answer":"Velocacosaurio","correct":"no"}
+            ]
+        },
+        {
+            "question": "Temperatura de ebullición del agua a nivel del mar:",
+            "topic": "Física",
+            "choices": [
+                {"answer":"100 grados C","correct":"yes"},
+                {"answer":"98.2 grados C","correct":"no"},
+                {"answer":"102 grados C","correct":"no"},
+                {"answer":"81 grados C","correct":"no"}
+            ]
+        },
+        {
+            "question": "Lengua oficial de la República Islámica de Irán:",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Farsi","correct":"yes"},
+                {"answer":"Arabe","correct":"no"},
+                {"answer":"Inglés","correct":"no"},
+                {"answer":"Iraní","correct":"no"},
+            ]
+        },
+        {
+            "question": "Arte marcial reconocida como deporte nacional ruso:",
+            "topic": "Deportes",
+            "choices": [
+                {"answer":"Sambo","correct":"yes"},
+                {"answer":"Judo","correct":"no"},
+                {"answer":"Lucha","correct":"no"},
+                {"answer":"Systema","correct":"no"}
+            ]
+        },
+        {
+            "question": "Creador de la Teoría de la Relatividad General:",
+            "topic": "Física",
+            "choices": [
+                {"answer":"Albert Einstein","correct":"yes"},
+                {"answer":"Niels Bohr","correct":"no"},
+                {"answer":"Stephen Hawkins","correct":"no"},
+                {"answer":"Louis Pasteur","correct":"no"}
+            ]
+        },
+        {
+            "question": "298712 * 2 = ?",
+            "topic": "Física",
+            "choices": [
+                {"answer":"597424","correct":"yes"},
+                {"answer":"597421","correct":"no"},
+                {"answer":"691567","correct":"no"},
+                {"answer":"492153","correct":"no"}
+            ]
+        },
+        {
+            "question": "Militar y político romano, conquistador de las Galias:",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Cayo Julio César","correct":"yes"},
+                {"answer":"Cicerón","correct":"no"},
+                {"answer":"Nerón","correct":"no"},
+                {"answer":"Marco Antonio","correct":"no"},
+            ]
+        },
+        {
+            "question": "Marino genovés, descubridor de América",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"Cristóbal Colón","correct":"yes"},
+                {"answer":"Américo Vespucio","correct":"no"},
+                {"answer":"Vasco de Gama","correct":"no"},
+                {"answer":"Hernán Cortés","correct":"no"}
+            ]
+        },
+        {
+            "question": "Primer presidente de los Estados Unidos de América",
+            "topic": "Historia",
+            "choices": [
+                {"answer":"George Washington","correct":"yes"},
+                {"answer":"Abraham Lincoln","correct":"no"},
+                {"answer":"Benjamin Franklin","correct":"no"},
+                {"answer":"Thomas Jefferson","correct":"no"}
+            ]
+        },
+        {
+            "question": "Batalla del fin del mundo en la mitología nórdica:",
+            "topic": "Mitología",
+            "choices": [
+                {"answer":"Ragnarök","correct":"yes"},
+                {"answer":"Armagedón","correct":"no"},
+                {"answer":"Valhalla","correct":"no"},
+                {"answer":"Apocalipsis","correct":"no"}
+            ]
+        },
+        {
+            "question": "En la mitología griega, padre de los dioses y de los hombres:",
+            "topic": "Mitología",
+            "choices": [
+                {"answer":"Zeus","correct":"yes"},
+                {"answer":"Poseidon","correct":"no"},
+                {"answer":"Apolo","correct":"no"},
+                {"answer":"Prometeo","correct":"no"}
+            ]
+        },
+        {
+            "question": "Ingeniero alemán, creador del motor diesel",
+            "topic": "Ingeniería",
+            "choices": [
+                {"answer":"Rudolf Diesel","correct":"yes"},
+                {"answer":"Diesel Gorman","correct":"no"},
+                {"answer":"Adolf Diesel","correct":"no"},
+                {"answer":"Ivan Diesel","correct":"no"}
+            ]
+        },
+        {
+            "question": "Inventor e ingeniero, reconocido por sus aportes en el campo del electromagnetismo y la electricidad:",
+            "topic": "Ingeniería",
+            "choices": [
+                {"answer":"Nikola Tesla","correct":"yes"},
+                {"answer":"Alexander Graham Bell","correct":"no"},
+                {"answer":"Benjamin Franklin","correct":"no"},
+                {"answer":"Alfred Nobel","correct":"no"}
+            ]
+        },
+        {
+            "question": "Proceso realizado por las plantas para convertir la energía de la luz en energía química",
+            "topic": "Biología",
+            "choices": [
+                {"answer":"Fotosíntesis","correct":"yes"},
+                {"answer":"Respiración","correct":"no"},
+                {"answer":"Nutrición","correct":"no"},
+                {"answer":"Reproducción","correct":"no"}
+            ]
+        },
+        {
+            "question": "Isla más grande del mundo",
+            "topic": "Geografía",
+            "choices": [
+                {"answer":"Groenlandia","correct":"yes"},
+                {"answer":"Madagascar","correct":"no"},
+               {"answer":"Australia","correct":"no"},
+                {"answer":"Islandia","correct":"no"}
+            ]
+        },
+        {
+            "question": "Segmento entre el centro de un círculo y su perímetro",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"Radio","correct":"yes"},
+                {"answer":"Diámetro","correct":"no"},
+                {"answer":"Segmento","correct":"no"},
+                {"answer":"Pi","correct":"no"}
+            ]
+        },
+        {
+            "question": "Brahman",
+            "topic": "Religión",
+            "choices": [
+                {"answer":"Sacerdote hinduista","correct":"yes"},
+                {"answer":"Seguidor del brahmanismo","correct":"no"},
+                {"answer":"Segudor del hinduismo","correct":"no"},
+                {"answer":"Sacerdote celta","correct":"no"},
+            ]
+        },
+        {
+            "question": "Area del círculo",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"Pi * Radio al cuadrado","correct":"yes"},
+                {"answer":"Pi * Diámetro al cuadrado","correct":"no"},
+                {"answer":"2 * Pi * Radio al cuadrado","correct":"no"},
+                {"answer":"Radio + 2 * Pi","correct":"no"},
+            ]
+        },
+        {
+            "question": "Cuál de estos números no es una potencia de 2?",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"28","correct":"yes"},
+                {"answer":"32","correct":"no"},
+                {"answer":"16","correct":"no"},
+                {"answer":"128","correct":"no"}
+            ]
+        },
+        {
+            "question": "En un dado de 20 caras, cuál es la probabilidad de obtener un 2?",
+            "topic": "Matemáticas",
+            "choices": [
+                {"answer":"5 porciento","correct":"yes"},
+                {"answer":"20 porciento","correct":"no"},
+                {"answer":"2 entre 20","correct":"no"},
+                {"answer":"10 porciento","correct":"no"}
+            ]
+        },
+        {
+            "question": "Estrella más cercana al sol",
+            "topic": "Astronomía",
+            "choices": [
+                {"answer":"Alfa Centauri C","correct":"yes"},
+                {"answer":"Alfa Centauri","correct":"no"},
+                {"answer":"Sirio","correct":"no"},
+                {"answer":"Orión","correct":"no"}
+            ]
+        },
+        {
+            "question": "El más célebre héroe griego, hijo de Zeus y Alcmena",
+            "topic": "Mitología",
+            "choices": [
+                {"answer":"Herakles","correct":"yes"},
+                {"answer":"Perseo","correct":"no"},
+                {"answer":"Prometeo","correct":"no"},
+                {"answer":"Teseo","correct":"no"}
+            ]
+        },
+        {
+            "question": "Compuesto químico formado por un metal y un grupo OH:",
+            "topic": "Química",
+            "choices": [
+                {"answer":"Hidróxido","correct":"yes"},
+                {"answer":"Acido","correct":"no"},
+                {"answer":"Oxido","correct":"no"},
+                {"answer":"Sal","correct":"no"},
+            ]
+        },
+        {
+            "question": "Fórmula química de la sal común",
+            "topic": "Química",
+            "choices": [
+                {"answer":"NaCl","correct":"yes"},
+                {"answer":"NaOH","correct":"no"},
+                {"answer":"KCl","correct":"no"},
+                {"answer":"H2O","correct":"no"}
+            ]
+        },
+        {
+            "question": "Creador del AK-47",
+            "topic": "Armas",
+            "choices": [
+                {"answer":"Mijaíl Kaláshnikov","correct":"yes"},
+                {"answer":"Arkady Kovalenko","correct":"no"},
+                {"answer":"Vladimir Putin","correct":"no"},
+                {"answer":"Samuel Colt","correct":"no"}
+            ]
+        },
+        {
+            "question": "Bebida alcohólica de baja graduación, fabricada con el jugo fermentado de manzana o pera:",
+            "topic": "Bebidas",
+            "choices": [
+                {"answer":"Sidra","correct":"yes"},
+                {"answer":"Vino","correct":"no"},
+                {"answer":"Ron","correct":"no"},
+                {"answer":"Cerveza","correct":"no"}
+            ]
+        },
+        {
+            "question": "Propiedad que tienen los cuerpos de permanecer en su estado de reposo relativo o movimiento relativo:",
+            "topic": "Física",
+            "choices": [
+                {"answer":"Inercia","correct":"yes"},
+                {"answer":"Gravedad","correct":"no"},
+                {"answer":"Masa","correct":"no"},
+                {"answer":"Aceleración","correct":"no"}
+            ]
+        }
+    ]
+
