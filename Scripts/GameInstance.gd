@@ -1,9 +1,6 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
 var easy
 var ghost
 var score:int = 0
@@ -12,6 +9,8 @@ var bombs:int = 0
 var KeysUsed:int = 0
 var BombsUsed:int = 0
 var GhostsKilled:int = 0
+
+
 #scene temp values
 var SceneScore:int = 0
 var SceneKeysUsed:int = 0
@@ -25,34 +24,20 @@ var PrevGhost = []
 var NextScene
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_tree().set_quit_on_go_back(false)
-	var qfile = File.new()	
-	if OS.get_locale().begins_with("es"):		
-		qfile.open("res://QuestionsDB/easy-es.json", File.READ)
-		var Json = JSON.parse(qfile.get_as_text())
-		error = Json.error
 
-		easy = Json.result
-		qfile.close()
-		qfile.open("res://QuestionsDB/ghost-es.json", File.READ)
-		Json  = JSON.parse(qfile.get_as_text())
-		ghost = Json.result
-		qfile.close()
+	if OS.get_locale().begins_with("es"):
+		_read_easy_question_db_by_lang("es")
+		_read_ghost_question_db_by_lang("es")
 	else:
-		qfile.open("res://QuestionsDB/easy-en.json", File.READ)
-		var Json = JSON.parse(qfile.get_as_text())
-		error = Json.error
-		easy = Json.result
-		qfile.close()
-		qfile.open("res://QuestionsDB/ghost-en.json", File.READ)
-		Json  = JSON.parse(qfile.get_as_text())
-		ghost = Json.result
-		qfile.close()
+		_read_easy_question_db_by_lang("en")
+		_read_ghost_question_db_by_lang("en")
+
 	randomize()
-	
-func SaveGame():	
+
+
+func SaveGame():
 	var savefile = File.new()
 	savefile.open("user://savedgame", File.WRITE)
 	print(get_tree().current_scene.filename)
@@ -61,7 +46,8 @@ func SaveGame():
 	savefile.store_32(KeysUsed)
 	savefile.store_32(BombsUsed)
 	savefile.store_32(GhostsKilled)
-		
+
+
 func LoadGame():
 	var savefile = File.new()
 	if not savefile.file_exists("user://savedgame"):
@@ -73,8 +59,84 @@ func LoadGame():
 	BombsUsed  = savefile.get_32()
 	GhostsKilled = savefile.get_32()
 	get_tree().change_scene(scene)
-	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+
+func get_easy_rand_question():
+	# generate a random question id
+	var idx = randi() % easy.size()
+
+	# check if question was recently displayed
+	while PrevEasy.has(idx):
+		idx = randi() % easy.size()
+
+	# clean previous easy question stack
+	_manage_easy_stack(idx)
+	
+	# shuffle choises
+	return _shuffle_question_choices(easy[idx])
+
+
+func get_ghost_rand_question():
+	# generate a random question id
+	var idx = randi() % ghost.size()
+	
+	# check if question was recently displayed
+	while PrevGhost.has(idx):
+		idx = randi() % ghost.size()
+
+	# clean previous ghost question stack
+	_manage_ghost_stack(idx)
+	
+	# shuffle choises
+	return _shuffle_question_choices(ghost[idx])
+
+
+
+# Private
+
+
+func _read_easy_question_db_by_lang(lang):
+	var file = File.new()
+	file.open("res://QuestionsDB/easy-" + lang + ".json", File.READ)
+	
+	var json_result = JSON.parse(file.get_as_text())
+	easy = json_result.result
+	error = json_result.error
+	
+	file.close()
+
+
+func _read_ghost_question_db_by_lang(lang):
+	var file = File.new()
+	file.open("res://QuestionsDB/ghost-" + lang + ".json", File.READ)
+	
+	var json_result = JSON.parse(file.get_as_text())
+	ghost = json_result.result
+	error = json_result.error
+	
+	file.close()
+
+
+func _manage_easy_stack(idx : int):
+	if PrevEasy.size() == 5:
+		PrevEasy.remove(0)
+		PrevEasy.append(idx)
+	else:
+		PrevEasy.append(idx)
+
+
+func _manage_ghost_stack(idx : int):
+	if PrevGhost.size() == 5:
+		PrevGhost.remove(0)
+		PrevGhost.append(idx)
+	else:
+		PrevGhost.append(idx)
+
+
+func _shuffle_question_choices(question):
+	var choices = question.choices
+	
+	choices.shuffle()
+	question.choices = choices
+	
+	return question
