@@ -43,7 +43,7 @@ func _physics_process(delta):
 	# mobile devices
 	if OS.has_touchscreen_ui_hint():
 		if !GameInstance.paused:
-			#get joystick value and normalize it
+			# get joystick value and normalize it
 			vec = joystick.get_value().normalized()
 			move_and_slide(vec * 150)
 
@@ -87,13 +87,14 @@ func _physics_process(delta):
 			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_left")
 
-			if get_slide_count()>0:
+			if get_slide_count() > 0:
 				$RayCast2D.cast_to= Vector2(-25,0)
+
 		if RIGHT:
 			move_and_slide(Vector2(150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_right")
 
-			if get_slide_count()>0:
+			if get_slide_count() > 0:
 				$RayCast2D.cast_to = Vector2(25,0)
 
 
@@ -120,4 +121,5 @@ func FireBomb():
 		if RIGHT:
 			vec.x = 1
 		b.dir = vec
+
 	get_parent().add_child(b)

@@ -39,25 +39,36 @@ func _ready() -> void:
 
 func SaveGame():
 	var savefile = File.new()
+	
 	savefile.open("user://savedgame", File.WRITE)
-	print(get_tree().current_scene.filename)
+	
+	print("name of scene to save: ", get_tree().current_scene.filename)
+	
 	savefile.store_string(get_tree().current_scene.filename)
 	savefile.store_32(score)
 	savefile.store_32(KeysUsed)
 	savefile.store_32(BombsUsed)
 	savefile.store_32(GhostsKilled)
+	savefile.close()
 
 
 func LoadGame():
-	var savefile = File.new()
-	if not savefile.file_exists("user://savedgame"):
+	var savedfile = File.new()
+	
+	if not savedfile.file_exists("user://savedgame"):
+		print("error: you don't have a saved game!")
 		return # Error! We don't have a save to load.
-	savefile.open("user://savedgame", File.READ)
-	var scene = savefile.get_line()
-	score = savefile.get_32()
-	KeysUsed  = savefile.get_32()
-	BombsUsed  = savefile.get_32()
-	GhostsKilled = savefile.get_32()
+		
+	savedfile.open("user://savedgame", File.READ)
+	
+	var scene = savedfile.get_line()
+	
+	score = savedfile.get_32()
+	KeysUsed  = savedfile.get_32()
+	BombsUsed  = savedfile.get_32()
+	GhostsKilled = savedfile.get_32()
+	
+	savedfile.close()
 	get_tree().change_scene(scene)
 
 

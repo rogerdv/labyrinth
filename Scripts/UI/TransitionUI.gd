@@ -6,12 +6,12 @@ var bonus = 0
 var stop:bool = false
 
 
-func _ready() -> void:	
-	GameInstance.KeysUsed+=GameInstance.SceneKeysUsed
+func _ready() -> void:
+	GameInstance.KeysUsed += GameInstance.SceneKeysUsed
 	GameInstance.BombsUsed += GameInstance.SceneBombsUsed
 	GameInstance.GhostsKilled += GameInstance.SceneGhostsKilled
-	$TextureProgress.value = GameInstance.time/120*100
-	#TODO: Save game 
+	$TextureProgress.value = GameInstance.time / 120 * 100
+	#TODO: Save game
 
 
 func _process(delta: float) -> void:

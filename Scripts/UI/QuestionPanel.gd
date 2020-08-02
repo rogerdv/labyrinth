@@ -72,8 +72,9 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		get_parent().get_node("../player").ToggleCollision(false)
 	else:
 		get_parent().get_node("../player").ToggleCollision(false)
-
-		if mode==2: 	# ghost mode
+		
+		# ghost mode
+		if mode == 2: 	
 			var start = get_parent().get_node("../SceneInfo").Start
 			get_parent().get_node("../player").position = start
 
