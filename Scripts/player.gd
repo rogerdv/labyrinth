@@ -39,7 +39,7 @@ func _input(event):
 
 func _physics_process(delta):
 	var coll
-	
+
 	# mobile devices
 	if OS.has_touchscreen_ui_hint():
 		if !GameInstance.paused:

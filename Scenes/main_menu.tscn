@@ -12,6 +12,8 @@
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -0.579102
+margin_bottom = -0.579102
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,6 +132,9 @@ margin_top = 551.256
 margin_right = 911.696
 margin_bottom = 565.256
 text = "Versus Windmills"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="power_by" type="Label" parent="."]
 anchor_left = 0.018
@@ -150,5 +155,5 @@ position = Vector2( 214.293, 3.27081 )
 texture = ExtResource( 6 )
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
