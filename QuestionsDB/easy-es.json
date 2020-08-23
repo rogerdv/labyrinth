@@ -1473,5 +1473,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Actual recordista mundial de los 100 m planos",
+        "topic": "Deporte",
+        "choices": [
+            {
+                "answer": "Usain Bolt",
+                "correct": "yes"
+            },
+            {
+                "answer": "Ben Johnson",
+                "correct": "no"
+            },
+            {
+                "answer": "Carl Lewis",
+                "correct": "no"
+            },
+            {
+                "answer": "Roland Emerson",
+                "correct": "no"
+            }
+        ]
     }
 ]

@@ -1472,5 +1472,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Current world record holder in the 100 metres",
+        "topic": "Sports",
+        "choices": [
+            {
+                "answer": "Usain Bolt",
+                "correct": "yes"
+            },
+            {
+                "answer": "Ben Johnson",
+                "correct": "no"
+            },
+            {
+                "answer": "Carl Lewis",
+                "correct": "no"
+            },
+            {
+                "answer": "Roland Emerson",
+                "correct": "no"
+            }
+        ]
     }
 ]
