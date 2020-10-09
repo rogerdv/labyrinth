@@ -25,14 +25,14 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-anchor_left = 0.192
-anchor_top = 0.14
-anchor_right = 0.804
-anchor_bottom = 0.921
-margin_left = 26.392
-margin_top = 18.0
-margin_right = -17.296
-margin_bottom = -25.6
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -291.5
+margin_top = -212.5
+margin_right = 291.5
+margin_bottom = 212.5
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,31 +49,37 @@ custom_constants/separation = 4
 
 [node name="question" type="Label" parent="PanelContainer/VBoxContainer"]
 margin_right = 486.0
-margin_bottom = 30.0
+margin_bottom = 35.0
 rect_min_size = Vector2( 485, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = ExtResource( 6 )
 text = "AAAA Here goes the very long question text BBB???"
 autowrap = true
 
 [node name="topic" type="Label" parent="PanelContainer/VBoxContainer"]
-margin_top = 34.0
+margin_top = 39.0
 margin_right = 486.0
-margin_bottom = 59.0
+margin_bottom = 74.0
 rect_min_size = Vector2( 200, 25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "topic"
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-margin_top = 63.0
+margin_top = 78.0
 margin_right = 486.0
-margin_bottom = 77.0
+margin_bottom = 92.0
 
 [node name="a1" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 81.0
+margin_top = 96.0
 margin_right = 486.0
-margin_bottom = 124.458
+margin_bottom = 139.458
 rect_min_size = Vector2( 400, 35 )
 focus_neighbour_top = NodePath("../a4")
 focus_neighbour_bottom = NodePath("../a2")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 7 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 5 )
@@ -81,48 +87,57 @@ custom_styles/normal = ExtResource( 4 )
 script = ExtResource( 2 )
 
 [node name="a2" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 128.0
+margin_top = 143.0
 margin_right = 486.0
-margin_bottom = 171.458
+margin_bottom = 186.458
 rect_min_size = Vector2( 400, 35 )
 focus_neighbour_top = NodePath("../a1")
 focus_neighbour_bottom = NodePath("../a3")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 7 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/normal = ExtResource( 4 )
 
 [node name="a3" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 175.0
+margin_top = 190.0
 margin_right = 486.0
-margin_bottom = 218.458
+margin_bottom = 233.458
 rect_min_size = Vector2( 400, 35 )
 focus_neighbour_top = NodePath("../a2")
 focus_neighbour_bottom = NodePath("../a4")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 7 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/normal = ExtResource( 4 )
 
 [node name="a4" type="Button" parent="PanelContainer/VBoxContainer"]
-margin_top = 222.0
+margin_top = 237.0
 margin_right = 486.0
-margin_bottom = 265.458
+margin_bottom = 280.458
 rect_min_size = Vector2( 400, 35 )
 focus_neighbour_top = NodePath("../a3")
 focus_neighbour_bottom = NodePath("../a1")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 7 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/normal = ExtResource( 4 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
-margin_top = 269.0
+margin_top = 284.0
 margin_right = 486.0
-margin_bottom = 283.0
+margin_bottom = 320.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="time" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
-margin_bottom = 14.0
+margin_top = 11.0
+margin_bottom = 25.0
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a1" to="." method="AnswerPressed" binds= [ 0 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a2" to="." method="AnswerPressed" binds= [ 1 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a3" to="." method="AnswerPressed" binds= [ 2 ]]
