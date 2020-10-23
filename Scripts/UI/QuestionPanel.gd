@@ -66,7 +66,7 @@ func AnswerPressed(extra_arg_0: int) -> void:
 
 		# update score
 		var score = get_parent().get_node("../SceneInfo").SceneScore+GameInstance.score
-		get_parent().get_node("InfoBar/Cont/Score").text = String(score)
+		get_parent().get_node("../CanvasLayer/UI").set_score(score)
 
 		#re-enable collision detection
 		get_parent().get_node("../player").ToggleCollision(false)
