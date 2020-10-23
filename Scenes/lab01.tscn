@@ -1,13 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Images/AllAxis_Outline.png" type="Texture" id=3]
-[ext_resource path="res://Images/Handle_Outline.png" type="Texture" id=4]
-[ext_resource path="res://Images/Handle_Outline_Drag.png" type="Texture" id=5]
-[ext_resource path="res://Scripts/UI/Joystick_Button.gd" type="Script" id=6]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/SceneInfo.gd" type="Script" id=7]
-[ext_resource path="res://UI/InfoBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/time.tscn" type="PackedScene" id=10]
 
@@ -18,17 +14,7 @@ position = Vector2( 169.298, 173.176 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Joystick" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 75, 525 )
-texture = ExtResource( 3 )
-
-[node name="Joystick_Button" type="TouchScreenButton" parent="CanvasLayer/Joystick"]
-position = Vector2( -32, -32 )
-normal = ExtResource( 4 )
-pressed = ExtResource( 5 )
-script = ExtResource( 6 )
-
-[node name="InfoBar" parent="CanvasLayer" instance=ExtResource( 8 )]
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="SceneInfo" type="Node" parent="."]
 script = ExtResource( 7 )

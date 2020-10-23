@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/SceneInfo.gd" type="Script" id=1]
-[ext_resource path="res://UI/Joystick.tscn" type="PackedScene" id=2]
-[ext_resource path="res://UI/InfoBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=6]
@@ -18,10 +17,7 @@ NextLevel = "res://Scenes/lab05.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Joystick" parent="CanvasLayer" instance=ExtResource( 2 )]
-position = Vector2( 75, 525 )
-
-[node name="InfoBar" parent="CanvasLayer" instance=ExtResource( 3 )]
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 244.408, 263.763 )
