@@ -5,5 +5,6 @@ font_path = "res://UI/AlegreyaSans-Regular.otf"
 
 [resource]
 size = 22
+outline_color = Color( 0.996078, 0.996078, 0.996078, 1 )
 use_filter = true
 font_data = SubResource( 1 )
