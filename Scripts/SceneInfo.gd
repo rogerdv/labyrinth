@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		else:
 			GameInstance.time-=1
 			var perc = GameInstance.time/120*100
-			get_node("../CanvasLayer/InfoBar/Cont/progress").value = perc
+			get_node("../CanvasLayer/UI").update_time(perc)
 			timer=0
 
 

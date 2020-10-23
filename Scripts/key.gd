@@ -8,6 +8,6 @@ func _ready() -> void:
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name == "player":
 		GameInstance.keys+=1
-		get_parent().get_node("CanvasLayer/InfoBar/Cont/keys").text = String(GameInstance.keys)
+		get_parent().get_node("CanvasLayer/UI").set_keys(GameInstance.keys)
 		queue_free()
 	

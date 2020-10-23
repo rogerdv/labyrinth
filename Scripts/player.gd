@@ -41,7 +41,7 @@ func _physics_process(delta):
 	var coll
 
 	# mobile devices
-	if OS.has_touchscreen_ui_hint():
+	if OS.has_touchscreen_ui_hint() and joystick:
 		if !GameInstance.paused:
 			# get joystick value and normalize it
 			vec = joystick.get_value().normalized()

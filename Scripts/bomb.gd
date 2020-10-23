@@ -8,5 +8,5 @@ func _ready() -> void:
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name == "player":
 		GameInstance.bombs += 1
-		get_parent().get_node("CanvasLayer/InfoBar/Cont/bombs").text = String(GameInstance.bombs)
+		get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 		queue_free()
