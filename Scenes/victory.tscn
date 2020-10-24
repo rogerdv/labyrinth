@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/ale-regular-med.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/UI/VictoryUI.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.401
+anchor_top = 0.187
+anchor_right = 0.603
+anchor_bottom = 0.228
+margin_left = 0.375977
+margin_top = -0.200005
+margin_right = -4.47205
+margin_bottom = 0.199997
+custom_fonts/font = ExtResource( 1 )
+text = "score"
+align = 1
+
+[node name="score" type="Label" parent="."]
+margin_left = 491.944
+margin_top = 156.191
+margin_right = 531.944
+margin_bottom = 174.191
+
+[node name="BacktoMain" type="Button" parent="."]
+margin_left = 261.0
+margin_top = 497.0
+margin_right = 365.0
+margin_bottom = 533.0
+text = "back_menu"
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 629.0
+margin_top = 498.0
+margin_right = 754.0
+margin_bottom = 535.0
+text = "main_quit"
+[connection signal="pressed" from="BacktoMain" to="." method="_on_BacktoMain_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
