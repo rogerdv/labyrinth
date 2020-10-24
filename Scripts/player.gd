@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-onready var joystick = get_parent().get_node("CanvasLayer/Joystick/Joystick_Button")
+onready var joystick = get_parent().get_node("CanvasLayer/UI").get_joystick()
 
 
 var UP:bool = false

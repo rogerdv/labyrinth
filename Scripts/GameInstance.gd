@@ -43,7 +43,7 @@ func SaveGame():
 	
 	print("name of scene to save: ", get_tree().current_scene.filename)
 	
-	savefile.store_string(get_tree().current_scene.filename)
+	savefile.store_pascal_string(get_tree().current_scene.filename)
 	savefile.store_32(score)
 	savefile.store_32(KeysUsed)
 	savefile.store_32(BombsUsed)
@@ -60,7 +60,7 @@ func LoadGame():
 		
 	savedfile.open("user://savedgame", File.READ)
 	
-	var scene = savedfile.get_line()
+	var scene = savedfile.get_pascal_string()
 	
 	score = savedfile.get_32()
 	KeysUsed  = savedfile.get_32()
