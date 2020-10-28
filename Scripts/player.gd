@@ -8,6 +8,11 @@ var UP:bool = false
 var DOWN:bool = false
 var LEFT:bool = false
 var RIGHT:bool = false
+var LAST_DIR:int = 2
+const DIR_UP = 1
+const DIR_DN = 2
+const DIR_LF = 3
+const DIR_RG = 4
 const bomb = "res://Scenes/bomb-projectile.tscn"
 var vec:Vector2
 
@@ -18,14 +23,7 @@ func _ready():
 
 func _input(event):
 	# press events
-	if Input.is_action_just_pressed("ui_up"):
-		UP = true
-	if Input.is_action_just_pressed("ui_down"):
-		DOWN = true
-	if Input.is_action_just_pressed("ui_left"):
-		LEFT = true
-	if Input.is_action_just_pressed("ui_right"):
-		RIGHT = true
+	
 	#release events
 	if Input.is_action_just_released("ui_up"):
 		UP = false
@@ -35,6 +33,21 @@ func _input(event):
 		LEFT = false
 	if Input.is_action_just_released("ui_right"):
 		RIGHT = false
+	if event is InputEventKey and event.pressed: 
+		if event.scancode==KEY_SPACE:
+			FireBomb()
+		if event.scancode==KEY_UP:
+			UP = true
+			LAST_DIR = DIR_UP
+		if event.scancode==KEY_DOWN:
+			DOWN = true
+			LAST_DIR = DIR_DN
+		if event.scancode==KEY_LEFT:
+			LEFT = true
+			LAST_DIR = DIR_LF
+		if event.scancode==KEY_RIGHT:
+			RIGHT = true
+			LAST_DIR = DIR_RG
 
 
 func _physics_process(delta):
@@ -50,12 +63,16 @@ func _physics_process(delta):
 			#play the animation according to direction
 			if vec.x > 0.1:
 				$AnimationPlayer.play("walk_right")
+				LAST_DIR = DIR_RG
 			elif vec.x < -0.1:
 				$AnimationPlayer.play("walk_left")
+				LAST_DIR = DIR_LF
 			elif vec.y > 0.1:
 				$AnimationPlayer.play("walk_down")
+				LAST_DIR = DIR_DN
 			elif vec.y < -0.1:
 				$AnimationPlayer.play("walk_up")
+				LAST_DIR = DIR_UP
 			elif vec == Vector2(0,0):
 				$AnimationPlayer.stop()
 			if (get_slide_count() > 0):
@@ -108,18 +125,20 @@ func ToggleCamera(toggle:bool):
 
 func FireBomb():
 	var b = load(bomb).instance()
-	if OS.has_touchscreen_ui_hint():
-		b.dir = vec
-	else:
-		vec = Vector2(0,0)
-		if UP:
-			vec.y = -1
-		if DOWN:
-			vec.y = 1
-		if LEFT:
-			vec.x = -1
-		if RIGHT:
-			vec.x = 1
-		b.dir = vec
+	
+	#if OS.has_touchscreen_ui_hint():
+	#	b.dir = vec
+	#else:
+	vec = Vector2(0,0)
+	if LAST_DIR==DIR_UP:
+		vec.y = -1
+	if LAST_DIR==DIR_DN:
+		vec.y = 1
+	if LAST_DIR==DIR_LF:
+		vec.x = -1
+	if LAST_DIR==DIR_RG:
+		vec.x = 1
+	b.dir = vec
 
 	get_parent().add_child(b)
+	b.position = position + vec * 20
