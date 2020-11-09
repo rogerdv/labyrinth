@@ -36,8 +36,8 @@ func _input(event: InputEvent) -> void:
 		elif event.scancode == KEY_ESCAPE:
 			GameInstance.SaveGame()
 			get_tree().change_scene("res://Scenes/main_menu.tscn")
-		elif event.scancode == KEY_SPACE:
-			get_node("../player").FireBomb()
+		#elif event.scancode == KEY_SPACE:
+		#	get_node("../player").FireBomb()
 
 
 func _process(delta: float) -> void:

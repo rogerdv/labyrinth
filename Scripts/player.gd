@@ -13,7 +13,7 @@ const DIR_UP = 1
 const DIR_DN = 2
 const DIR_LF = 3
 const DIR_RG = 4
-const bomb = "res://Scenes/bomb-projectile.tscn"
+const bomb = preload("res://Scenes/bomb-projectile.tscn")
 var vec:Vector2
 
 
@@ -77,14 +77,13 @@ func _physics_process(delta):
 				$AnimationPlayer.stop()
 			if (get_slide_count() > 0):
 				coll = get_slide_collision(0)
-			#print("Collided with: ", coll.collider.name)
-			#print(vec.normalized())
+				#print("Collided with: ", coll.collider.name)
+				#print(vec.normalized())
 				$RayCast2D.cast_to = vec* Vector2(30,30)
 
 	if !GameInstance.paused:
 		# keyboard based movement
-		if UP:
-			#translate(Vector2(0,-150*delta))
+		if UP:			
 			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_up")
 
@@ -124,7 +123,7 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
-	var b = load(bomb).instance()
+	var b = bomb.instance()
 	
 	#if OS.has_touchscreen_ui_hint():
 	#	b.dir = vec
