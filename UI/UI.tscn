@@ -178,3 +178,4 @@ position = Vector2( -32, -32 )
 normal = ExtResource( 3 )
 pressed = ExtResource( 4 )
 script = ExtResource( 1 )
+[connection signal="pressed" from="Fire" to="." method="_on_Fire_pressed"]
