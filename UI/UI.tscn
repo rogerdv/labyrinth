@@ -44,6 +44,8 @@ region_rect = Rect2( 0, 0, 128, 128 )
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 2.51984
+margin_right = 2.51978
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,9 +56,9 @@ anchor_left = 0.908
 anchor_top = 0.704
 anchor_right = 0.983
 anchor_bottom = 0.826
-margin_left = 12.2079
+margin_left = 13.2079
 margin_top = 9.59998
-margin_right = 0.407959
+margin_right = 1.40796
 margin_bottom = 0.399994
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -96,17 +98,18 @@ __meta__ = {
 }
 
 [node name="ScoreLabel" type="Label" parent="Cont"]
-margin_right = 119.0
+margin_right = 118.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 60, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "score"
+align = 2
 valign = 1
 
 [node name="Score" type="Label" parent="Cont"]
-margin_left = 124.0
-margin_right = 243.0
+margin_left = 123.0
+margin_right = 241.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 15, 0 )
 size_flags_horizontal = 3
@@ -117,23 +120,23 @@ valign = 1
 script = ExtResource( 9 )
 
 [node name="Control" type="Control" parent="Cont"]
-margin_left = 248.0
-margin_right = 367.0
+margin_left = 246.0
+margin_right = 365.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="Cont"]
-margin_left = 372.0
-margin_right = 436.0
+margin_left = 370.0
+margin_right = 434.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 12 )
 stretch_mode = 1
 
 [node name="keys" type="Label" parent="Cont"]
-margin_left = 441.0
-margin_right = 560.0
+margin_left = 439.0
+margin_right = 557.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
 size_flags_horizontal = 3
@@ -142,15 +145,15 @@ text = "0"
 valign = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Cont"]
-margin_left = 565.0
-margin_right = 629.0
+margin_left = 562.0
+margin_right = 626.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 13 )
 
 [node name="bombs" type="Label" parent="Cont"]
-margin_left = 634.0
-margin_right = 753.0
+margin_left = 631.0
+margin_right = 750.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
 size_flags_horizontal = 3
@@ -158,23 +161,31 @@ size_flags_vertical = 3
 text = "0"
 valign = 1
 
-[node name="progress" type="TextureProgress" parent="Cont"]
-margin_left = 758.0
-margin_right = 1016.0
+[node name="MarginContainer" type="MarginContainer" parent="Cont"]
+margin_left = 755.0
+margin_right = 1017.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 258, 64 )
+custom_constants/margin_right = 4
+custom_constants/margin_top = 16
+custom_constants/margin_bottom = 4
+
+[node name="progress" type="TextureProgress" parent="Cont/MarginContainer"]
+margin_top = 16.0
+margin_right = 258.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 258, 20 )
 size_flags_horizontal = 3
-size_flags_vertical = 3
 value = 100.0
 texture_under = ExtResource( 5 )
 texture_progress = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 75, 525 )
+position = Vector2( 86.3393, 512.401 )
+scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 2 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Sprite"]
-position = Vector2( -32, -32 )
+position = Vector2( -32.7, -32.744 )
 normal = ExtResource( 3 )
 pressed = ExtResource( 4 )
 script = ExtResource( 1 )
