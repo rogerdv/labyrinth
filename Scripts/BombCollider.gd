@@ -22,8 +22,7 @@ func _physics_process(_delta):
 			
 			BlastEffect.position = pos+Vector2(32,32)
 			get_parent().get_parent().add_child(BlastEffect)
-			collider.set_cell(map_point.x, map_point.y, 3)
-			
+			collider.set_cell(map_point.x, map_point.y, 3)			
 			#time penalty
 			GameInstance.time-=5
 		else:
