@@ -23,8 +23,6 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1.0
-margin_bottom = 1.0
 texture = ExtResource( 9 )
 expand = true
 __meta__ = {
@@ -139,10 +137,13 @@ __meta__ = {
 }
 
 [node name="develop_by" type="Label" parent="."]
-margin_left = 871.696
-margin_top = 551.256
-margin_right = 911.696
-margin_bottom = 565.256
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -166.0
+margin_top = -27.0
+theme = ExtResource( 4 )
 text = "Versus Windmills"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -157,15 +158,17 @@ margin_left = 23.3112
 margin_top = 20.717
 margin_right = -21.5608
 margin_bottom = -13.283
+theme = ExtResource( 4 )
 text = "Powered by Godot Engine"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="icon" type="Sprite" parent="power_by"]
-position = Vector2( 214.293, 3.27081 )
+position = Vector2( 276.029, 8.31048 )
 texture = ExtResource( 6 )
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]

@@ -15,15 +15,6 @@ position = Vector2( 169.298, 173.176 )
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 3 )]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.196078, 0.176471, 0.176471, 0.54902 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="SceneInfo" type="Node" parent="."]
 script = ExtResource( 7 )
 NextLevel = "res://Scenes/lab02.tscn"
@@ -49,3 +40,7 @@ zoom = Vector2( 3.9, 3.9 )
 
 [node name="key2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 245.172, 343.337 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0.337255, 0.294118, 0.294118, 1 )

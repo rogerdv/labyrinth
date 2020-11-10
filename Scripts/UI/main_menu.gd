@@ -21,3 +21,7 @@ func _on_quit_pressed():
 
 func _on_continue_pressed() -> void:
 	GameInstance.LoadGame()
+
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene("res://Scenes/credits.tscn")

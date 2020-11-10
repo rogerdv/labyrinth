@@ -20,6 +20,7 @@ position = Vector2( 1261.42, 1297.46 )
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource( 3 )
+NextLevel = "res://Scenes/lab08.tscn"
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
