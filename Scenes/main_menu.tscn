@@ -131,44 +131,61 @@ margin_top = 2.6
 margin_right = -16.92
 margin_bottom = -0.200005
 custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.894118, 0.431373, 0.431373, 1 )
+custom_colors/font_color_shadow = Color( 0.913725, 0.756863, 0.756863, 1 )
 text = "Info"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="develop_by" type="Label" parent="."]
-anchor_left = 1.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -166.0
-margin_top = -27.0
-theme = ExtResource( 4 )
-text = "Versus Windmills"
+margin_top = -71.0
+margin_bottom = -2.0
+custom_constants/separation = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="power_by" type="Label" parent="."]
-anchor_left = 0.018
-anchor_top = 0.874
-anchor_right = 0.221
-anchor_bottom = 0.954
-margin_left = 23.3112
-margin_top = 20.717
-margin_right = -21.5608
-margin_bottom = -13.283
+[node name="power_by" type="Label" parent="HBoxContainer"]
+margin_top = 21.0
+margin_right = 219.0
+margin_bottom = 48.0
 theme = ExtResource( 4 )
 text = "Powered by Godot Engine"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="icon" type="Sprite" parent="power_by"]
-position = Vector2( 276.029, 8.31048 )
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_left = 219.0
+margin_right = 283.0
+margin_bottom = 69.0
 texture = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 283.0
+margin_right = 1024.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 20
+
+[node name="develop_by" type="Label" parent="HBoxContainer/MarginContainer"]
+margin_top = 21.0
+margin_right = 721.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+text = "Versus Windmills"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
