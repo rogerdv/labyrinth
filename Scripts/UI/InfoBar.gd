@@ -5,7 +5,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func update_time(percent):
-	$Cont/progress.value = percent
+	$Cont/MarginContainer/progress.value = percent
 
 func set_score(score):
 	$Cont/Score.text = String(score)
