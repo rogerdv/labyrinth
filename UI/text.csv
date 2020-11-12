@@ -18,3 +18,6 @@ original2,Basado en una idea original de Yurguen Castillo Suarez & Manuel Montes
 program, Programación: Roger Durañona Vargas, Programmer: Roger Durañona Vargas
 artist,"Gráficos: Yoendris Isaac Sierra, Ana Elena Pérez","Graphics: Yoendris Isaac Sierra, Ana Elena Pérez"
 back_menu,Menú principal,Main menu
+confirm_exit,Desea abandonar?,Do you want to quit?
+yes,Sí,Yes
+no,No,No

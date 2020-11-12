@@ -20,8 +20,8 @@ anchor_right = 0.649
 anchor_bottom = 0.928
 margin_left = 46.552
 margin_top = 19.2
-margin_right = -32.576
-margin_bottom = 0.199951
+margin_right = -47.576
+margin_bottom = 0.200012
 theme = ExtResource( 2 )
 text = "tap"
 __meta__ = {
@@ -42,18 +42,20 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-margin_top = 12.0
-margin_right = 43.0
-margin_bottom = 26.0
+margin_top = 6.0
+margin_right = 56.0
+margin_bottom = 33.0
+theme = ExtResource( 2 )
 text = "totalsc"
 align = 1
 valign = 1
 
 [node name="val" type="Label" parent="HBoxContainer"]
-margin_left = 47.0
-margin_top = 12.0
-margin_right = 51.0
-margin_bottom = 26.0
+margin_left = 60.0
+margin_top = 6.0
+margin_right = 65.0
+margin_bottom = 33.0
+theme = ExtResource( 2 )
 text = ":"
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
@@ -61,9 +63,8 @@ anchor_left = 0.333
 anchor_top = 0.695
 anchor_right = 0.661
 anchor_bottom = 0.748
-margin_left = 33.008
-margin_top = -3.05176e-05
-margin_right = -22.864
+margin_left = 42.008
+margin_right = -35.864
 margin_bottom = 0.199982
 texture_under = ExtResource( 3 )
 texture_progress = ExtResource( 4 )

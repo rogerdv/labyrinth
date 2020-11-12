@@ -44,11 +44,14 @@ func _process(delta: float) -> void:
 			if mode == 1: 	# failed the question
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
+				GameInstance.paused = false
 				queue_free()
 			else:
 				# ghost mode, go back to start
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
+				get_parent().get_node("../player").ToggleCollision(false)
+				GameInstance.paused = false
 				queue_free()
 
 
@@ -78,5 +81,18 @@ func AnswerPressed(extra_arg_0: int) -> void:
 			var start = get_parent().get_node("../SceneInfo").Start
 			get_parent().get_node("../player").position = start
 
+	GameInstance.paused = false
+	queue_free()
+
+
+func _on_UseKey_pressed() -> void:
+	if GameInstance.keys>0:
+		GameInstance.keys-=1
+		GameInstance.KeysUsed+=1
+	if mode == 1:
+			tmap.set_cell(x, y, 3)
+	else:
+		ghost.queue_free()	
+	get_parent().get_node("../player").ToggleCollision(false)
 	GameInstance.paused = false
 	queue_free()

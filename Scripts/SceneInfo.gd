@@ -7,7 +7,7 @@ var Start:Vector2
 var timer:float = 0
 var mapviews:int = 0
 var mapmode:bool = false
-
+var PauseMenuScene = preload("res://UI/PauseMenu.tscn")
 
 func _ready() -> void:
 	Start = get_node("../player").position
@@ -34,8 +34,8 @@ func _input(event: InputEvent) -> void:
 		elif 	event.scancode == KEY_F6:
 			GameInstance.LoadGame()
 		elif event.scancode == KEY_ESCAPE:
-			GameInstance.SaveGame()
-			get_tree().change_scene("res://Scenes/main_menu.tscn")
+			GameInstance.paused = true			
+			get_node("../CanvasLayer").add_child(PauseMenuScene.instance())
 		#elif event.scancode == KEY_SPACE:
 		#	get_node("../player").FireBomb()
 
@@ -59,5 +59,5 @@ func _notification(what):
 
 
 func _on_Back_pressed():
-	GameInstance.SaveGame()
-	get_tree().change_scene("res://Scenes/main_menu.tscn")
+	GameInstance.paused = true			
+	get_node("../CanvasLayer").add_child(PauseMenuScene.instance())

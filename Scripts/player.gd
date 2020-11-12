@@ -140,4 +140,4 @@ func FireBomb():
 	b.dir = vec
 
 	get_parent().add_child(b)
-	b.position = position + vec * 20
+	b.position = position + vec * 25
