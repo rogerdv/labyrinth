@@ -60,3 +60,7 @@ position = Vector2( 1356.52, -548.886 )
 
 [node name="time5" parent="." instance=ExtResource( 4 )]
 position = Vector2( -857.146, 1244.03 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 58.9426, 162.623 )
+zoom = Vector2( 4.6, 4.5 )
