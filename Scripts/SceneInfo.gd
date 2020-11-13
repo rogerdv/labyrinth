@@ -29,8 +29,7 @@ func _input(event: InputEvent) -> void:
 			GameInstance.LoadGame()
 		elif event.scancode == KEY_ESCAPE:
 			GameInstance.paused = true			
-			get_node("../CanvasLayer").add_child(PauseMenuScene.instance())
-		
+			get_node("../CanvasLayer").add_child(PauseMenuScene.instance())		
 
 
 func _process(delta: float) -> void:

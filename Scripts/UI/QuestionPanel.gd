@@ -10,11 +10,12 @@ var x:int
 var y:int
 var tmap
 var ghost
-
+var FailSound = preload("res://Sounds/sfx_sounds_error8.wav")
+var CorrectSound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
 func _ready() -> void:
 	$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)
-
+	
 	if (mode == 1):
 		# get a random question
 		question = GameInstance.get_easy_rand_question()
@@ -41,13 +42,18 @@ func _process(delta: float) -> void:
 		if counter > 0:
 			$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)
 		else:
-			if mode == 1: 	# failed the question
+			# failed the question
+			if mode == 1: 	
+				$AudioStreamPlayer2D.stream = FailSound
+				$AudioStreamPlayer2D.play()
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
 				GameInstance.paused = false
 				queue_free()
 			else:
 				# ghost mode, go back to start
+				$AudioStreamPlayer2D.stream = FailSound
+				$AudioStreamPlayer2D.play()
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
 				get_parent().get_node("../player").ToggleCollision(false)
@@ -58,6 +64,8 @@ func _process(delta: float) -> void:
 func AnswerPressed(extra_arg_0: int) -> void:
 	if question["choices"][extra_arg_0].correct == "yes":
 		print("Correct!")
+		$AudioStreamPlayer2D.stream = CorrectSound
+		$AudioStreamPlayer2D.play()
 
 		if mode == 1:
 			tmap.set_cell(x, y, 3)
@@ -74,6 +82,8 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		#re-enable collision detection
 		get_parent().get_node("../player").ToggleCollision(false)
 	else:
+		$AudioStreamPlayer2D.stream = FailSound
+		$AudioStreamPlayer2D.play()
 		get_parent().get_node("../player").ToggleCollision(false)
 		
 		# ghost mode

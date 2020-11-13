@@ -15,24 +15,29 @@ const DIR_LF = 3
 const DIR_RG = 4
 const bomb = preload("res://Scenes/bomb-projectile.tscn")
 var vec:Vector2
+var steps = preload("res://Sounds/stepstone_1.wav")
 
-
-func _ready():
-	pass # Replace with function body.
+func _ready():	
+	pass
 
 
 func _input(event):
 	# press events
 	
 	#release events
-	if Input.is_action_just_released("ui_up"):
-		UP = false
-	if Input.is_action_just_released("ui_down"):
-		DOWN = false
-	if Input.is_action_just_released("ui_left"):
-		LEFT = false
-	if Input.is_action_just_released("ui_right"):
-		RIGHT = false
+	if event is InputEventKey and not event.pressed: 
+		if event.scancode==KEY_UP:
+			UP = false
+			
+		if event.scancode==KEY_DOWN:
+			DOWN = false
+			
+		if event.scancode==KEY_LEFT:
+			LEFT = false
+			
+		if event.scancode==KEY_RIGHT:
+			RIGHT = false
+		
 	if event is InputEventKey and event.pressed: 
 		if event.scancode==KEY_SPACE:
 			FireBomb()
@@ -56,25 +61,35 @@ func _physics_process(delta):
 	# mobile devices
 	if OS.has_touchscreen_ui_hint() and joystick:
 		if !GameInstance.paused:
+			
 			# get joystick value and normalize it
 			vec = joystick.get_value().normalized()
 			move_and_slide(vec * 150)
 
 			#play the animation according to direction
 			if vec.x > 0.1:
+				$AudioStreamPlayer2D.stream = steps
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_right")
 				LAST_DIR = DIR_RG
 			elif vec.x < -0.1:
+				$AudioStreamPlayer2D.stream = steps
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_left")
 				LAST_DIR = DIR_LF
 			elif vec.y > 0.1:
+				$AudioStreamPlayer2D.stream = steps
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_down")
 				LAST_DIR = DIR_DN
 			elif vec.y < -0.1:
+				$AudioStreamPlayer2D.stream = steps
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_up")
 				LAST_DIR = DIR_UP
 			elif vec == Vector2(0,0):
 				$AnimationPlayer.stop()
+				$AudioStreamPlayer2D.stop()
 			if (get_slide_count() > 0):
 				coll = get_slide_collision(0)
 				#print("Collided with: ", coll.collider.name)
@@ -84,6 +99,8 @@ func _physics_process(delta):
 	if !GameInstance.paused:
 		# keyboard based movement
 		if UP:			
+			$AudioStreamPlayer2D.stream = steps
+			$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_up")
 
@@ -93,6 +110,8 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,-30)
 
 		if DOWN:
+			$AudioStreamPlayer2D.stream = steps
+			$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(0,150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_down")
 			if  (get_slide_count()>0):
@@ -100,6 +119,8 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,30)
 
 		if LEFT:
+			$AudioStreamPlayer2D.stream = steps
+			$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_left")
 
@@ -107,11 +128,17 @@ func _physics_process(delta):
 				$RayCast2D.cast_to= Vector2(-25,0)
 
 		if RIGHT:
+			$AudioStreamPlayer2D.stream = steps
+			$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_right")
 
 			if get_slide_count() > 0:
 				$RayCast2D.cast_to = Vector2(25,0)
+				
+		#if not UP and not DOWN and not LEFT and not RIGHT:
+		#	$AudioStreamPlayer2D.stop()
+		#	$AnimationPlayer.stop()
 
 
 func ToggleCollision(toggle:bool):
