@@ -89,6 +89,7 @@ func _on_UseKey_pressed() -> void:
 	if GameInstance.keys>0:
 		GameInstance.keys-=1
 		GameInstance.KeysUsed+=1
+		get_parent().get_node("../CanvasLayer/UI").set_keys(GameInstance.keys)
 	if mode == 1:
 			tmap.set_cell(x, y, 3)
 	else:
