@@ -658,5 +658,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Epíteto de Odiseo:",
+        "topic": "Mitología",
+        "choices": [
+            {
+                "answer": "El de las muchas mañas",
+                "correct": "yes"
+            },
+            {
+                "answer": "El veloz",
+                "correct": "no"
+            },
+            {
+                "answer": "El del brazo certero",
+                "correct": "no"
+            },
+            {
+                "answer": "El viajero",
+                "correct": "no"
+            }
+        ]
     }
 ]

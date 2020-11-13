@@ -1495,5 +1495,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Hijo del rey Príamo, causante de la guerra de Troya",
+        "topic": "Mitología",
+        "choices": [
+            {
+                "answer": "Paris",
+                "correct": "yes"
+            },
+            {
+                "answer": "Héctor",
+                "correct": "no"
+            },
+            {
+                "answer": "Heleno",
+                "correct": "no"
+            },
+            {
+                "answer": "Menelao",
+                "correct": "no"
+            }
+        ]
     }
 ]

@@ -1494,5 +1494,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Son of King Priam, who caused the Trojan War",
+        "topic": "Mythology",
+        "choices": [
+            {
+                "answer": "Paris",
+                "correct": "yes"
+            },
+            {
+                "answer": "Hector",
+                "correct": "no"
+            },
+            {
+                "answer": "Menelaus",
+                "correct": "no"
+            },
+            {
+                "answer": "Deiphobus",
+                "correct": "no"
+            }
+        ]
     }
 ]
