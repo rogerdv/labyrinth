@@ -49,6 +49,10 @@ func _process(delta: float) -> void:
 			var perc = GameInstance.time/120*100
 			get_node("../CanvasLayer/UI").update_time(perc)
 			timer=0
+			if GameInstance.time<=0:
+				#game over
+				get_tree().change_scene("res://Scenes/Defeat.tscn")
+				#invalidate saved game
 
 
 func _notification(what):
