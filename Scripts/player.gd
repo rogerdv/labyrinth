@@ -123,6 +123,11 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
+	if GameInstance.bombs==0:
+		return
+	GameInstance.bombs-=1
+	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
+	GameInstance.BombsUsed+=1
 	var b = bomb.instance()
 	
 	#if OS.has_touchscreen_ui_hint():
