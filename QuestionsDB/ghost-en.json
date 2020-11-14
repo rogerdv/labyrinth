@@ -658,5 +658,28 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Odysseus' epithet:",
+        "topic": "Mythology",
+        "choices": [
+            {
+                "answer": "The Cunning",
+                "correct": "yes"
+            },
+            {
+                "answer": "The Fast",
+                "correct": "no"
+            },
+            {
+                "answer": "The Accurate",
+                "correct": "no"
+            },
+            {
+                "answer": "The Traveler",
+                "correct": "no"
+            }
+        ]
     }
+
 ]

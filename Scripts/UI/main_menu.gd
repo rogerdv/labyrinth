@@ -3,7 +3,7 @@ extends Control
 
 func _ready():
 	var info = get_node("info")
-	#info.text = "Database size "+String(GameInstance.easy.size())me
+	info.text = "Database size "+String(GameInstance.easy.size())
 	
 	if GameInstance.error != OK:
 		info.text = OS.get_locale() + " Error loadig json " + String(GameInstance.error)

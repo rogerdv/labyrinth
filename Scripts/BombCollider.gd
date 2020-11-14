@@ -3,6 +3,7 @@ extends RayCast2D
 
 var save_margin = 1.0
 var blast = preload("res://Scenes/Explosion.tscn")
+var BlastSound = preload("res://Sounds/8bit_bomb_explosion.wav")
 
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,7 +12,8 @@ func _ready() -> void:
 func _physics_process(_delta):
 	if is_colliding():
 		var BlastEffect = blast.instance()
-		print("bomb is colliding")
+		get_node("../AudioStreamPlayer2D").stream = BlastSound
+		get_node("../AudioStreamPlayer2D").play()
 		cast_to = Vector2(0,0)
 		var collider = get_collider()
 		#print("Collided with: ", collider.name)

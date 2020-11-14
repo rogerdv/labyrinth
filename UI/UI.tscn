@@ -191,3 +191,4 @@ normal = ExtResource( 3 )
 pressed = ExtResource( 4 )
 script = ExtResource( 1 )
 [connection signal="pressed" from="Fire" to="." method="_on_Fire_pressed"]
+[connection signal="pressed" from="Map" to="." method="_on_Map_pressed"]

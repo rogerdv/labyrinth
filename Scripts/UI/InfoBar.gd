@@ -17,9 +17,13 @@ func set_bombs(bombs):
 	$Cont/bombs.text = String(bombs)
 	
 func _on_Map_pressed() -> void:
-	get_node("../../player").ToggleCamera(false)
-	get_node("../../Camera2D").current = true
+	get_node("../../SceneInfo").display_map()
 
+func ui_visible(toggle:bool):
+	$Fire.visible = toggle
+	$Map.visible = toggle
+	$Cont.visible = toggle
+	$Sprite.visible = toggle
 
 func _on_Fire_pressed() -> void:
 	get_node("../../player").FireBomb()

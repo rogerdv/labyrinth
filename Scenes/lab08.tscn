@@ -21,7 +21,7 @@ position = Vector2( 536.542, 587.338 )
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 2 )]
 
-[node name="Node" type="Node" parent="."]
+[node name="SceneInfo" type="Node" parent="."]
 script = ExtResource( 4 )
 NextLevel = "res://Scenes/victory.tscn"
 
@@ -87,3 +87,7 @@ position = Vector2( 3487.94, 2501.38 )
 
 [node name="Ghost10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1855.04, 1112 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 2076.46, 1302.8 )
+zoom = Vector2( 4.2, 4.5 )

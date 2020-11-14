@@ -50,6 +50,7 @@ margin_left = -78.0
 margin_top = -98.0
 margin_right = 81.0
 margin_bottom = -32.0
+custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 custom_fonts/font = ExtResource( 1 )
