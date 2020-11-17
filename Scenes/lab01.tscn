@@ -38,9 +38,6 @@ __meta__ = {
 position = Vector2( 1934.46, 1146.6 )
 zoom = Vector2( 3.9, 3.9 )
 
-[node name="key2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 245.172, 343.337 )
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color( 0.337255, 0.294118, 0.294118, 1 )

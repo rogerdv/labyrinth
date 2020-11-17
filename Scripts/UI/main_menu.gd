@@ -25,3 +25,7 @@ func _on_continue_pressed() -> void:
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene("res://Scenes/credits.tscn")
+
+
+func _on_instructions_pressed() -> void:
+	get_tree().change_scene("res://Scenes/Instructions.tscn")

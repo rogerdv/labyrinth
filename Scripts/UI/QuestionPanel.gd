@@ -14,7 +14,7 @@ var FailSound = preload("res://Sounds/sfx_sounds_error8.wav")
 var CorrectSound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
 func _ready() -> void:
-	$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)
+	$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)	
 	
 	if (mode == 1):
 		# get a random question
@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 		if counter > 0:
 			$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)
 		else:
-			# failed the question
+			# failed the question, time out
 			if mode == 1: 	
 				$AudioStreamPlayer2D.stream = FailSound
 				$AudioStreamPlayer2D.play()
@@ -85,9 +85,9 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		$AudioStreamPlayer2D.stream = FailSound
 		$AudioStreamPlayer2D.play()
 		get_parent().get_node("../player").ToggleCollision(false)
-		
-		# ghost mode
-		if mode == 2: 	
+		if mode == 1:
+			tmap.set_cell(x, y, 0)		
+		else: 	# ghost mode
 			var start = get_parent().get_node("../SceneInfo").Start
 			get_parent().get_node("../player").position = start
 

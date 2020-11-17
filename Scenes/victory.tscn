@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/ale-regular-med.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/UI/VictoryUI.gd" type="Script" id=2]
+[ext_resource path="res://UI/lab_theme.tres" type="Theme" id=3]
+[ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=5]
+[ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -11,30 +15,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.401
-anchor_top = 0.187
-anchor_right = 0.603
-anchor_bottom = 0.228
-margin_left = 0.375977
-margin_top = -0.200005
-margin_right = -4.47205
-margin_bottom = 0.199997
-custom_fonts/font = ExtResource( 1 )
-text = "score"
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -191.0
+margin_top = 28.0
+margin_right = 195.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 4 )
+text = "victory"
 align = 1
-
-[node name="score" type="Label" parent="."]
-margin_left = 491.944
-margin_top = 156.191
-margin_right = 531.944
-margin_bottom = 174.191
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BacktoMain" type="Button" parent="."]
 margin_left = 261.0
 margin_top = 497.0
 margin_right = 365.0
 margin_bottom = 533.0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
 text = "back_menu"
 
 [node name="Exit" type="Button" parent="."]
@@ -42,6 +44,85 @@ margin_left = 629.0
 margin_top = 498.0
 margin_right = 754.0
 margin_bottom = 535.0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
 text = "main_quit"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = -146.0
+margin_right = 123.0
+margin_bottom = 65.0
+custom_constants/separation = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 245.0
+margin_bottom = 32.0
+custom_constants/separation = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/ScoreContainer"]
+margin_right = 201.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="VBoxContainer/ScoreContainer"]
+margin_left = 205.0
+margin_top = 2.0
+margin_right = 245.0
+margin_bottom = 29.0
+theme = ExtResource( 3 )
+text = "2222"
+
+[node name="KeysContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 35.0
+margin_right = 245.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="VBoxContainer/KeysContainer"]
+margin_right = 217.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "kused"
+
+[node name="KeysUsed" type="Label" parent="VBoxContainer/KeysContainer"]
+margin_left = 221.0
+margin_right = 245.0
+margin_bottom = 27.0
+theme = ExtResource( 3 )
+text = "00"
+
+[node name="GhostkContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 65.0
+margin_right = 245.0
+margin_bottom = 92.0
+
+[node name="Label" type="Label" parent="VBoxContainer/GhostkContainer"]
+margin_right = 217.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "gkilled"
+
+[node name="Gkilled" type="Label" parent="VBoxContainer/GhostkContainer"]
+margin_left = 221.0
+margin_right = 245.0
+margin_bottom = 27.0
+theme = ExtResource( 3 )
+text = "00"
 [connection signal="pressed" from="BacktoMain" to="." method="_on_BacktoMain_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

@@ -49,7 +49,7 @@ valign = 1
 margin_top = 32.0
 margin_right = 187.0
 margin_bottom = 46.0
-text = "psaved"
+text = "psave"
 align = 1
 autowrap = true
 

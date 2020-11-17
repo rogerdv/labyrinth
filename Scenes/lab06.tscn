@@ -12,7 +12,7 @@
 
 [node name="SceneInfo" type="Node" parent="."]
 script = ExtResource( 1 )
-NextLevel = "res://Scenes/victory.tscn"
+NextLevel = "res://Scenes/lab07.tscn"
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 
@@ -64,3 +64,9 @@ position = Vector2( -857.146, 1244.03 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 58.9426, 162.623 )
 zoom = Vector2( 4.6, 4.5 )
+
+[node name="time6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -878.505, -926.771 )
+
+[node name="time7" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1725.74, -606.253 )

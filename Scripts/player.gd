@@ -68,23 +68,24 @@ func _physics_process(delta):
 
 			#play the animation according to direction
 			if vec.x > 0.1:
-				$AudioStreamPlayer2D.stream = steps
-				$AudioStreamPlayer2D.play()
+				#$AudioStreamPlayer2D.stream = steps
+				if not $AudioStreamPlayer2D.playing: 
+					$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_right")
 				LAST_DIR = DIR_RG
 			elif vec.x < -0.1:
-				$AudioStreamPlayer2D.stream = steps
-				$AudioStreamPlayer2D.play()
+				if not $AudioStreamPlayer2D.playing: 
+					$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_left")
 				LAST_DIR = DIR_LF
 			elif vec.y > 0.1:
-				$AudioStreamPlayer2D.stream = steps
-				$AudioStreamPlayer2D.play()
+				if not $AudioStreamPlayer2D.playing: 
+					$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_down")
 				LAST_DIR = DIR_DN
 			elif vec.y < -0.1:
-				$AudioStreamPlayer2D.stream = steps
-				$AudioStreamPlayer2D.play()
+				if not $AudioStreamPlayer2D.playing: 
+					$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_up")
 				LAST_DIR = DIR_UP
 			elif vec == Vector2(0,0):
@@ -99,8 +100,8 @@ func _physics_process(delta):
 	if !GameInstance.paused:
 		# keyboard based movement
 		if UP:			
-			$AudioStreamPlayer2D.stream = steps
-			$AudioStreamPlayer2D.play()
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_up")
 
@@ -110,8 +111,8 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,-30)
 
 		if DOWN:
-			$AudioStreamPlayer2D.stream = steps
-			$AudioStreamPlayer2D.play()
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(0,150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_down")
 			if  (get_slide_count()>0):
@@ -119,8 +120,8 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,30)
 
 		if LEFT:
-			$AudioStreamPlayer2D.stream = steps
-			$AudioStreamPlayer2D.play()
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_left")
 
@@ -128,8 +129,8 @@ func _physics_process(delta):
 				$RayCast2D.cast_to= Vector2(-25,0)
 
 		if RIGHT:
-			$AudioStreamPlayer2D.stream = steps
-			$AudioStreamPlayer2D.play()
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			move_and_slide(Vector2(150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_right")
 

@@ -1,0 +1,181 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/lab_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Images/door.png" type="Texture" id=3]
+[ext_resource path="res://Images/bomb.png" type="Texture" id=4]
+[ext_resource path="res://Images/time bonus.png" type="Texture" id=5]
+[ext_resource path="res://Images/mapa A.png" type="Texture" id=6]
+[ext_resource path="res://Images/Key.png" type="Texture" id=7]
+[ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=8]
+[ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=9]
+[ext_resource path="res://Scripts/UI/InstructionsUI.gd" type="Script" id=10]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 1004.0
+margin_bottom = 590.0
+custom_constants/separation = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+text = "main_inst"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 984.0
+margin_bottom = 61.0
+theme = ExtResource( 2 )
+text = "inst2"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 63.0
+margin_right = 984.0
+margin_bottom = 127.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 66.0
+margin_top = 18.0
+margin_right = 984.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "door"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 129.0
+margin_right = 984.0
+margin_bottom = 156.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_bottom = 27.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 2.0
+margin_right = 984.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "ghost"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 158.0
+margin_right = 984.0
+margin_bottom = 222.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 66.0
+margin_top = 18.0
+margin_right = 984.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "timebonus"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 224.0
+margin_right = 984.0
+margin_bottom = 288.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+margin_left = 66.0
+margin_top = 18.0
+margin_right = 984.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "bomb"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 290.0
+margin_right = 984.0
+margin_bottom = 354.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 66.0
+margin_top = 18.0
+margin_right = 984.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "key"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 356.0
+margin_right = 984.0
+margin_bottom = 484.0
+custom_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
+margin_left = 130.0
+margin_top = 50.0
+margin_right = 984.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "map"
+
+[node name="close" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_left = 432.0
+margin_top = 486.0
+margin_right = 552.0
+margin_bottom = 516.458
+rect_min_size = Vector2( 120, 0 )
+size_flags_horizontal = 4
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/normal = ExtResource( 8 )
+text = "close"
+[connection signal="pressed" from="MarginContainer/VBoxContainer/close" to="." method="_on_close_pressed"]

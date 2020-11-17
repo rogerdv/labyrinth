@@ -11,9 +11,7 @@ func _ready() -> void:
 
 func _physics_process(_delta):
 	if is_colliding():
-		var BlastEffect = blast.instance()
-		get_node("../AudioStreamPlayer2D").stream = BlastSound
-		get_node("../AudioStreamPlayer2D").play()
+		var BlastEffect = blast.instance()		
 		cast_to = Vector2(0,0)
 		var collider = get_collider()
 		#print("Collided with: ", collider.name)
