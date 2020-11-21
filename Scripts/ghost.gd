@@ -6,7 +6,7 @@ var PlayerVisible:bool = false
 var path
 onready var nav = get_node("../Navigation2D")
 const CHARACTER_SPEED = 110
-
+var DelayCounter = 0
 
 func _ready() -> void:
 	$Sprite.visible = false
@@ -20,6 +20,10 @@ func _process(delta: float) -> void:
 			$Sprite.visible = true
 
 	if $Sprite.visible and !GameInstance.paused:		#We are working
+		if DelayCounter<1.5:
+			DelayCounter+=delta
+			return
+			
 		#print("The sprite is visible, check path")
 		path = nav.get_simple_path(global_position, get_node("../player").global_position)
 		if path.size()>0:
@@ -68,6 +72,7 @@ func _on_VisibilityNotifier2D_screen_entered() -> void:
 
 func _on_VisibilityNotifier2D_screen_exited() -> void:
 	print("Not visible, disabling")
+	PlayerVisible = false
 	$Sprite.visible = false
 
 
