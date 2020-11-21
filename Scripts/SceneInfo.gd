@@ -81,3 +81,10 @@ func display_map():
 		get_node("../CanvasLayer/UI").ui_visible(true)
 		mapmode = false
 		GameInstance.paused = false
+
+
+
+func _on_limit_body_entered(body: Node) -> void:
+	get_tree().change_scene("res://Scenes/Defeat.tscn")
+
+
