@@ -81,7 +81,7 @@ func AnswerPressed(extra_arg_0: int) -> void:
 
 		#re-enable collision detection
 		get_parent().get_node("../player").ToggleCollision(false)
-	else:
+	else:	#failed 
 		$AudioStreamPlayer2D.stream = FailSound
 		$AudioStreamPlayer2D.play()
 		get_parent().get_node("../player").ToggleCollision(false)
@@ -90,6 +90,7 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		else: 	# ghost mode
 			var start = get_parent().get_node("../SceneInfo").Start
 			get_parent().get_node("../player").position = start
+			ghost.queue_free()
 
 	GameInstance.paused = false
 	queue_free()
