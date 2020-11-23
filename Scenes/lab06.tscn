@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/SceneInfo.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Scenes/tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://Scenes/bomb.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/ghost.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2565.57, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -70,3 +73,17 @@ position = Vector2( -878.505, -926.771 )
 
 [node name="time7" parent="." instance=ExtResource( 4 )]
 position = Vector2( -1725.74, -606.253 )
+
+[node name="UpLimit" type="Area2D" parent="."]
+position = Vector2( 0, -1190.49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpLimit"]
+shape = SubResource( 1 )
+
+[node name="BottLimit" type="Area2D" parent="."]
+position = Vector2( 6, 1488 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottLimit"]
+shape = SubResource( 1 )
+[connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
+[connection signal="body_entered" from="BottLimit" to="SceneInfo" method="_on_limit_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/SceneInfo.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Scenes/bomb.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/time.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2526.6, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -91,3 +94,15 @@ position = Vector2( 3037.99, 1224.37 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 2290.67, 1242.53 )
 zoom = Vector2( 4.6, 4.3 )
+
+[node name="UpLimit" type="Area2D" parent="."]
+position = Vector2( 2299.19, -30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpLimit"]
+shape = SubResource( 1 )
+
+[node name="BottomLimit" type="Area2D" parent="."]
+position = Vector2( 2280.14, 2523.78 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomLimit"]
+shape = SubResource( 1 )
