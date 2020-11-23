@@ -1,11 +1,11 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/UI/Joystick_Button.gd" type="Script" id=1]
 [ext_resource path="res://Images/AllAxis_Outline.png" type="Texture" id=2]
 [ext_resource path="res://Images/Handle_Outline.png" type="Texture" id=3]
 [ext_resource path="res://Images/Handle_Outline_Drag.png" type="Texture" id=4]
-[ext_resource path="res://Images/prog-bar-red.jpg" type="Texture" id=5]
-[ext_resource path="res://Images/prog-bar.jpg" type="Texture" id=6]
+[ext_resource path="res://Images/progress_bar/bar_under.png" type="Texture" id=5]
+[ext_resource path="res://Images/progress_bar/bar01.png" type="Texture" id=6]
 [ext_resource path="res://UI/ale_dynamicfont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scripts/UI/InfoBar.gd" type="Script" id=8]
 [ext_resource path="res://UI/ScoreUpdateOnStart.gd" type="Script" id=9]
@@ -16,6 +16,12 @@
 [ext_resource path="res://Images/Bomba B.png" type="Texture" id=14]
 [ext_resource path="res://Images/mapa A.png" type="Texture" id=15]
 [ext_resource path="res://Images/Bomba A.png" type="Texture" id=16]
+[ext_resource path="res://Images/progress_bar/bar06.png" type="Texture" id=17]
+[ext_resource path="res://Images/progress_bar/bar02.png" type="Texture" id=18]
+[ext_resource path="res://Images/progress_bar/bar05.png" type="Texture" id=19]
+[ext_resource path="res://Images/progress_bar/bar04.png" type="Texture" id=20]
+[ext_resource path="res://Images/progress_bar/bar07.png" type="Texture" id=21]
+[ext_resource path="res://Images/progress_bar/bar03.png" type="Texture" id=22]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 16 )
@@ -40,6 +46,23 @@ region_rect = Rect2( 0, 0, 128, 128 )
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 15 )
 region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AnimatedTexture" id=7]
+flags = 4
+frames = 7
+frame_0/texture = ExtResource( 6 )
+frame_1/texture = ExtResource( 18 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 22 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 20 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 19 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 17 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 21 )
+frame_6/delay_sec = 0.0
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -87,101 +110,100 @@ __meta__ = {
 [node name="Cont" type="HBoxContainer" parent="."]
 anchor_right = 0.993
 anchor_bottom = 0.067
-margin_right = 0.168091
-margin_bottom = 23.8
-rect_min_size = Vector2( 900, 32 )
+margin_left = -1.68176
+margin_right = -3.70367
+margin_bottom = 31.84
+rect_min_size = Vector2( 800, 64 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 10 )
-custom_constants/separation = 5
+custom_constants/separation = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreLabel" type="Label" parent="Cont"]
-margin_right = 118.0
+margin_right = 60.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 60, 0 )
-size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "score"
 align = 2
 valign = 1
 
 [node name="Score" type="Label" parent="Cont"]
-margin_left = 123.0
-margin_right = 241.0
+margin_left = 64.0
+margin_right = 79.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 15, 0 )
-size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "0"
 valign = 1
 script = ExtResource( 9 )
 
-[node name="Control" type="Control" parent="Cont"]
-margin_left = 246.0
-margin_right = 365.0
-margin_bottom = 64.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
 [node name="TextureRect" type="TextureRect" parent="Cont"]
-margin_left = 370.0
-margin_right = 434.0
+margin_left = 83.0
+margin_right = 147.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 12 )
 stretch_mode = 1
 
 [node name="keys" type="Label" parent="Cont"]
-margin_left = 439.0
-margin_right = 557.0
+margin_left = 151.0
+margin_right = 167.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
-size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "0"
 valign = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Cont"]
-margin_left = 562.0
-margin_right = 626.0
+margin_left = 171.0
+margin_right = 235.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 13 )
 
 [node name="bombs" type="Label" parent="Cont"]
-margin_left = 631.0
-margin_right = 750.0
+margin_left = 239.0
+margin_right = 255.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
-size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "0"
 valign = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Cont"]
-margin_left = 755.0
-margin_right = 1017.0
+[node name="Control" type="Control" parent="Cont"]
+margin_left = 259.0
+margin_right = 309.0
 margin_bottom = 64.0
-custom_constants/margin_right = 4
-custom_constants/margin_top = 16
-custom_constants/margin_bottom = 4
+rect_min_size = Vector2( 50, 0 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Cont"]
+margin_left = 313.0
+margin_right = 846.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 11
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
 
 [node name="progress" type="TextureProgress" parent="Cont/MarginContainer"]
-margin_top = 16.0
-margin_right = 258.0
-margin_bottom = 60.0
+margin_top = 11.0
+margin_right = 528.0
+margin_bottom = 59.0
 rect_min_size = Vector2( 258, 20 )
 size_flags_horizontal = 3
 value = 100.0
 texture_under = ExtResource( 5 )
-texture_progress = ExtResource( 6 )
+texture_progress = SubResource( 7 )
+nine_patch_stretch = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 86.3393, 512.401 )
+position = Vector2( 82.9719, 394.542 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 2 )
 
