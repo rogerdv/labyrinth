@@ -14,7 +14,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if PlayerVisible and !GameInstance.paused:
+	var player_pos = get_node("../player").position
+	
+	
+	if PlayerVisible and !GameInstance.paused and position.distance_to(player_pos)<350:
 		var r = randi()%1000
 		if r < chance:
 			$Sprite.visible = true
@@ -66,6 +69,7 @@ func move_along_path(distance):
 
 func _on_VisibilityNotifier2D_screen_entered() -> void:
 	print("Entered visible area!!")
+	
 	PlayerVisible = true
 	randomize()
 
