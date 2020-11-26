@@ -44,8 +44,9 @@ func _process(delta: float) -> void:
 		else:
 			# failed the question, time out
 			if mode == 1: 	
-				$AudioStreamPlayer2D.stream = FailSound
-				$AudioStreamPlayer2D.play()
+				get_parent().get_node("../AudioStreamPlayer2D").stream = FailSound
+				get_parent().get_node("../AudioStreamPlayer2D").play()
+				tmap.set_cell(x, y, 0)	
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
 				GameInstance.paused = false
@@ -62,10 +63,11 @@ func _process(delta: float) -> void:
 
 
 func AnswerPressed(extra_arg_0: int) -> void:
-	if question["choices"][extra_arg_0].correct == "yes":
-		print("Correct!")
+	if question["choices"][extra_arg_0].correct == "yes":		
 		$AudioStreamPlayer2D.stream = CorrectSound
 		$AudioStreamPlayer2D.play()
+		#get_parent().get_node("../AudioStreamPlayer2D").question_correct()
+		#get_parent().get_node("../AudioStreamPlayer2D").play()
 
 		if mode == 1:
 			tmap.set_cell(x, y, 3)

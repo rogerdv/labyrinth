@@ -2,7 +2,8 @@ extends Control
 
 
 func _ready() -> void:
-	pass # Replace with function body.
+	if not OS.has_touchscreen_ui_hint():
+		$Sprite.visible=false
 
 func update_time(percent):
 	$Cont/MarginContainer/progress.value = percent
@@ -29,4 +30,5 @@ func _on_Fire_pressed() -> void:
 	get_node("../../player").FireBomb()
 	
 func get_joystick():
-	return $Sprite/TouchScreenButton
+	if OS.has_touchscreen_ui_hint():
+		return $Sprite/TouchScreenButton

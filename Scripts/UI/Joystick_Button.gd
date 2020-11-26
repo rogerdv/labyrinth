@@ -16,7 +16,7 @@ var threshold = 10
 func ready():
 	# need to test
 	if OS.has_touchscreen_ui_hint():
-		self.visible=false
+		get_parent().visible=true
 
 func _process(delta):
 	if ongoing_drag == -1:

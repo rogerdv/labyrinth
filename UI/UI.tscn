@@ -1,11 +1,11 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/UI/Joystick_Button.gd" type="Script" id=1]
 [ext_resource path="res://Images/AllAxis_Outline.png" type="Texture" id=2]
 [ext_resource path="res://Images/Handle_Outline.png" type="Texture" id=3]
 [ext_resource path="res://Images/Handle_Outline_Drag.png" type="Texture" id=4]
 [ext_resource path="res://Images/progress_bar/bar_under.png" type="Texture" id=5]
-[ext_resource path="res://Images/progress_bar/bar01.png" type="Texture" id=6]
+[ext_resource path="res://Images/progress_bar/animated_bar.tres" type="Texture" id=6]
 [ext_resource path="res://UI/ale_dynamicfont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scripts/UI/InfoBar.gd" type="Script" id=8]
 [ext_resource path="res://UI/ScoreUpdateOnStart.gd" type="Script" id=9]
@@ -16,12 +16,6 @@
 [ext_resource path="res://Images/Bomba B.png" type="Texture" id=14]
 [ext_resource path="res://Images/mapa A.png" type="Texture" id=15]
 [ext_resource path="res://Images/Bomba A.png" type="Texture" id=16]
-[ext_resource path="res://Images/progress_bar/bar06.png" type="Texture" id=17]
-[ext_resource path="res://Images/progress_bar/bar02.png" type="Texture" id=18]
-[ext_resource path="res://Images/progress_bar/bar05.png" type="Texture" id=19]
-[ext_resource path="res://Images/progress_bar/bar04.png" type="Texture" id=20]
-[ext_resource path="res://Images/progress_bar/bar07.png" type="Texture" id=21]
-[ext_resource path="res://Images/progress_bar/bar03.png" type="Texture" id=22]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 16 )
@@ -46,23 +40,6 @@ region_rect = Rect2( 0, 0, 128, 128 )
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 15 )
 region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="AnimatedTexture" id=7]
-flags = 4
-frames = 7
-frame_0/texture = ExtResource( 6 )
-frame_1/texture = ExtResource( 18 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 22 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 20 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 19 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 17 )
-frame_5/delay_sec = 0.0
-frame_6/texture = ExtResource( 21 )
-frame_6/delay_sec = 0.0
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -199,7 +176,7 @@ rect_min_size = Vector2( 258, 20 )
 size_flags_horizontal = 3
 value = 100.0
 texture_under = ExtResource( 5 )
-texture_progress = SubResource( 7 )
+texture_progress = ExtResource( 6 )
 nine_patch_stretch = true
 
 [node name="Sprite" type="Sprite" parent="."]

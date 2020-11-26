@@ -24,6 +24,7 @@ var PrevEasy = []
 var PrevGhost = []
 var NextScene
 
+var sound_fx:AudioStreamPlayer2D
 
 func _ready() -> void:
 	get_tree().set_quit_on_go_back(false)

@@ -30,4 +30,5 @@ func _process(delta: float) -> void:
 
 func _on_Button_pressed() -> void:
 	#load next scene
-	get_tree().change_scene(GameInstance.NextScene)
+	if stop:
+		get_tree().change_scene(GameInstance.NextScene)

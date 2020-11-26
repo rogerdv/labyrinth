@@ -28,47 +28,70 @@ func _input(event):
 	if event is InputEventKey and not event.pressed: 
 		if event.scancode==KEY_UP:
 			UP = false
+			if $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_DOWN:
 			DOWN = false
+			if $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_LEFT:
 			LEFT = false
+			if $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_RIGHT:
 			RIGHT = false
-		
+			if $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.stop()
+	
+	#key pressed events
 	if event is InputEventKey and event.pressed: 
 		if event.scancode==KEY_SPACE:
 			FireBomb()
-		if event.scancode==KEY_UP:
-			UP = true
+		
+		if event.scancode==KEY_UP:						
+			UP = true			
 			LAST_DIR = DIR_UP
-		if event.scancode==KEY_DOWN:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
+			
+		if event.scancode==KEY_DOWN:			
 			DOWN = true
 			LAST_DIR = DIR_DN
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
+				
 		if event.scancode==KEY_LEFT:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			LEFT = true
 			LAST_DIR = DIR_LF
 		if event.scancode==KEY_RIGHT:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 			RIGHT = true
 			LAST_DIR = DIR_RG
+		
+		if not UP and not DOWN and not LEFT and not RIGHT:
+			$AudioStreamPlayer2D.stop()
+			$AnimationPlayer.stop()
 
 
 func _physics_process(delta):
 	var coll
 
 	# mobile devices
-	if OS.has_touchscreen_ui_hint() and joystick:
+	if OS.has_touchscreen_ui_hint() and joystick:		
 		if !GameInstance.paused:
 			
 			# get joystick value and normalize it
 			vec = joystick.get_value().normalized()
-			move_and_slide(vec * 150)
+			move_and_slide(vec * 150)			
 
 			#play the animation according to direction
-			if vec.x > 0.1:
-				#$AudioStreamPlayer2D.stream = steps
+			if vec.x > 0.1:								
 				if not $AudioStreamPlayer2D.playing: 
 					$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_right")
@@ -100,8 +123,7 @@ func _physics_process(delta):
 	if !GameInstance.paused:
 		# keyboard based movement
 		if UP:			
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+			
 			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_up")
 
@@ -111,8 +133,7 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,-30)
 
 		if DOWN:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+			
 			move_and_slide(Vector2(0,150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_down")
 			if  (get_slide_count()>0):
@@ -120,8 +141,7 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(0,30)
 
 		if LEFT:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+			
 			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_left")
 
@@ -129,17 +149,14 @@ func _physics_process(delta):
 				$RayCast2D.cast_to= Vector2(-25,0)
 
 		if RIGHT:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+			
 			move_and_slide(Vector2(150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_right")
 
 			if get_slide_count() > 0:
 				$RayCast2D.cast_to = Vector2(25,0)
 				
-		#if not UP and not DOWN and not LEFT and not RIGHT:
-		#	$AudioStreamPlayer2D.stop()
-		#	$AnimationPlayer.stop()
+		
 
 
 func ToggleCollision(toggle:bool):
@@ -151,9 +168,9 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
-	#if GameInstance.bombs==0:
-	#	return
-	#GameInstance.bombs-=1
+	if GameInstance.bombs==0:
+		return
+	GameInstance.bombs-=1
 	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 	GameInstance.BombsUsed+=1
 	var b = bomb.instance()

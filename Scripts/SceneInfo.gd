@@ -67,7 +67,7 @@ func _on_Back_pressed():
 	get_node("../CanvasLayer").add_child(PauseMenuScene.instance())
 	
 func display_map():
-	if !mapmode and mapviews<3:
+	if !mapmode and mapviews<4:
 		get_node("../CanvasLayer/UI").ui_visible(false)
 		mapmode=true
 		mapviews+=1

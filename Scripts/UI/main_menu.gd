@@ -2,11 +2,12 @@ extends Control
 
 
 func _ready():
-	var info = get_node("info")
-	info.text = "Database size "+String(GameInstance.easy.size())
+	pass
+	#var info = get_node("info")
+	#info.text = "Database size "+String(GameInstance.easy.size())
 	
-	if GameInstance.error != OK:
-		info.text = OS.get_locale() + " Error loadig json " + String(GameInstance.error)
+	#if GameInstance.error != OK:
+	#	info.text = OS.get_locale() + " Error loadig json " + String(GameInstance.error)
 	#else:
 	#	info.text = String(GameInstance.error) + ": No error, Database size " + String(GameInstance.ghost.size()) + " lang " + OS.get_locale()
 
