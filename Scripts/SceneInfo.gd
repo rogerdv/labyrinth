@@ -12,7 +12,7 @@ var PauseMenuScene = preload("res://UI/PauseMenu.tscn")
 
 func _ready() -> void:
 	Start = get_node("../player").position
-	GameInstance.time = 120
+	GameInstance.time = GameInstance.MAXTIME
 	GameInstance.SceneScore = 0
 	GameInstance.SceneBombsUsed = 0
 	GameInstance.SceneKeysUsed = 0
@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 			timer+=delta
 		else:
 			GameInstance.time-=1
-			var perc = GameInstance.time/120*100
+			var perc = GameInstance.time/GameInstance.MAXTIME*100
 			get_node("../CanvasLayer/UI").update_time(perc)
 			timer=0
 			if GameInstance.time<=0:

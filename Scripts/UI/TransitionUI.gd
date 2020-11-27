@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 			GameInstance.score += 2
 			count = 0
 			$HBoxContainer/val.text = String(GameInstance.score)
-			var perc = GameInstance.time/120*100
+			var perc = GameInstance.time/GameInstance.MAXTIME*100
 			$TextureProgress.value = perc
 			if GameInstance.time == 0:
 				stop = true

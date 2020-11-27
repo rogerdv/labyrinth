@@ -24,6 +24,8 @@ var PrevEasy = []
 var PrevGhost = []
 var NextScene
 
+const MAXTIME = 250
+
 var sound_fx:AudioStreamPlayer2D
 
 func _ready() -> void:
