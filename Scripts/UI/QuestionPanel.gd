@@ -44,8 +44,10 @@ func _process(delta: float) -> void:
 		else:
 			# failed the question, time out
 			if mode == 1: 	
-				get_parent().get_node("../AudioStreamPlayer2D").stream = FailSound
-				get_parent().get_node("../AudioStreamPlayer2D").play()
+				if !$AudioStreamPlayer2D.is_playing():
+					$AudioStreamPlayer2D.stream = FailSound
+					$AudioStreamPlayer2D.play()
+				#get_parent().get_node("../AudioStreamPlayer2D").play()
 				tmap.set_cell(x, y, 0)	
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
@@ -53,8 +55,9 @@ func _process(delta: float) -> void:
 				queue_free()
 			else:
 				# ghost mode, go back to start
-				$AudioStreamPlayer2D.stream = FailSound
-				$AudioStreamPlayer2D.play()
+				if !$AudioStreamPlayer2D.is_playing():
+					$AudioStreamPlayer2D.stream = FailSound
+					$AudioStreamPlayer2D.play()
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
 				get_parent().get_node("../player").ToggleCollision(false)
@@ -63,11 +66,13 @@ func _process(delta: float) -> void:
 
 
 func AnswerPressed(extra_arg_0: int) -> void:
-	if question["choices"][extra_arg_0].correct == "yes":		
-		$AudioStreamPlayer2D.stream = CorrectSound
-		$AudioStreamPlayer2D.play()
-		#get_parent().get_node("../AudioStreamPlayer2D").question_correct()
-		#get_parent().get_node("../AudioStreamPlayer2D").play()
+	if question["choices"][extra_arg_0].correct == "yes":	
+		if !$AudioStreamPlayer2D.is_playing():
+			print("not playing")
+			print(CorrectSound.mix_rate)
+			$AudioStreamPlayer2D.stream = CorrectSound
+			$AudioStreamPlayer2D.play()
+		
 
 		if mode == 1:
 			tmap.set_cell(x, y, 3)
@@ -84,8 +89,9 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		#re-enable collision detection
 		get_parent().get_node("../player").ToggleCollision(false)
 	else:	#failed 
-		$AudioStreamPlayer2D.stream = FailSound
-		$AudioStreamPlayer2D.play()
+		if !$AudioStreamPlayer2D.is_playing():
+			$AudioStreamPlayer2D.stream = FailSound
+			$AudioStreamPlayer2D.play()
 		get_parent().get_node("../player").ToggleCollision(false)
 		if mode == 1:
 			tmap.set_cell(x, y, 0)		

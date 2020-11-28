@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=2]
@@ -8,9 +8,6 @@
 [ext_resource path="res://Scenes/ghost.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/time.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scripts/AudioPlayer.gd" type="Script" id=9]
-[ext_resource path="res://Sounds/sfx_sounds_error8.wav" type="AudioStream" id=10]
-[ext_resource path="res://Sounds/sfx_sounds_fanfare3.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2264.86, 5.61799 )
@@ -111,10 +108,5 @@ position = Vector2( 2067.2, 2648 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpLimit2"]
 position = Vector2( 5.29724, 18.0109 )
 shape = SubResource( 1 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-script = ExtResource( 9 )
-fail_sound = ExtResource( 10 )
-correct_sound = ExtResource( 11 )
 [connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
 [connection signal="body_entered" from="UpLimit2" to="SceneInfo" method="_on_limit_body_entered"]
