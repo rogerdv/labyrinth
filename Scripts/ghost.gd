@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-export(int) var chance = 5
+export(int) var chance = 20
 var PlayerVisible:bool = false
 var path
 onready var nav = get_node("../Navigation2D")
@@ -67,22 +67,21 @@ func move_along_path(distance):
 	global_position = last_point
 	set_process(false)
 
-func _on_VisibilityNotifier2D_screen_entered() -> void:
-	print("Entered visible area!!")
-	
+func _on_VisibilityNotifier2D_screen_entered() -> void:	
 	PlayerVisible = true
 	randomize()
 
 
-func _on_VisibilityNotifier2D_screen_exited() -> void:
-	print("Not visible, disabling")
+func _on_VisibilityNotifier2D_screen_exited() -> void:	
 	PlayerVisible = false
 	$Sprite.visible = false
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	if body.name=="player":
+	if body.name=="player" and $Sprite.visible:
 		var panel = preload("res://UI/QuestionPanel.tscn").instance()
+		panel.connect("correct",get_node("../SceneInfo"),"correct")
+		panel.connect("wrong",get_node("../SceneInfo"),"wrong")
 		panel.mode = 2
 		panel.ghost = self
 		get_node("../CanvasLayer").add_child(panel)

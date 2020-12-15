@@ -15,15 +15,16 @@ func _physics_process(_delta):
 			var map_point = collider.world_to_map(point)
 			var tile_idx = collider.get_cell(map_point.x,map_point.y)
 			var tile_name = collider.tile_set.tile_get_name(tile_idx)
-			print(tile_name)
+			#print(tile_name)
 			get_node("../AudioStreamPlayer2D").stop()
 			match tile_name:
-				"door":
-					print("payer_collide_with_door!")
+				"door":					
 					 # disable collider
 					get_parent().ToggleCollision(true)
 					# pause and display question
 					var panel = preload("res://UI/QuestionPanel.tscn").instance()
+					panel.connect("correct",get_parent().get_node("../SceneInfo"),"correct")
+					panel.connect("wrong",get_parent().get_node("../SceneInfo"),"wrong")
 					panel.mode = 1
 					panel.x = map_point.x
 					panel.y = map_point.y

@@ -9,6 +9,8 @@ var mapviews:int = 0
 var mapmode:bool = false
 var MapTimeCounter
 var PauseMenuScene = preload("res://UI/PauseMenu.tscn")
+var fail_sound = preload("res://Sounds/sfx_sounds_error8.wav")
+var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
 func _ready() -> void:
 	Start = get_node("../player").position
@@ -16,7 +18,7 @@ func _ready() -> void:
 	GameInstance.SceneScore = 0
 	GameInstance.SceneBombsUsed = 0
 	GameInstance.SceneKeysUsed = 0
-	GameInstance.SceneGhostsKilled = 0
+	GameInstance.SceneGhostsKilled = 0	
 
 
 func _input(event: InputEvent) -> void:
@@ -39,6 +41,7 @@ func _process(delta: float) -> void:
 			mapmode=false
 			get_node("../Camera2D").current = false
 			get_node("../player").ToggleCamera(true)
+			get_node("../player").map_mode = false
 			get_node("../CanvasLayer/UI").ui_visible(true)
 			GameInstance.paused = false
 	if !GameInstance.paused:
@@ -73,18 +76,26 @@ func display_map():
 		mapviews+=1
 		MapTimeCounter = 0
 		get_node("../player").ToggleCamera(false)
+		get_node("../player").map_mode = true
 		get_node("../Camera2D").current = true
 		GameInstance.paused = true
 	else:
 		get_node("../Camera2D").current = false
 		get_node("../player").ToggleCamera(true)
+		get_node("../player").map_mode = false
 		get_node("../CanvasLayer/UI").ui_visible(true)
 		mapmode = false
 		GameInstance.paused = false
 
 
-
 func _on_limit_body_entered(body: Node) -> void:
 	get_tree().change_scene("res://Scenes/Defeat.tscn")
+	
 
+func correct():	
+	get_node("../fx").stream = correct_sound
+	get_node("../fx").play()
 
+func wrong():
+	get_node("../fx").stream = fail_sound
+	get_node("../fx").play()

@@ -16,6 +16,8 @@ const DIR_RG = 4
 const bomb = preload("res://Scenes/bomb-projectile.tscn")
 var vec:Vector2
 var steps = preload("res://Sounds/stepstone_1.wav")
+var map_mode:bool = false
+var counter = 0
 
 func _ready():	
 	pass
@@ -157,7 +159,21 @@ func _physics_process(delta):
 				$RayCast2D.cast_to = Vector2(25,0)
 				
 		
-
+func _process(delta: float) -> void:
+	if map_mode:
+		counter+=delta
+		if counter>0.5:
+			counter=0
+			if $Sprite.scale.x==1:
+				$Sprite.scale.x=2
+				$Sprite.scale.y=2
+			else:
+				$Sprite.scale.x=1
+				$Sprite.scale.y=1
+	else:
+		if $Sprite.scale.x==2:
+			$Sprite.scale.x=1
+			$Sprite.scale.y=1
 
 func ToggleCollision(toggle:bool):
 	$CollisionShape2D.disabled = toggle
@@ -168,9 +184,9 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
-	#if GameInstance.bombs==0:
-	#	return
-	#GameInstance.bombs-=1
+	if GameInstance.bombs==0:
+		return
+	GameInstance.bombs-=1
 	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 	GameInstance.BombsUsed+=1
 	var b = bomb.instance()

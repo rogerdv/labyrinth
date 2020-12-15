@@ -24,7 +24,7 @@ var PrevEasy = []
 var PrevGhost = []
 var NextScene
 
-const MAXTIME = 250
+const MAXTIME = 180
 
 var sound_fx:AudioStreamPlayer2D
 
