@@ -31,6 +31,7 @@ door,"Responde una pregunta para abrir la puerta. Si fallas, se convertirá en p
 ghost,"Cuídate de los esbirros de la Ingnorancia, si te atrapan, tendrás que responder una pregunta más difícil.","Beware of Ignorance minions, if one catches you, a more difficult question must be answered."
 timebonus,Bonificación de tiempo.,Time bonus.
 bomb,"Las bombas matan fantasmas, también rompen muros y puertas, !pero eso te costará tiempo!","Bombs will kill ghosts, can also destroy walls and doors, but that will cost you time!"
-map,"Puedes consultar el mapa solo tres veces por nivel, durante 5 segundos.","You can consult the map only 3 times per level, during 5 seconds."
+map,"Puedes consultar el mapa solo cuatro veces por nivel, durante cinco segundos.","You can consult the map only 3 times per level, during 5 seconds."
 key,"La llave te permite abrir una puerta sin responder la pregunta, pero no conseguirás puntos.","Keys will allow you to open a door without answering the question, but you will get no points."
 story1,"Una amenaza se cierne sobre el Reino de la Sabiduría: la Ignorancia ha escapado de su prisión y oscurece con su velo la Luz del Saber. Para salvar el Reino, un héroe debe atravesar el Laberinto del Saber y restaurar la Luz, pero el camino no será fácil. Solo los más sabios lograrán llegar hasta el final.","The Kingdom of Wisdom is in danger: the Ignorance has escaped and darkens with its veil the Light of Knowledge. To save the Kingdom, a hero must cross the Labyrinth of Knowledge and restore the Light, but the road won't be easy. Only the wisest will make it through."
+start,Que comience el desafío!,Let the challenge begin!
