@@ -66,7 +66,7 @@ position = Vector2( -857.146, 1244.03 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 58.9426, 162.623 )
-zoom = Vector2( 4.6, 4.5 )
+zoom = Vector2( 5.5, 5.6 )
 
 [node name="time6" parent="." instance=ExtResource( 4 )]
 position = Vector2( -878.505, -926.771 )
@@ -85,5 +85,7 @@ position = Vector2( 6, 1488 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottLimit"]
 shape = SubResource( 1 )
+
+[node name="fx" type="AudioStreamPlayer2D" parent="."]
 [connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
 [connection signal="body_entered" from="BottLimit" to="SceneInfo" method="_on_limit_body_entered"]
