@@ -13,7 +13,7 @@ func _ready():
 
 
 func _on_newgame_pressed():
-	get_tree().change_scene("res://Scenes/lab01.tscn")        
+	get_tree().change_scene("res://Scenes/Intro.tscn")        
 
 
 func _on_quit_pressed():
