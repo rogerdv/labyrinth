@@ -18,14 +18,17 @@ func _process(delta: float) -> void:
 	if !stop:
 		count += delta
 		if count > 0.1:
-			GameInstance.time -= 1
-			GameInstance.score += 2
+			$AudioStreamPlayer.play()
+			GameInstance.time -= 2
+			if GameInstance.time <= 0:
+				stop = true
+				GameInstance.time = 0
+			GameInstance.score += 4
 			count = 0
 			$HBoxContainer/val.text = String(GameInstance.score)
 			var perc = GameInstance.time/GameInstance.MAXTIME*100
 			$TextureProgress.value = perc
-			if GameInstance.time == 0:
-				stop = true
+			
 
 
 func _on_Button_pressed() -> void:
