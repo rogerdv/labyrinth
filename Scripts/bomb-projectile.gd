@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 
 export(Vector2) var dir
-var blast = preload("res://Scenes/Explosion.tscn")
 var BlastSound = preload("res://Sounds/8bit_bomb_explosion.wav")
 
 func _ready() -> void:
