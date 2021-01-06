@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Images/Main Character Animation (4).png" type="Texture" id=2]
 [ext_resource path="res://Scripts/GetCollider.gd" type="Script" id=3]
 [ext_resource path="res://Sounds/stepstone_1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Images/light.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.9786, 21.5868 )
@@ -104,3 +105,9 @@ attenuation = 1.07177
 enabled = true
 cast_to = Vector2( 0, 0 )
 script = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 5 )
+texture_scale = 1.4
+energy = 0.7
+shadow_enabled = true

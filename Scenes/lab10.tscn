@@ -24,3 +24,6 @@ format = 1
 script = ExtResource( 3 )
 
 [node name="fx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.129412, 0.129412, 0.113725, 1 )

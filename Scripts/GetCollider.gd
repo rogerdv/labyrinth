@@ -15,7 +15,7 @@ func _physics_process(_delta):
 			var map_point = collider.world_to_map(point)
 			var tile_idx = collider.get_cell(map_point.x,map_point.y)
 			var tile_name = collider.tile_set.tile_get_name(tile_idx)
-			#print(tile_name)
+			print(tile_name)
 			get_node("../AudioStreamPlayer2D").stop()
 			match tile_name:
 				"door":					

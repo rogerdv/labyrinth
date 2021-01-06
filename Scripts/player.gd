@@ -125,33 +125,29 @@ func _physics_process(delta):
 	if !GameInstance.paused:
 		# keyboard based movement
 		if UP:			
-			
 			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_up")
 
 			if (get_slide_count() > 0):
 				coll = get_slide_collision(0)
-				print("Collided with: ", coll.collider.name)
+				#print("Collided with: ", coll.collider.name)
 				$RayCast2D.cast_to = Vector2(0,-30)
 
-		if DOWN:
-			
+		if DOWN:			
 			move_and_slide(Vector2(0,150), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_down")
 			if  (get_slide_count()>0):
 				#coll = get_slide_collision(0)
 				$RayCast2D.cast_to = Vector2(0,30)
 
-		if LEFT:
-			
+		if LEFT:			
 			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_left")
 
 			if get_slide_count() > 0:
 				$RayCast2D.cast_to= Vector2(-25,0)
 
-		if RIGHT:
-			
+		if RIGHT:			
 			move_and_slide(Vector2(150,0), Vector2(0,0), true)
 			$AnimationPlayer.play("walk_right")
 
@@ -184,8 +180,8 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
-	if GameInstance.bombs==0:
-		return
+	#if GameInstance.bombs==0:
+	#	return
 	GameInstance.bombs-=1
 	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 	GameInstance.BombsUsed+=1
