@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LS_Lose_8bit.ogg-168aa5700df96c34d45497fed72be58d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/LS_Lose_8bit.ogg"
+dest_files=[ "res://.import/LS_Lose_8bit.ogg-168aa5700df96c34d45497fed72be58d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LS_Minuet_8bit.ogg-d7f7d396cb4a10e4ee2a9f2094866a6a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/LS_Minuet_8bit.ogg"
+dest_files=[ "res://.import/LS_Minuet_8bit.ogg-d7f7d396cb4a10e4ee2a9f2094866a6a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
