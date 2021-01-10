@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/UI/main_menu.gd" type="Script" id=1]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/UI/focus_control.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/UI/CheckSave.gd" type="Script" id=8]
 [ext_resource path="res://Images/menu pic.png" type="Texture" id=9]
+[ext_resource path="res://Sounds/LS_Minuet_8bit.ogg" type="AudioStream" id=10]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -184,6 +185,10 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/instructions" to="." method="_on_instructions_pressed"]
