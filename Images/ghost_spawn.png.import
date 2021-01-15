@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/puerta01.png-d73f55ffff0929f61d1faca57b15c704.stex"
+path="res://.import/ghost_spawn.png-7f994d45b8b808c13df755be3ac84473.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/puerta01.png"
-dest_files=[ "res://.import/puerta01.png-d73f55ffff0929f61d1faca57b15c704.stex" ]
+source_file="res://Images/ghost_spawn.png"
+dest_files=[ "res://.import/ghost_spawn.png-7f994d45b8b808c13df755be3ac84473.stex" ]
 
 [params]
 
