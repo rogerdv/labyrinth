@@ -121,15 +121,16 @@ script = ExtResource( 9 )
 
 [node name="TextureRect" type="TextureRect" parent="Cont"]
 margin_left = 83.0
-margin_right = 147.0
+margin_right = 115.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 12 )
-stretch_mode = 1
+expand = true
+stretch_mode = 6
 
 [node name="keys" type="Label" parent="Cont"]
-margin_left = 151.0
-margin_right = 167.0
+margin_left = 119.0
+margin_right = 135.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
 size_flags_vertical = 3
@@ -137,15 +138,15 @@ text = "0"
 valign = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Cont"]
-margin_left = 171.0
-margin_right = 235.0
+margin_left = 139.0
+margin_right = 203.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 13 )
 
 [node name="bombs" type="Label" parent="Cont"]
-margin_left = 239.0
-margin_right = 255.0
+margin_left = 207.0
+margin_right = 223.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 16, 0 )
 size_flags_vertical = 3
@@ -153,13 +154,13 @@ text = "0"
 valign = 1
 
 [node name="Control" type="Control" parent="Cont"]
-margin_left = 259.0
-margin_right = 309.0
+margin_left = 227.0
+margin_right = 277.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 50, 0 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Cont"]
-margin_left = 313.0
+margin_left = 281.0
 margin_right = 846.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
@@ -170,7 +171,7 @@ custom_constants/margin_bottom = 5
 
 [node name="progress" type="TextureProgress" parent="Cont/MarginContainer"]
 margin_top = 11.0
-margin_right = 528.0
+margin_right = 560.0
 margin_bottom = 59.0
 rect_min_size = Vector2( 258, 20 )
 size_flags_horizontal = 3

@@ -42,7 +42,7 @@ position = Vector2( 1948.71, 1147.27 )
 zoom = Vector2( 4.7, 5 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.337255, 0.294118, 0.294118, 1 )
+color = Color( 0.414063, 0.396271, 0.396271, 1 )
 
 [node name="UpLimit" type="Area2D" parent="."]
 position = Vector2( 1928, -28.6607 )

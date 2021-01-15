@@ -122,38 +122,41 @@ func _physics_process(delta):
 				#print(vec.normalized())
 				$RayCast2D.cast_to = vec* Vector2(30,30)
 
-	if !GameInstance.paused:
-		# keyboard based movement
-		if UP:			
-			move_and_slide(Vector2(0,-150), Vector2(0,0), true)
-			$AnimationPlayer.play("walk_up")
+	else:
+		if !GameInstance.paused:
+			# keyboard based movement
+			if UP:			
+				move_and_slide(Vector2(0,-150), Vector2(0,0), true)
+				$AnimationPlayer.play("walk_up")
 
-			if (get_slide_count() > 0):
-				coll = get_slide_collision(0)
-				#print("Collided with: ", coll.collider.name)
-				$RayCast2D.cast_to = Vector2(0,-30)
+				if (get_slide_count() > 0):
+					coll = get_slide_collision(0)
+					#print("Collided with: ", coll.collider.name)
+					$RayCast2D.cast_to = Vector2(0,-30)
 
-		if DOWN:			
-			move_and_slide(Vector2(0,150), Vector2(0,0), true)
-			$AnimationPlayer.play("walk_down")
-			if  (get_slide_count()>0):
-				#coll = get_slide_collision(0)
-				$RayCast2D.cast_to = Vector2(0,30)
+			if DOWN:			
+				move_and_slide(Vector2(0,150), Vector2(0,0), true)
+				$AnimationPlayer.play("walk_down")
+				if  (get_slide_count()>0):
+					#coll = get_slide_collision(0)
+					$RayCast2D.cast_to = Vector2(0,30)
 
-		if LEFT:			
-			move_and_slide(Vector2(-150,0), Vector2(0,0), true)
-			$AnimationPlayer.play("walk_left")
+			if LEFT:			
+				move_and_slide(Vector2(-150,0), Vector2(0,0), true)
+				$AnimationPlayer.play("walk_left")
 
-			if get_slide_count() > 0:
-				$RayCast2D.cast_to= Vector2(-25,0)
+				if get_slide_count() > 0:
+					$RayCast2D.cast_to= Vector2(-25,0)
 
-		if RIGHT:			
-			move_and_slide(Vector2(150,0), Vector2(0,0), true)
-			$AnimationPlayer.play("walk_right")
+			if RIGHT:			
+				move_and_slide(Vector2(150,0), Vector2(0,0), true)
+				$AnimationPlayer.play("walk_right")
 
-			if get_slide_count() > 0:
-				$RayCast2D.cast_to = Vector2(25,0)
-				
+				if get_slide_count() > 0:
+					$RayCast2D.cast_to = Vector2(25,0)
+			if not UP and not DOWN and not LEFT and not RIGHT:
+				$AudioStreamPlayer2D.stop()
+				$AnimationPlayer.stop()		
 		
 func _process(delta: float) -> void:
 	if map_mode:
@@ -180,8 +183,8 @@ func ToggleCamera(toggle:bool):
 
 
 func FireBomb():
-	#if GameInstance.bombs==0:
-	#	return
+	if GameInstance.bombs==0:
+		return
 	GameInstance.bombs-=1
 	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 	GameInstance.BombsUsed+=1

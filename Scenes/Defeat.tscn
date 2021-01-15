@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/ale-regular-med.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=3]
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=4]
 [ext_resource path="res://Scripts/UI/DefeatUI.gd" type="Script" id=5]
+[ext_resource path="res://Sounds/LS_Lose_8bit.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Scripts/UI/focus_control.gd" type="Script" id=7]
 
 [node name="Defeat" type="Control"]
 anchor_right = 1.0
@@ -55,4 +57,10 @@ custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 custom_fonts/font = ExtResource( 1 )
 text = "back_menu"
+script = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

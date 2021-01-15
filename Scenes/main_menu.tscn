@@ -188,6 +188,7 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+volume_db = -2.0
 autoplay = true
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]

@@ -10,20 +10,22 @@ var DelayCounter = 0
 
 func _ready() -> void:
 	$Sprite.visible = false
-	$AnimationPlayer.play("idle")
+	#$AnimationPlayer.play("idle")
 
 
 func _process(delta: float) -> void:
 	var player_pos = get_node("../player").position
 	
 	
-	if PlayerVisible and !GameInstance.paused and position.distance_to(player_pos)<350:
+	if !$Sprite.visible and PlayerVisible and !GameInstance.paused and position.distance_to(player_pos)<350:
 		var r = randi()%1000
 		if r < chance:
 			$Sprite.visible = true
+			$AudioStreamPlayer2D.play()
+			$AnimationPlayer.play("spawn")
 
 	if $Sprite.visible and !GameInstance.paused:		#We are working
-		if DelayCounter<1.5:
+		if DelayCounter<1:
 			DelayCounter+=delta
 			return
 			
@@ -33,6 +35,10 @@ func _process(delta: float) -> void:
 			#there is a path to player
 			#print("There is path")
 			var walk_distance = CHARACTER_SPEED * delta
+			#print(global_position)
+			#print(path[0])
+			#var d = global_position.direction_to(path[0])
+			#print(d)
 			move_along_path(walk_distance)
 
 		#var space_state = get_world_2d().direct_space_state
@@ -51,6 +57,23 @@ func _update_navigation_path(start_position, end_position):
 
 func move_along_path(distance):
 	var last_point = global_position
+	#correct orientation
+	#print(last_point)
+	#print(get_node("../player").global_position)
+	var d = last_point.direction_to(get_node("../player").global_position)	
+	print(d)
+	if d.x>0 and d.x>abs(d.y):
+		$AnimationPlayer.play("walk_right")
+		print("Going right")
+	elif d.x<0 and abs(d.x)>abs(d.y):
+		$AnimationPlayer.play("walk_left")
+		print("Going left")
+	elif d.y<0 and abs(d.y)>abs(d.x):  #going up
+		$AnimationPlayer.play("walk_up")
+		print("Going up")
+	elif d.y>0 and d.y>d.x:  #going up
+		$AnimationPlayer.play("walk_down")
+		print("Going dow")
 	while path.size():
 		var distance_between_points = last_point.distance_to(path[0])
 
@@ -66,6 +89,7 @@ func move_along_path(distance):
 	# the character reached the end of the path
 	global_position = last_point
 	set_process(false)
+	$AnimationPlayer.play("idle")
 
 func _on_VisibilityNotifier2D_screen_entered() -> void:	
 	PlayerVisible = true
@@ -75,6 +99,7 @@ func _on_VisibilityNotifier2D_screen_entered() -> void:
 func _on_VisibilityNotifier2D_screen_exited() -> void:	
 	PlayerVisible = false
 	$Sprite.visible = false
+	$AudioStreamPlayer2D.stop()
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
@@ -85,3 +110,8 @@ func _on_Area2D_body_entered(body: Node) -> void:
 		panel.mode = 2
 		panel.ghost = self
 		get_node("../CanvasLayer").add_child(panel)
+
+
+func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+	if anim_name!="idle":
+		$AnimationPlayer.play("idle")

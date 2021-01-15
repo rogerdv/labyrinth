@@ -12,6 +12,7 @@ var tmap
 var ghost
 var fail_sound = preload("res://Sounds/sfx_sounds_error8.wav")
 var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
+var door_anim = preload("res://Scenes/animated_door.tscn")
 
 signal correct
 signal wrong
@@ -67,7 +68,28 @@ func _process(delta: float) -> void:
 func AnswerPressed(extra_arg_0: int) -> void:	
 	if question["choices"][extra_arg_0].correct == "yes":
 		if mode == 1:
+			#replace tile by animated door
 			tmap.set_cell(x, y, 3)
+			var d_anim = door_anim.instance()
+			#d_anim.tile_map = tmap
+			#d_anim.tile_index = 3
+			#d_anim.x =x 
+			#d_anim.y = y
+			var pos =tmap.map_to_world(Vector2(x, y))
+			d_anim.position = pos+Vector2(32,32)
+			get_parent().get_parent().add_child(d_anim)
+			get_parent().get_node("../SceneInfo").SceneScore +=10
+
+			# update score
+			var score = get_parent().get_node("../SceneInfo").SceneScore+GameInstance.score
+			get_parent().get_node("../CanvasLayer/UI").set_score(score)
+
+			#re-enable collision detection
+			get_parent().get_node("../player").ToggleCollision(false)
+			emit_signal("correct")
+			queue_free()
+			return
+			
 		else:
 			ghost.queue_free()
 			GameInstance.SceneGhostsKilled += 1

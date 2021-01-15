@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://Images/Main Character Animation (4).png" type="Texture" id=2]
+[ext_resource path="res://Images/player_anim.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/GetCollider.gd" type="Script" id=3]
 [ext_resource path="res://Sounds/stepstone_1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Images/light.png" type="Texture" id=5]
@@ -11,7 +11,7 @@ extents = Vector2( 11.9786, 21.5868 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "walk_down"
-length = 0.5
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -20,15 +20,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 12, 13, 14, 15 ]
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "walk_left"
-length = 0.5
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -37,14 +37,14 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 4, 4, 5, 6 ]
+"values": [ 12, 13, 14, 15, 16 ]
 }
 
 [sub_resource type="Animation" id=4]
-length = 0.4
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -53,10 +53,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 2, 3 ]
+"values": [ 6, 7, 8, 9, 10, 11 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -69,10 +69,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 8, 9, 10, 11 ]
+"values": [ 18, 19, 20, 21, 22, 23 ]
 }
 
 [node name="player" type="KinematicBody2D"]
@@ -88,8 +88,8 @@ current = true
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 vframes = 4
-hframes = 4
-frame = 12
+hframes = 6
+frame = 18
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/walk_down = SubResource( 2 )
@@ -110,4 +110,5 @@ script = ExtResource( 3 )
 texture = ExtResource( 5 )
 texture_scale = 1.4
 energy = 0.7
+mode = 2
 shadow_enabled = true

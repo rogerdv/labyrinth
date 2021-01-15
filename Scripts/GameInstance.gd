@@ -36,7 +36,7 @@ func _ready() -> void:
 	_read_easy_question_db_by_lang(lang)
 	_read_ghost_question_db_by_lang(lang)
 
-	randomize()
+	randomize()	
 
 
 func SaveGame():
