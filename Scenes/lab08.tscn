@@ -67,6 +67,9 @@ position = Vector2( 2628.98, 1283.35 )
 [node name="time3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2478.57, 1155.39 )
 
+[node name="time5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3008.37, 1671.72 )
+
 [node name="Ghost7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3934.86, 2496.82 )
 
@@ -80,7 +83,7 @@ position = Vector2( 3896.68, 2165.9 )
 position = Vector2( 3657.68, 2044.27 )
 
 [node name="bomb3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2686.28, 2353.58 )
+position = Vector2( 2614.44, 2434.4 )
 
 [node name="Ghost9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3487.94, 2501.38 )
@@ -93,3 +96,9 @@ position = Vector2( 2076.46, 1302.8 )
 zoom = Vector2( 5, 5.6 )
 
 [node name="fx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.25098, 0.25098, 0.231373, 1 )
+
+[node name="Ghost11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 456.607, 1032.67 )

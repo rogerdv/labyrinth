@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://UI/ale-regular-med.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/ale_regular_med.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=3]
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=4]

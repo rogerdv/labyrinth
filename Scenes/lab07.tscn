@@ -83,10 +83,10 @@ position = Vector2( 187.094, 2031.08 )
 position = Vector2( 328.205, 1879.89 )
 
 [node name="Ghost8" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1260.55, 332.342 )
+position = Vector2( 1412.77, 227.692 )
 
 [node name="bomb4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1961.06, 322.262 )
+position = Vector2( 1961.06, 217.612 )
 
 [node name="key2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2652.76, 1028.04 )
@@ -110,5 +110,17 @@ position = Vector2( 5.29724, 18.0109 )
 shape = SubResource( 1 )
 
 [node name="fx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.25098, 0.25098, 0.231373, 1 )
+
+[node name="Ghost9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2627.69, 490.978 )
+
+[node name="Ghost10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3759.82, 486.221 )
+
+[node name="time6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3189, 709.792 )
 [connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
 [connection signal="body_entered" from="UpLimit2" to="SceneInfo" method="_on_limit_body_entered"]

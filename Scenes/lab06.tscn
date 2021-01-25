@@ -87,5 +87,8 @@ position = Vector2( 6, 1488 )
 shape = SubResource( 1 )
 
 [node name="fx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.25098, 0.25098, 0.231373, 1 )
 [connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
 [connection signal="body_entered" from="BottLimit" to="SceneInfo" method="_on_limit_body_entered"]
