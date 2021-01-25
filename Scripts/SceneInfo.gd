@@ -99,3 +99,6 @@ func correct():
 func wrong():
 	get_node("../fx").stream = fail_sound
 	get_node("../fx").play()
+
+
+

@@ -13,7 +13,7 @@ const DIR_UP = 1
 const DIR_DN = 2
 const DIR_LF = 3
 const DIR_RG = 4
-const bomb = preload("res://Scenes/bomb-projectile.tscn")
+const bomb = preload("res://Scenes/bomb_projectile.tscn")
 var vec:Vector2
 var steps = preload("res://Sounds/stepstone_1.wav")
 var map_mode:bool = false

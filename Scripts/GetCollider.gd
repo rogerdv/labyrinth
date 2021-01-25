@@ -3,7 +3,7 @@ extends RayCast2D
 
 # gets the tile we are colliding
 var save_margin = 1.0
-
+var exit_anim = preload("res://Scenes/animated_exit.tscn")
 
 func _physics_process(_delta):
 	if is_colliding():
@@ -31,9 +31,19 @@ func _physics_process(_delta):
 					panel.tmap = collider
 					get_parent().get_node("../CanvasLayer").add_child(panel)
 				"exit":
-					GameInstance.NextScene = get_parent().get_node("../SceneInfo").NextLevel
+					var exit_door = exit_anim.instance()
+					exit_door.connect("finished", self, "_exit_anim_end")
+					get_parent().get_parent().add_child(exit_door)
+					exit_door.position =collider.map_to_world(Vector2(map_point.x, map_point.y))
+					#GameInstance.NextScene = get_parent().get_node("../SceneInfo").NextLevel
 					#update score
-					GameInstance.score += get_parent().get_node("../SceneInfo").SceneScore
-					#print("Next scene is "+scene)
-					get_tree().change_scene("res://Scenes/transition.tscn")
+					#GameInstance.score += get_parent().get_node("../SceneInfo").SceneScore					
+					#get_tree().change_scene("res://Scenes/transition.tscn")
 
+func _exit_anim_end():
+	GameInstance.NextScene = get_parent().get_node("../SceneInfo").NextLevel
+	#update score
+	GameInstance.score += get_parent().get_node("../SceneInfo").SceneScore
+	#print("Next scene is "+scene)
+	get_tree().change_scene("res://Scenes/transition.tscn")
+	

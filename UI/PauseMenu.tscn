@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/lab_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UI/PauseMenuUI.gd" type="Script" id=2]
-[ext_resource path="res://UI/ale-regular-med.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/ale_regular_med.tres" type="DynamicFont" id=3]
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=4]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=5]
+[ext_resource path="res://Scripts/UI/focus_control.gd" type="Script" id=6]
 
 [node name="PauseMenu" type="Control"]
 anchor_right = 1.0
@@ -69,6 +70,7 @@ custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "yes"
+script = ExtResource( 6 )
 
 [node name="no" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 96.0
