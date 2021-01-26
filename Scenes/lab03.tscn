@@ -34,6 +34,33 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="Ghost" parent="." instance=ExtResource( 6 )]
 position = Vector2( 693.392, 1045.86 )
 
+[node name="Ghost3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 793.173, 140.707 )
+
+[node name="Ghost4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1933.52, 500.63 )
+
+[node name="Ghost5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2261.37, 1010.22 )
+
+[node name="Ghost6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1991.98, 2200.03 )
+
+[node name="Ghost7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1596.88, 1540.03 )
+
+[node name="Ghost8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2804.65, 1809.42 )
+
+[node name="Ghost9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2827.09, 386.135 )
+
+[node name="Ghost10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3648.74, 507.361 )
+
+[node name="Ghost11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3532, 1010.22 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1947.81, 1145.37 )
 zoom = Vector2( 4.7, 5 )

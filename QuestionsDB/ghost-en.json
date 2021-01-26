@@ -680,6 +680,28 @@
                 "correct": "no"
             }
         ]
+    }, 
+    {
+        "question": "Chemical element with the highest fusion temperature:",
+        "topic": "Chemestry",
+        "choices": [
+            {
+                "answer": "Wolfram",
+                "correct": "yes"
+            },
+            {
+                "answer": "Steel",
+                "correct": "no"
+            },
+            {
+                "answer": "Uranium",
+                "correct": "no"
+            },
+            {
+                "answer": "Chrome",
+                "correct": "no"
+            }
+        ]
     }
 
 ]

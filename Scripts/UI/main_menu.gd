@@ -30,3 +30,7 @@ func _on_credits_pressed() -> void:
 
 func _on_instructions_pressed() -> void:
 	get_tree().change_scene("res://Scenes/Instructions.tscn")
+
+
+func _on_old_mode_toggled(button_pressed: bool) -> void:
+	GameInstance.old_mode=button_pressed

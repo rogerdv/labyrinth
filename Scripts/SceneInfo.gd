@@ -54,6 +54,9 @@ func _process(delta: float) -> void:
 			timer=0
 			if GameInstance.time<=0:
 				#game over
+				if GameInstance.old_mode:	#if old school mode active, remove saved game
+					GameInstance.delete_game()
+					
 				get_tree().change_scene("res://Scenes/Defeat.tscn")
 				#invalidate saved game
 
@@ -78,9 +81,11 @@ func display_map():
 		get_node("../player").ToggleCamera(false)
 		get_node("../player").map_mode = true
 		get_node("../Camera2D").current = true
+		get_node("../CanvasModulate").visible = false
 		GameInstance.paused = true
 	else:
 		get_node("../Camera2D").current = false
+		get_node("../CanvasModulate").visible = true
 		get_node("../player").ToggleCamera(true)
 		get_node("../player").map_mode = false
 		get_node("../CanvasLayer/UI").ui_visible(true)

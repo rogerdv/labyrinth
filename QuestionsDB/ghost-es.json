@@ -680,5 +680,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Elemento químico con la mayor temperatura de fusión:",
+        "topic": "Química",
+        "choices": [
+            {
+                "answer": "Wolframio",
+                "correct": "yes"
+            },
+            {
+                "answer": "Acero",
+                "correct": "no"
+            },
+            {
+                "answer": "Uranio",
+                "correct": "no"
+            },
+            {
+                "answer": "Cromo",
+                "correct": "no"
+            }
+        ]
     }
 ]

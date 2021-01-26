@@ -10,7 +10,7 @@ var bombs:int = 0
 var KeysUsed:int = 0
 var BombsUsed:int = 0
 var GhostsKilled:int = 0
-
+var old_mode: bool = false
 
 #scene temp values
 var SceneScore:int = 0
@@ -18,6 +18,8 @@ var SceneKeysUsed:int = 0
 var SceneBombsUsed:int = 0
 var SceneGhostsKilled:int = 0
 var time:float
+
+
 var paused:bool = false
 var error
 var PrevEasy = []
@@ -51,6 +53,10 @@ func SaveGame():
 	savefile.store_32(KeysUsed)
 	savefile.store_32(BombsUsed)
 	savefile.store_32(GhostsKilled)
+	if GameInstance.old_mode:
+		savefile.store_32(1)
+	else:
+		savefile.store_32(0)
 	savefile.close()
 
 
@@ -69,10 +75,20 @@ func LoadGame():
 	KeysUsed  = savedfile.get_32()
 	BombsUsed  = savedfile.get_32()
 	GhostsKilled = savedfile.get_32()
-	
+	var mode = savedfile.get_32()
+	if mode==1:
+		GameInstance.old_mode = true
+	else:
+		GameInstance.old_mode = false
+		
 	savedfile.close()
 	get_tree().change_scene(scene)
 
+func delete_game():
+	var dir = Directory.new()
+	if dir.file_exists("user://savedgame"):
+		dir.remove("user://savedgame")
+	
 
 func get_easy_rand_question():
 	# generate a random question id
@@ -135,7 +151,7 @@ func _read_ghost_question_db_by_lang(lang):
 
 
 func _manage_easy_stack(idx : int):
-	if PrevEasy.size() == 5:
+	if PrevEasy.size() == 25:
 		PrevEasy.remove(0)
 		PrevEasy.append(idx)
 	else:
@@ -143,7 +159,7 @@ func _manage_easy_stack(idx : int):
 
 
 func _manage_ghost_stack(idx : int):
-	if PrevGhost.size() == 5:
+	if PrevGhost.size() == 10:
 		PrevGhost.remove(0)
 		PrevGhost.append(idx)
 	else:

@@ -236,7 +236,7 @@ __meta__ = {
 margin_right = 348.0
 margin_bottom = 40.0
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/VBoxContainer2/HBoxContainer"]
+[node name="old_mode" type="CheckButton" parent="PanelContainer/VBoxContainer2/HBoxContainer"]
 margin_right = 76.0
 margin_bottom = 40.0
 __meta__ = {
@@ -267,5 +267,6 @@ autowrap = true
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
+[connection signal="toggled" from="PanelContainer/VBoxContainer2/HBoxContainer/old_mode" to="." method="_on_old_mode_toggled"]
