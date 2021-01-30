@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/lab_theme.tres" type="Theme" id=2]
 [ext_resource path="res://Images/door.png" type="Texture" id=3]
 [ext_resource path="res://Images/bomb.png" type="Texture" id=4]
 [ext_resource path="res://Images/time bonus.png" type="Texture" id=5]
-[ext_resource path="res://Images/mapa A.png" type="Texture" id=6]
 [ext_resource path="res://Images/Key.png" type="Texture" id=7]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=8]
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=9]
@@ -191,21 +190,12 @@ autowrap = true
 [node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 margin_top = 300.0
 margin_right = 814.0
-margin_bottom = 340.0
+margin_bottom = 327.0
 custom_constants/separation = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 40, 40 )
-texture = ExtResource( 6 )
-expand = true
-
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
-margin_left = 42.0
-margin_top = 6.0
 margin_right = 814.0
-margin_bottom = 33.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 theme = ExtResource( 2 )
 text = "map"
@@ -213,9 +203,9 @@ autowrap = true
 
 [node name="close" type="Button" parent="MarginContainer/VBoxContainer"]
 margin_left = 347.0
-margin_top = 344.0
+margin_top = 331.0
 margin_right = 467.0
-margin_bottom = 390.458
+margin_bottom = 377.458
 rect_min_size = Vector2( 120, 0 )
 size_flags_horizontal = 4
 theme = ExtResource( 2 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/UI/Joystick_Button.gd" type="Script" id=1]
 [ext_resource path="res://Images/AllAxis_Outline.png" type="Texture" id=2]
@@ -10,36 +10,34 @@
 [ext_resource path="res://Scripts/UI/InfoBar.gd" type="Script" id=8]
 [ext_resource path="res://UI/ScoreUpdateOnStart.gd" type="Script" id=9]
 [ext_resource path="res://UI/lab_theme.tres" type="Theme" id=10]
-[ext_resource path="res://Images/mapa B.png" type="Texture" id=11]
+[ext_resource path="res://Images/map.png" type="Texture" id=11]
 [ext_resource path="res://Images/Key.png" type="Texture" id=12]
 [ext_resource path="res://Images/bomb.png" type="Texture" id=13]
-[ext_resource path="res://Images/Bomba B.png" type="Texture" id=14]
-[ext_resource path="res://Images/mapa A.png" type="Texture" id=15]
-[ext_resource path="res://Images/Bomba A.png" type="Texture" id=16]
-
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 16 )
-region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 14 )
-region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 16 )
-region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 15 )
-region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 11 )
-region_rect = Rect2( 0, 0, 128, 128 )
+[ext_resource path="res://Images/bomb-1.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 15 )
-region_rect = Rect2( 0, 0, 128, 128 )
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 64, 64 )
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -61,9 +59,9 @@ margin_top = -207.838
 margin_right = -24.9999
 margin_bottom = -137.838
 rect_min_size = Vector2( 70, 0 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -77,9 +75,9 @@ margin_left = -88.9999
 margin_top = -89.643
 margin_right = -18.9999
 margin_bottom = -19.6429
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

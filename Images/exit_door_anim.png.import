@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bomba A.png-693f9a1d468cdcf98a7cd2e0463a9481.stex"
+path="res://.import/exit_door_anim.png-fc0737c2094a5d9799abd43349ad2ded.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Bomba A.png"
-dest_files=[ "res://.import/Bomba A.png-693f9a1d468cdcf98a7cd2e0463a9481.stex" ]
+source_file="res://Images/exit_door_anim.png"
+dest_files=[ "res://.import/exit_door_anim.png-fc0737c2094a5d9799abd43349ad2ded.stex" ]
 
 [params]
 
