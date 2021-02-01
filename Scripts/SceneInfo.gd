@@ -40,7 +40,8 @@ func _process(delta: float) -> void:
 		if MapTimeCounter>6:
 			mapmode=false
 			get_node("../Camera2D").current = false
-			get_node("../player").ToggleCamera(true)
+			get_node("../CanvasModulate").visible = true
+			get_node("../player").ToggleCamera(true)			
 			get_node("../player").map_mode = false
 			get_node("../CanvasLayer/UI").ui_visible(true)
 			GameInstance.paused = false

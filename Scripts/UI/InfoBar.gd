@@ -24,7 +24,8 @@ func ui_visible(toggle:bool):
 	$Fire.visible = toggle
 	$Map.visible = toggle
 	$Cont.visible = toggle
-	$Sprite.visible = toggle
+	if OS.has_touchscreen_ui_hint():
+		$Sprite.visible = toggle
 
 func _on_Fire_pressed() -> void:
 	get_node("../../player").FireBomb()

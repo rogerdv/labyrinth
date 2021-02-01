@@ -249,6 +249,6 @@ autowrap = true
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="PanelContainer/VBoxContainer2/HBoxContainer/old_mode" to="." method="_on_old_mode_toggled"]
