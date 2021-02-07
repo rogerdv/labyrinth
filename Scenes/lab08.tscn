@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/bomb.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/ghost.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sounds/In_the_Hall_of_the_Mountain_King_Peer_Gynt.ogg" type="AudioStream" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -96,6 +97,10 @@ position = Vector2( 2076.46, 1302.8 )
 zoom = Vector2( 5, 5.6 )
 
 [node name="fx" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 2000, 1000 )
+stream = ExtResource( 9 )
+autoplay = true
+max_distance = 4000.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )

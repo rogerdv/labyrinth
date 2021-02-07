@@ -702,6 +702,28 @@
                 "correct": "no"
             }
         ]
+    }, 
+    {
+        "question": "e4 e5, Nf3 Nc6, Bb5",
+        "topic": "Chess",
+        "choices": [
+            {
+                "answer": "Ruy Lopez",
+                "correct": "yes"
+            },
+            {
+                "answer": "Queen´s Gambit",
+                "correct": "no"
+            },
+            {
+                "answer": "Steinitz Defense",
+                "correct": "no"
+            },
+            {
+                "answer": "Open",
+                "correct": "no"
+            }
+        ]
     }
 
 ]

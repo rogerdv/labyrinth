@@ -702,5 +702,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "e4 e5 2.Cf3 Cc6 3.Ab5 ",
+        "topic": "Ajedrez",
+        "choices": [
+            {
+                "answer": "Apertura Ruy López",
+                "correct": "yes"
+            },
+            {
+                "answer": "Gambito de Dama",
+                "correct": "no"
+            },
+            {
+                "answer": "Defensa Steinitz",
+                "correct": "no"
+            },
+            {
+                "answer": "Apertura",
+                "correct": "no"
+            }
+        ]
     }
 ]

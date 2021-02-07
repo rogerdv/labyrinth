@@ -207,6 +207,5 @@ func FireBomb():
 	get_parent().add_child(b)
 	b.position = position + vec * 25
 
-
-func _on_limit_body_entered(body: Node) -> void:
-	pass # Replace with function body.
+func mute_sound():
+	$AudioStreamPlayer2D.stop()

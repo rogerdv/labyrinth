@@ -14,8 +14,6 @@ var fail_sound = preload("res://Sounds/sfx_sounds_error8.wav")
 var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 var door_anim = preload("res://Scenes/animated_door.tscn")
 
-signal correct
-signal wrong
 
 func _ready() -> void:			
 	$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)	
@@ -36,6 +34,7 @@ func _ready() -> void:
 	$PanelContainer/VBoxContainer/a4.text = question['choices'][3]["answer"]
 
 	GameInstance.paused = true
+	get_parent().get_node("../player").mute_sound()
 
 
 func _process(delta: float) -> void:
@@ -47,26 +46,33 @@ func _process(delta: float) -> void:
 			$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)
 		else:
 			# failed the question, time out
+			$AudioStreamPlayer.stream = fail_sound
+			if not $AudioStreamPlayer.playing:				
+				$AudioStreamPlayer.play()
 			if mode == 1: 	
-				emit_signal("wrong")
+				#emit_signal("wrong")
+				
 				#get_parent().get_node("../AudioStreamPlayer2D").play()
 				tmap.set_cell(x, y, 0)	
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
 				GameInstance.paused = false
-				queue_free()
+				#queue_free()
 			else:
-				# ghost mode, go back to start
-				emit_signal("wrong")
+				# ghost mode, go back to start				
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
 				get_parent().get_node("../player").ToggleCollision(false)
 				GameInstance.paused = false
-				queue_free()
+				#queue_free()
 
 
 func AnswerPressed(extra_arg_0: int) -> void:	
-	if question["choices"][extra_arg_0].correct == "yes":
+	if question["choices"][extra_arg_0].correct == "yes":	
+		#correct
+		$AudioStreamPlayer.stream = correct_sound
+		if not $AudioStreamPlayer.playing:			
+			$AudioStreamPlayer.play()
 		if mode == 1:
 			#replace tile by animated door
 			tmap.set_cell(x, y, 3)
@@ -85,9 +91,8 @@ func AnswerPressed(extra_arg_0: int) -> void:
 			get_parent().get_node("../CanvasLayer/UI").set_score(score)
 
 			#re-enable collision detection
-			get_parent().get_node("../player").ToggleCollision(false)
-			emit_signal("correct")
-			queue_free()
+			get_parent().get_node("../player").ToggleCollision(false)			
+			#queue_free()
 			return
 			
 		else:
@@ -104,7 +109,11 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		get_parent().get_node("../player").ToggleCollision(false)
 		emit_signal("correct")
 	else:	#failed 
-		emit_signal("wrong")
+		$AudioStreamPlayer.stream = fail_sound
+		if not $AudioStreamPlayer.playing:
+			print("not playing, play incorrect")
+			$AudioStreamPlayer.play()
+		
 		
 		get_parent().get_node("../player").ToggleCollision(false)
 		if mode == 1:
@@ -115,7 +124,7 @@ func AnswerPressed(extra_arg_0: int) -> void:
 			ghost.queue_free()
 
 	GameInstance.paused = false
-	queue_free()
+	#queue_free()
 
 
 func _on_UseKey_pressed() -> void:
@@ -129,4 +138,8 @@ func _on_UseKey_pressed() -> void:
 		ghost.queue_free()	
 	get_parent().get_node("../player").ToggleCollision(false)
 	GameInstance.paused = false
+	queue_free()
+
+
+func _on_AudioStreamPlayer_finished():
 	queue_free()

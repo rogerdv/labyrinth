@@ -168,8 +168,11 @@ custom_styles/normal = SubResource( 4 )
 icon = ExtResource( 8 )
 flat = true
 script = ExtResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a1" to="." method="AnswerPressed" binds= [ 0 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a2" to="." method="AnswerPressed" binds= [ 1 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a3" to="." method="AnswerPressed" binds= [ 2 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a4" to="." method="AnswerPressed" binds= [ 3 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/UseKey" to="." method="_on_UseKey_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

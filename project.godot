@@ -45,7 +45,9 @@ translations=PoolStringArray( "res://UI/text.en.translation", "res://UI/text.es.
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 quality/2d/use_pixel_snap=true
 vram_compression/import_etc=true
+environment/default_clear_color=Color( 0, 0, 0.0117647, 1 )
 environment/default_environment="res://default_env.tres"

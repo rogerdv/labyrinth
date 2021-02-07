@@ -27,15 +27,16 @@ close,Cerrar,Close
 defeat,!Has sido derrotado!,You have lost!
 sorry,"Desgraciadamente, no has podido vencer a la Ignorancia","Regrettably, you havent been capable of defeating Ignorance"
 psave,Su progreso será guardado,Progress will be saved
-victory,!Has derrotado a la Ignorancia!,You have defeated the Ignorance!
+victory,¡Has derrotado a la Ignorancia!,You have defeated the Ignorance!
 door,"Responde una pregunta para abrir la puerta. Si fallas, se convertirá en piedra.","Answer a question to open doors. If you fail, the door will turn to stone."
 ghost,"Cuídate de los esbirros de la Ingnorancia, si te atrapan, tendrás que responder una pregunta más difícil.","Beware of Ignorance minions, if one catches you, a more difficult question must be answered."
 timebonus,Bonificación de tiempo.,Time bonus.
-bomb,"Las bombas matan fantasmas, también rompen muros y puertas, !pero eso te costará tiempo!","Bombs will kill ghosts, can also destroy walls and doors, but that will cost you time!"
-map,"Puedes consultar el mapa solo cuatro veces por nivel, durante cinco segundos.","You can consult the map only 3 times per level, during 5 seconds."
+bomb,"Las bombas matan fantasmas, también rompen muros y puertas, ¡pero eso te costará tiempo!","Bombs will kill ghosts, can also destroy walls and doors, but that will cost you time!"
+map,"Puedes consultar el mapa solo cuatro veces por nivel, durante cinco segundos.","You can consult the map only four times per level, during five seconds."
 key,"La llave te permite abrir una puerta sin responder la pregunta, pero no conseguirás puntos.","Keys will allow you to open a door without answering the question, but you will get no points."
 story1,"Una amenaza se cierne sobre el Reino de la Sabiduría: la Ignorancia ha escapado de su prisión y oscurece con su velo la Luz del Saber. Para salvar el Reino, un héroe debe atravesar el Laberinto del Saber y restaurar la Luz, pero el camino no será fácil. Solo los más sabios lograrán llegar hasta el final.","The Kingdom of Wisdom is in danger: the Ignorance has escaped and darkens with its veil the Light of Knowledge. To save the Kingdom, a hero must cross the Labyrinth of Knowledge and restore the Light, but the road won't be easy. Only the wisest will make it through."
-start,Que comience el desafío!,Let the challenge begin!
+start,¡Que comience el desafío!,Let the challenge begin!
 mode,Gamer de la viejísima escuela,Oldest school gamer
 mode_help,"Con este modo activado, si pierdes la partida la salva se invalida. Tendrás que empezar desde el principio otra vez.","In this mode, the saved game will be deleted if you loose. You will have to start from the beginning again."
 title,El Laberinto del Saber,The Labyrinth of Knowledge
+vic_demo,¡Gracias por jugar el demo!,Thank you for playing the demo!

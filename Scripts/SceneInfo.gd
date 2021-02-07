@@ -12,6 +12,7 @@ var PauseMenuScene = preload("res://UI/PauseMenu.tscn")
 var fail_sound = preload("res://Sounds/sfx_sounds_error8.wav")
 var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
+
 func _ready() -> void:
 	Start = get_node("../player").position
 	GameInstance.time = GameInstance.MAXTIME
@@ -19,9 +20,16 @@ func _ready() -> void:
 	GameInstance.SceneBombsUsed = 0
 	GameInstance.SceneKeysUsed = 0
 	GameInstance.SceneGhostsKilled = 0	
+	GameInstance.keys = 0
+	GameInstance.bombs = 0
+	GameInstance.paused = false
 
 
 func _input(event: InputEvent) -> void:
+	if mapmode:
+		if event is InputEventScreenTouch and MapTimeCounter>1: 
+			display_map()
+		
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_M:
 			display_map()			
@@ -36,15 +44,10 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if mapmode:
+		
 		MapTimeCounter+=delta
 		if MapTimeCounter>6:
-			mapmode=false
-			get_node("../Camera2D").current = false
-			get_node("../CanvasModulate").visible = true
-			get_node("../player").ToggleCamera(true)			
-			get_node("../player").map_mode = false
-			get_node("../CanvasLayer/UI").ui_visible(true)
-			GameInstance.paused = false
+			display_map()
 	if !GameInstance.paused:
 		if timer<1:
 			timer+=delta
@@ -75,21 +78,24 @@ func _on_Back_pressed():
 	
 func display_map():
 	if !mapmode and mapviews<4:
+		
 		get_node("../CanvasLayer/UI").ui_visible(false)
 		mapmode=true
 		mapviews+=1
 		MapTimeCounter = 0
 		get_node("../player").ToggleCamera(false)
+		get_node("../player").mute_sound()
 		get_node("../player").map_mode = true
 		get_node("../Camera2D").current = true
 		get_node("../CanvasModulate").visible = false
-		GameInstance.paused = true
+		GameInstance.paused = true		
 	else:
 		get_node("../Camera2D").current = false
 		get_node("../CanvasModulate").visible = true
 		get_node("../player").ToggleCamera(true)
 		get_node("../player").map_mode = false
 		get_node("../CanvasLayer/UI").ui_visible(true)
+		#tap_detect.queue_free()
 		mapmode = false
 		GameInstance.paused = false
 
@@ -97,14 +103,10 @@ func display_map():
 func _on_limit_body_entered(body: Node) -> void:
 	get_tree().change_scene("res://Scenes/Defeat.tscn")
 	
-
-func correct():	
-	get_node("../fx").stream = correct_sound
-	get_node("../fx").play()
-
-func wrong():
-	get_node("../fx").stream = fail_sound
-	get_node("../fx").play()
-
+func _gui_event(event: InputEvent):
+	print (event)
+	if event is InputEventScreenTouch and event.pressed:
+		print("touched screen")
+		display_map()
 
 

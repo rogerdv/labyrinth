@@ -1517,5 +1517,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Sexta parte del 30 porciento de 100",
+        "topic": "Mitología",
+        "choices": [
+            {
+                "answer": "5",
+                "correct": "yes"
+            },
+            {
+                "answer": "6",
+                "correct": "no"
+            },
+            {
+                "answer": "7",
+                "correct": "no"
+            },
+            {
+                "answer": "18",
+                "correct": "no"
+            }
+        ]
     }
 ]

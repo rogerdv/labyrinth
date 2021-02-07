@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/ale_regular_med.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/UI/VictoryUI.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://UI/ale_title.tres" type="DynamicFont" id=4]
 [ext_resource path="res://UI/buttonstyle_normal.tres" type="StyleBox" id=5]
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=6]
-
+[ext_resource path="res://Scripts/UI/focus_control.gd" type="Script" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -31,20 +31,21 @@ __meta__ = {
 }
 
 [node name="BacktoMain" type="Button" parent="."]
-margin_left = 261.0
-margin_top = 497.0
-margin_right = 365.0
-margin_bottom = 533.0
+margin_left = 225.081
+margin_top = 416.183
+margin_right = 329.081
+margin_bottom = 452.183
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 6 )
 custom_styles/normal = ExtResource( 5 )
 text = "back_menu"
+script = ExtResource( 7 )
 
 [node name="Exit" type="Button" parent="."]
-margin_left = 629.0
-margin_top = 498.0
-margin_right = 754.0
-margin_bottom = 535.0
+margin_left = 593.081
+margin_top = 417.183
+margin_right = 718.081
+margin_bottom = 454.183
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 6 )
 custom_styles/normal = ExtResource( 5 )
@@ -125,5 +126,19 @@ margin_right = 245.0
 margin_bottom = 27.0
 theme = ExtResource( 3 )
 text = "00"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = -7.0
+margin_right = 126.0
+margin_bottom = 7.0
+theme = ExtResource( 3 )
+text = "vic_demo"
+align = 1
+valign = 1
 [connection signal="pressed" from="BacktoMain" to="." method="_on_BacktoMain_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

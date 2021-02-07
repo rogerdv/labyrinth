@@ -1516,5 +1516,27 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Sixth part of the 30 percent of 100",
+        "topic": "Math",
+        "choices": [
+            {
+                "answer": "5",
+                "correct": "yes"
+            },
+            {
+                "answer": "6",
+                "correct": "no"
+            },
+            {
+                "answer": "5.5",
+                "correct": "no"
+            },
+            {
+                "answer": "18",
+                "correct": "no"
+            }
+        ]
     }
 ]

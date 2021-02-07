@@ -10,8 +10,7 @@ func _ready() -> void:
 	GameInstance.KeysUsed += GameInstance.SceneKeysUsed
 	GameInstance.BombsUsed += GameInstance.SceneBombsUsed
 	GameInstance.GhostsKilled += GameInstance.SceneGhostsKilled
-	$TextureProgress.value = GameInstance.time / 120 * 100
-	#TODO: Save game
+	$TextureProgress.value = GameInstance.time / GameInstance.MAXTIME * 100	
 
 
 func _process(delta: float) -> void:

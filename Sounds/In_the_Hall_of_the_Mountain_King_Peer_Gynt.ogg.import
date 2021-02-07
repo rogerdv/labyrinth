@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/In_the_Hall_of_the_Mountain_King_Peer_Gynt.ogg-93de59a27685c70871612b24951a6c4b.oggstr"
+
+[deps]
+
+source_file="res://Sounds/In_the_Hall_of_the_Mountain_King_Peer_Gynt.ogg"
+dest_files=[ "res://.import/In_the_Hall_of_the_Mountain_King_Peer_Gynt.ogg-93de59a27685c70871612b24951a6c4b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
