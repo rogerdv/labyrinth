@@ -140,5 +140,8 @@ theme = ExtResource( 3 )
 text = "vic_demo"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="BacktoMain" to="." method="_on_BacktoMain_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
