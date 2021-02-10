@@ -724,5 +724,49 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "El hidróxido de aluminio es:",
+        "topic": "Química",
+        "choices": [
+            {
+                "answer": "Anfótero",
+                "correct": "yes"
+            },
+            {
+                "answer": "Básico",
+                "correct": "no"
+            },
+            {
+                "answer": "Ácido",
+                "correct": "no"
+            },
+            {
+                "answer": "Neutro",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "El sulfato de cobre se hidrata con:",
+        "topic": "Química",
+        "choices": [
+            {
+                "answer": "Tiene varios niveles de hidratación",
+                "correct": "yes"
+            },
+            {
+                "answer": "Una molécula de agua",
+                "correct": "no"
+            },
+            {
+                "answer": "Dos moléculas de agua",
+                "correct": "no"
+            },
+            {
+                "answer": "Tres moléculas de agua",
+                "correct": "no"
+            }
+        ]
     }
 ]

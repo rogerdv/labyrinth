@@ -724,6 +724,50 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Aluminium hydroxide is",
+        "topic": "Chemestry",
+        "choices": [
+            {
+                "answer": "Amphoteric",
+                "correct": "yes"
+            },
+            {
+                "answer": "Basic",
+                "correct": "no"
+            },
+            {
+                "answer": "Acid",
+                "correct": "no"
+            },
+            {
+                "answer": "Neutral",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Copper sulfate hydrates with",
+        "topic": "Chemestry",
+        "choices": [
+            {
+                "answer": "Has several hydration levels",
+                "correct": "yes"
+            },
+            {
+                "answer": "One molecule of water",
+                "correct": "no"
+            },
+            {
+                "answer": "Two molecules of water",
+                "correct": "no"
+            },
+            {
+                "answer": "Tree molecules of water",
+                "correct": "no"
+            }
+        ]
     }
 
 ]
