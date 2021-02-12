@@ -40,3 +40,6 @@ mode,Gamer de la viejísima escuela,Oldest school gamer
 mode_help,"Con este modo activado, si pierdes la partida la salva se invalida. Tendrás que empezar desde el principio otra vez.","In this mode, the saved game will be deleted if you loose. You will have to start from the beginning again."
 title,El Laberinto del Saber,The Labyrinth of Knowledge
 vic_demo,¡Gracias por jugar el demo!,Thank you for playing the demo!
+opts,Opciones,Settings
+invert,Invertir controles,Invert controls
+invert_help,Control de movimiento a la derecha,Movement control to the right

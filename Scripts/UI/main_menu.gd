@@ -34,3 +34,7 @@ func _on_instructions_pressed() -> void:
 
 func _on_old_mode_toggled(button_pressed: bool) -> void:
 	GameInstance.old_mode=button_pressed
+
+
+func _on_invert_toggled(button_pressed):
+	GameInstance.invert_control=button_pressed

@@ -213,14 +213,22 @@ __meta__ = {
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer"]
 margin_right = 348.0
-margin_bottom = 161.0
+margin_bottom = 177.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2"]
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer2"]
 margin_right = 348.0
-margin_bottom = 40.0
+margin_bottom = 27.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "opts"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2"]
+margin_top = 31.0
+margin_right = 348.0
+margin_bottom = 71.0
 
 [node name="old_mode" type="CheckButton" parent="PanelContainer/VBoxContainer2/HBoxContainer"]
 margin_right = 76.0
@@ -242,17 +250,51 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer2"]
-margin_top = 44.0
+margin_top = 75.0
 margin_right = 348.0
-margin_bottom = 71.0
+margin_bottom = 102.0
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "mode_help"
+autowrap = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer2"]
+margin_top = 106.0
+margin_right = 348.0
+margin_bottom = 146.0
+
+[node name="invert" type="CheckButton" parent="PanelContainer/VBoxContainer2/HBoxContainer2"]
+margin_right = 76.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="info" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer2"]
+margin_left = 80.0
+margin_top = 6.0
+margin_right = 129.0
+margin_bottom = 33.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "invert"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer2"]
+margin_top = 150.0
+margin_right = 348.0
+margin_bottom = 177.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "invert_help"
 autowrap = true
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="PanelContainer/VBoxContainer2/HBoxContainer/old_mode" to="." method="_on_old_mode_toggled"]
+[connection signal="toggled" from="PanelContainer/VBoxContainer2/HBoxContainer2/invert" to="." method="_on_invert_toggled"]

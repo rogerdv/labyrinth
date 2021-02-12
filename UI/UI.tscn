@@ -26,12 +26,12 @@ __meta__ = {
 }
 
 [node name="Fire" type="TouchScreenButton" parent="."]
-position = Vector2( 769, 300 )
+position = Vector2( 765.436, 300 )
 normal = ExtResource( 14 )
 pressed = ExtResource( 14 )
 
 [node name="Map" type="TouchScreenButton" parent="."]
-position = Vector2( 764.932, 389.882 )
+position = Vector2( 761.368, 389.882 )
 normal = ExtResource( 11 )
 pressed = ExtResource( 11 )
 
@@ -132,7 +132,7 @@ texture_progress = ExtResource( 6 )
 nine_patch_stretch = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 82.9719, 394.542 )
+position = Vector2( 100, 385 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 2 )
 

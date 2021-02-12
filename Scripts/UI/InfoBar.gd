@@ -1,9 +1,18 @@
 extends Control
 
+const JOYSTICK_RIGHT_X = 750
+const JOYSTICK_Y = 385
+const BUTTONS_LEFT_X = 30
+
 
 func _ready() -> void:
 	if not OS.has_touchscreen_ui_hint():
 		$Sprite.visible=false
+	else:
+		if GameInstance.invert_control:
+			$Sprite.position.x = JOYSTICK_RIGHT_X
+			$Fire.position.x = BUTTONS_LEFT_X
+			$Map.position.x  = BUTTONS_LEFT_X
 
 func update_time(percent):
 	$Cont/MarginContainer/progress.value = percent

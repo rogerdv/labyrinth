@@ -11,6 +11,7 @@ var KeysUsed:int = 0
 var BombsUsed:int = 0
 var GhostsKilled:int = 0
 var old_mode: bool = false
+var invert_control = false
 
 #scene temp values
 var SceneScore:int = 0
