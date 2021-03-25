@@ -132,7 +132,7 @@
         ]
     },
     {
-        "question": "Cuál es el significado de ninjutsu?",
+        "question": "¿Cuál es el significado de ninjutsu?",
         "topic": "Artes Marciales",
         "choices": [
             {
@@ -330,7 +330,7 @@
         ]
     },
     {
-        "question": "Si dos ángulos de un triángulo equilátero miden Pi/3 radianes, cuánto mide el tercer ángulo?",
+        "question": "Si dos ángulos de un triángulo equilátero miden Pi/3 radianes, ¿cuánto mide el tercer ángulo?",
         "topic": "Matemáticas",
         "choices": [
             {
@@ -550,7 +550,7 @@
         ]
     },
     {
-        "question": "En qué batalla murió Napoleón?",
+        "question": "¿En qué batalla murió Napoleón?",
         "topic": "Historia",
         "choices": [
             {
@@ -765,6 +765,182 @@
             },
             {
                 "answer": "Tres moléculas de agua",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Modalidad deportiva de la Antigua Grecia, combinación de boxeo y lucha con muy pocas reglas",
+        "topic": "Artes marciales",
+        "choices": [
+            {
+                "answer": "Pancracio",
+                "correct": "yes"
+            },
+            {
+                "answer": "Pugilismo",
+                "correct": "no"
+            },
+            {
+                "answer": "Pentecostés",
+                "correct": "no"
+            },
+            {
+                "answer": "Lucha greco",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Planeta menos denso del Sistema Solar",
+        "topic": "Astronomía",
+        "choices": [
+            {
+                "answer": "Saturno",
+                "correct": "yes"
+            },
+            {
+                "answer": "Júpiter",
+                "correct": "no"
+            },
+            {
+                "answer": "Venus",
+                "correct": "no"
+            },
+            {
+                "answer": "Neptuno",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "¿Cuántas costillas hay en el cuerpo humano?",
+        "topic": "Anatomía",
+        "choices": [
+            {
+                "answer": "24",
+                "correct": "yes"
+            },
+            {
+                "answer": "26",
+                "correct": "no"
+            },
+            {
+                "answer": "12",
+                "correct": "no"
+            },
+            {
+                "answer": "30",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "¿Cuál es el color de la malaquita?",
+        "topic": "Geología",
+        "choices": [
+            {
+                "answer": "Verde",
+                "correct": "yes"
+            },
+            {
+                "answer": "Azul",
+                "correct": "no"
+            },
+            {
+                "answer": "Blanco",
+                "correct": "no"
+            },
+            {
+                "answer": "Rojo",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Según la leyenda, los fundadores de Roma fueron amamantados por:",
+        "topic": "Mitología",
+        "choices": [
+            {
+                "answer": "Una loba",
+                "correct": "yes"
+            },
+            {
+                "answer": "La diosa Minerva",
+                "correct": "no"
+            },
+            {
+                "answer": "Una vaca",
+                "correct": "no"
+            },
+            {
+                "answer": "Una cabra",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Temperatura del cero absoluto:",
+        "topic": "Física",
+        "choices": [
+            {
+                "answer": "-273.15 C",
+                "correct": "yes"
+            },
+            {
+                "answer": "0 C",
+                "correct": "no"
+            },
+            {
+                "answer": "-1500 C",
+                "correct": "no"
+            },
+            {
+                "answer": "-250 C",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Famoso escultor griego, creador de la estatua de Atenea Pártenos:",
+        "topic": "Arte",
+        "choices": [
+            {
+                "answer": "Fidias",
+                "correct": "yes"
+            },
+            {
+                "answer": "Pericles",
+                "correct": "no"
+            },
+            {
+                "answer": "Hércules",
+                "correct": "no"
+            },
+            {
+                "answer": "Apolo",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Infante pesado griego, equipado con armas, coraza y escudo:",
+        "topic": "Hisotira militar",
+        "choices": [
+            {
+                "answer": "Hoplita",
+                "correct": "yes"
+            },
+            {
+                "answer": "Escaramucero",
+                "correct": "no"
+            },
+            {
+                "answer": "Psiloi",
+                "correct": "no"
+            },
+            {
+                "answer": "Peltasta",
                 "correct": "no"
             }
         ]

@@ -1538,5 +1538,143 @@
                 "correct": "no"
             }
         ]
+    }, 
+    {
+        "question": "Largest planet in the Solar System",
+        "topic": "Astronomy",
+        "choices": [
+            {
+                "answer": "Jupiter",
+                "correct": "yes"
+            },
+            {
+                "answer": "Saturn",
+                "correct": "no"
+            },
+            {
+                "answer": "Earth",
+                "correct": "no"
+            },
+            {
+                "answer": "Neptune",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "Loss of ability to detect smells",
+        "topic": "Medicine",
+        "choices": [
+            {
+                "answer": "Anosmia",
+                "correct": "yes"
+            },
+            {
+                "answer": "Hypoxia",
+                "correct": "no"
+            },
+            {
+                "answer": "Arrhythmia",
+                "correct": "no"
+            },
+            {
+                "answer": "Diabetes",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "Eye disorder that cuases distant objects to be blurry",
+        "topic": "Medicine",
+        "choices": [
+            {
+                "answer": "Myopia",
+                "correct": "yes"
+            },
+            {
+                "answer": "Astigmatism",
+                "correct": "no"
+            },
+            {
+                "answer": "Presbyopia",
+                "correct": "no"
+            },
+            {
+                "answer": "Hypermetropia",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "How many sides has an hexagon?",
+        "topic": "Geometry",
+        "choices": [
+            {
+                "answer": "6",
+                "correct": "yes"
+            },
+            {
+                "answer": "7",
+                "correct": "no"
+            },
+            {
+                "answer": "16",
+                "correct": "no"
+            },
+            {
+                "answer": "5",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "Form of government, originated in Ancient Greece",
+        "topic": "Politics",
+        "choices": [
+            {
+                "answer": "Democracy",
+                "correct": "yes"
+            },
+            {
+                "answer": "Republic",
+                "correct": "no"
+            },
+            {
+                "answer": "Monarchy",
+                "correct": "no"
+            },
+            {
+                "answer": "Dictatorship",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "Governing and advisoring assembly in the roman republic and empire:",
+        "topic": "Politics",
+        "choices": [
+            {
+                "answer": "Senate",
+                "correct": "yes"
+            },
+            {
+                "answer": "Parliament",
+                "correct": "no"
+            },
+            {
+                "answer": "Aristocracy",
+                "correct": "no"
+            },
+            {
+                "answer": "Council",
+                "correct": "no"
+
+            }
+        ]
     }
 ]

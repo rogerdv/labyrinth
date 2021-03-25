@@ -573,7 +573,7 @@
         ]
     },
     {
-        "question": "Primer hombre en volar al espacio",
+        "question": "Primer hombre en volar al espacio:",
         "topic": "Aeronáutica",
         "choices": [
             {
@@ -661,7 +661,7 @@
         ]
     },
     {
-        "question": "Consola de juegos creada por Microsoft, presentada en el año 2001",
+        "question": "Consola de juegos creada por Microsoft, presentada en el año 2001:",
         "topic": "Hardware",
         "choices": [
             {
@@ -683,7 +683,7 @@
         ]
     },
     {
-        "question": "Marca de auto utilizado por James Bond",
+        "question": "Marca de auto utilizado por James Bond:",
         "topic": "Automóviles",
         "choices": [
             {
@@ -1035,7 +1035,7 @@
         ]
     },
     {
-        "question": "Marino genovés, descubridor de América",
+        "question": "Marino genovés, descubridor de América:",
         "topic": "Historia",
         "choices": [
             {
@@ -1057,7 +1057,7 @@
         ]
     },
     {
-        "question": "Primer presidente de los Estados Unidos de América",
+        "question": "Primer presidente de los Estados Unidos de América:",
         "topic": "Historia",
         "choices": [
             {
@@ -1123,7 +1123,7 @@
         ]
     },
     {
-        "question": "Ingeniero alemán, creador del motor diesel",
+        "question": "Ingeniero alemán, creador del motor diesel:",
         "topic": "Ingeniería",
         "choices": [
             {
@@ -1167,7 +1167,7 @@
         ]
     },
     {
-        "question": "Proceso realizado por las plantas para convertir la energía de la luz en energía química",
+        "question": "Proceso realizado por las plantas para convertir la energía de la luz en energía química:",
         "topic": "Biología",
         "choices": [
             {
@@ -1189,7 +1189,7 @@
         ]
     },
     {
-        "question": "Isla más grande del mundo",
+        "question": "Isla más grande del mundo:",
         "topic": "Geografía",
         "choices": [
             {
@@ -1277,7 +1277,7 @@
         ]
     },
     {
-        "question": "Cuál de estos números no es una potencia de 2?",
+        "question": "¿Cuál de estos números no es una potencia de 2?",
         "topic": "Matemáticas",
         "choices": [
             {
@@ -1299,7 +1299,7 @@
         ]
     },
     {
-        "question": "En un dado de 20 caras, cuál es la probabilidad de obtener un 2?",
+        "question": "En un dado de 20 caras, ¿cuál es la probabilidad de obtener un 2?",
         "topic": "Matemáticas",
         "choices": [
             {
@@ -1321,7 +1321,7 @@
         ]
     },
     {
-        "question": "Estrella más cercana al sol",
+        "question": "Estrella más cercana al sol:",
         "topic": "Astronomía",
         "choices": [
             {
@@ -1536,6 +1536,139 @@
             },
             {
                 "answer": "18",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Planeta más grande del Sistema Solar",
+        "topic": "Astronomía",
+        "choices": [
+            {
+                "answer": "Júpiter",
+                "correct": "yes"
+            },
+            {
+                "answer": "Saturno",
+                "correct": "no"
+            },
+            {
+                "answer": "Tierra",
+                "correct": "no"
+            },
+            {
+                "answer": "Neptuno",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Pérdida total del olfato",
+        "topic": "Medicina",
+        "choices": [
+            {
+                "answer": "Anosmia",
+                "correct": "yes"
+            },
+            {
+                "answer": "Arritmia",
+                "correct": "no"
+            },
+            {
+                "answer": "Hipoxia",
+                "correct": "no"
+            },
+            {
+                "answer": "Diabetes",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Defecto en el ojo que impide ver corectamente obbjetos alejados",
+        "topic": "Medicina",
+        "choices": [
+            {
+                "answer": "Miopía",
+                "correct": "yes"
+            },
+            {
+                "answer": "Astigmatismo",
+                "correct": "no"
+            },
+            {
+                "answer": "Hipermetropía",
+                "correct": "no"
+            },
+            {
+                "answer": "Presbicia",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "¿Cuántos lados tiene un hexágono?",
+        "topic": "Geometría",
+        "choices": [
+            {
+                "answer": "6",
+                "correct": "yes"
+            },
+            {
+                "answer": "7",
+                "correct": "no"
+            },
+            {
+                "answer": "16",
+                "correct": "no"
+            },
+            {
+
+                "answer": "5",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Forma de gobierno originada en la Antigua Grecia:",
+        "topic": "Política",
+        "choices": [
+            {
+                "answer": "Democracia",
+                "correct": "yes"
+            },
+            {
+                "answer": "República",
+                "correct": "no"
+            },
+            {
+                "answer": "Monarquía",
+                "correct": "no"
+            },
+            {
+                "answer": "Dictadura",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Asamblea consultiva y legislativa de la república e imperio romano:",
+        "topic": "Política",
+        "choices": [
+            {
+                "answer": "Senado",
+                "correct": "yes"
+            },
+            {
+                "answer": "Parlamento",
+                "correct": "no"
+            },
+            {
+                "answer": "Aristocracia",
+                "correct": "no"
+            },
+            {
+                "answer": "Consejo",
                 "correct": "no"
             }
         ]

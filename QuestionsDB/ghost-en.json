@@ -768,6 +768,184 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Ancient Greek sporting event, combining wrestling and boxing techniques, and almost no rules",
+        "topic": "Martial Arts",
+        "choices": [
+            {
+                "answer": "Pankration",
+                "correct": "yes"
+            },
+            {
+                "answer": "Pugilism",
+                "correct": "no"
+            },
+            {
+                "answer": "Pentecost",
+                "correct": "no"
+            },
+            {
+                "answer": "Greco-roman wrestling",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Least dense planet in the Solar System",
+        "topic": "Astronomy",
+        "choices": [
+
+            {
+                "answer": "Saturn",
+                "correct": "yes"
+            },
+            {
+                "answer": "Jupiter",
+                "correct": "no"
+            },
+            {
+                "answer": "Venus",
+                "correct": "no"
+            },
+            {
+                "answer": "Neptune",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "How many ribas has the human body",
+        "topic": "Anatomy",
+        "choices": [
+
+            {
+                "answer": "24",
+                "correct": "yes"
+            },
+            {
+                "answer": "26",
+                "correct": "no"
+            },
+            {
+                "answer": "12",
+                "correct": "no"
+            },
+            {
+                "answer": "30",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "What's the color of malachyte?",
+        "topic": "Anatomy",
+        "choices": [
+            {
+                "answer": "Green",
+                "correct": "yes"
+            },
+            {
+                "answer": "Blue",
+                "correct": "no"
+            },
+            {
+                "answer": "White",
+                "correct": "no"
+            },
+            {
+                "answer": "Red",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "According to the legend, the founders of Romer were nurtured by:",
+        "topic": "Mithology",
+        "choices": [
+            {
+                "answer": "A wolf",
+                "correct": "yes"
+            },
+            {
+                "answer": "Minerva, the Goddess",
+                "correct": "no"
+            },
+            {
+                "answer": "A cow",
+                "correct": "no"
+            },
+            {
+                "answer": "A goat",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Temperature of absolute zero:",
+        "topic": "Physics",
+        "choices": [
+            {
+                "answer": "-273.15 C",
+                "correct": "yes"
+            },
+            {
+                "answer": "0 C",
+                "correct": "no"
+            },
+            {
+                "answer": "-1500 C",
+                "correct": "no"
+            },
+            {
+                "answer": "-250 C",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Famous greek sculptor, author of Athena Parthenos statue:",
+        "topic": "Physics",
+        "choices": [
+            {
+                "answer": "Phidias",
+                "correct": "yes"
+            },
+            {
+                "answer": "Hercules",
+                "correct": "no"
+            },
+            {
+                "answer": "Periclimene",
+                "correct": "no"
+            },
+            {
+                "answer": "Apollo",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Greek reavy infantry soldiers, equipped with weapons, armor and shield:",
+        "topic": "History",
+        "choices": [
+            {
+                "answer": "Hoplite",
+                "correct": "yes"
+            },
+            {
+                "answer": "Psiloi",
+                "correct": "no"
+            },
+            {
+                "answer": "Peltast",
+                "correct": "no"
+            },
+            {
+                "answer": "Skirmisher",
+                "correct": "no"
+            }
+        ]
     }
 
 ]
