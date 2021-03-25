@@ -9,4 +9,6 @@ func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name == "player":
 		# add some time to counter
 		GameInstance.time += 15
+		if GameInstance.time>GameInstance.MAXTIME:
+			GameInstance.time=GameInstance.MAXTIME
 		queue_free()

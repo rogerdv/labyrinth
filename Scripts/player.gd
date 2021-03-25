@@ -19,10 +19,14 @@ var steps = preload("res://Sounds/stepstone_1.wav")
 var map_mode:bool = false
 var counter = 0
 
+signal animation_finished
+
 func _ready():	
 	pass
 
-
+func get_animator():
+	return $AnimationPlayer
+	
 func _input(event):
 	# press events
 	
@@ -209,3 +213,8 @@ func FireBomb():
 
 func mute_sound():
 	$AudioStreamPlayer2D.stop()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	print(anim_name)
+	emit_signal("animation_finished",anim_name)

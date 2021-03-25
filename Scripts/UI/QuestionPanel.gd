@@ -49,10 +49,7 @@ func _process(delta: float) -> void:
 			$AudioStreamPlayer.stream = fail_sound
 			if not $AudioStreamPlayer.playing:				
 				$AudioStreamPlayer.play()
-			if mode == 1: 	
-				#emit_signal("wrong")
-				
-				#get_parent().get_node("../AudioStreamPlayer2D").play()
+			if mode == 1:				
 				tmap.set_cell(x, y, 0)	
 				# re-enable collision detection
 				get_parent().get_node("../player").ToggleCollision(false)
@@ -63,6 +60,7 @@ func _process(delta: float) -> void:
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
 				get_parent().get_node("../player").ToggleCollision(false)
+				get_parent().get_node("../player").get_animator().play("teleport")
 				GameInstance.paused = false
 				#queue_free()
 
@@ -110,17 +108,16 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		emit_signal("correct")
 	else:	#failed 
 		$AudioStreamPlayer.stream = fail_sound
-		if not $AudioStreamPlayer.playing:
-			print("not playing, play incorrect")
+		if not $AudioStreamPlayer.playing:			
 			$AudioStreamPlayer.play()
 		
 		
 		get_parent().get_node("../player").ToggleCollision(false)
 		if mode == 1:
 			tmap.set_cell(x, y, 0)		
-		else: 	# ghost mode
+		else: 	# ghost mode			
 			var start = get_parent().get_node("../SceneInfo").Start
-			get_parent().get_node("../player").position = start
+			get_parent().get_node("../player").position = start			
 			ghost.queue_free()
 
 	GameInstance.paused = false
@@ -142,4 +139,6 @@ func _on_UseKey_pressed() -> void:
 
 
 func _on_AudioStreamPlayer_finished():
+	if mode!=1:
+		get_parent().get_node("../player").get_animator().play("teleport")
 	queue_free()

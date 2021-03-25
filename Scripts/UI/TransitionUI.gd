@@ -4,13 +4,17 @@ extends Control
 var count = 0
 var bonus = 0
 var stop:bool = false
-
+var player_icon = preload("res://Images/player_image.png")
 
 func _ready() -> void:
 	GameInstance.KeysUsed += GameInstance.SceneKeysUsed
 	GameInstance.BombsUsed += GameInstance.SceneBombsUsed
 	GameInstance.GhostsKilled += GameInstance.SceneGhostsKilled
 	$TextureProgress.value = GameInstance.time / GameInstance.MAXTIME * 100	
+	var st = GameInstance.NextScene.left(GameInstance.NextScene.length()-5)
+	var num = st.right(st.length()-2)
+	print(num)
+	get_node("MarginContainer/levels/"+num).texture = player_icon
 
 
 func _process(delta: float) -> void:

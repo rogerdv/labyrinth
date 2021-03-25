@@ -15,6 +15,7 @@ var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
 func _ready() -> void:
 	Start = get_node("../player").position
+	get_node("../player").get_animator().connect("animation_finished", self, "animation_finished")
 	GameInstance.time = GameInstance.MAXTIME
 	GameInstance.SceneScore = 0
 	GameInstance.SceneBombsUsed = 0
@@ -57,12 +58,15 @@ func _process(delta: float) -> void:
 			get_node("../CanvasLayer/UI").update_time(perc)
 			timer=0
 			if GameInstance.time<=0:
+				GameInstance.paused=true				
+				
+				var anim = get_node("../player").get_animator()
+				#anim.connect("animation_finished", self, "animation_finished")
+				anim.play("petrify")
 				#game over
 				if GameInstance.old_mode:	#if old school mode active, remove saved game
 					GameInstance.delete_game()
-					
-				get_tree().change_scene("res://Scenes/Defeat.tscn")
-				#invalidate saved game
+				#get_tree().change_scene("res://Scenes/Defeat.tscn")
 
 
 func _notification(what):
@@ -109,4 +113,5 @@ func _gui_event(event: InputEvent):
 		print("touched screen")
 		display_map()
 
-
+func animation_finished(animation):	
+	get_tree().change_scene("res://Scenes/Defeat.tscn")

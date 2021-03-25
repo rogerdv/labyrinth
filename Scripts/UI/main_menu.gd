@@ -1,8 +1,9 @@
 extends Control
 
 
-func _ready():
-	pass
+func _ready():	
+	$PanelContainer/VBoxContainer2/HBoxContainer/old_mode.pressed = GameInstance.old_mode
+	$PanelContainer/VBoxContainer2/HBoxContainer2/invert.pressed = GameInstance.invert_control
 	#var info = get_node("info")
 	#info.text = "Database size "+String(GameInstance.easy.size())
 	
@@ -13,14 +14,21 @@ func _ready():
 
 
 func _on_newgame_pressed():
+	GameInstance.score = 0
+	GameInstance.BombsUsed = 0
+	GameInstance.KeysUsed = 0
+	GameInstance.GhostsKilled
+	GameInstance.save_conf()
 	get_tree().change_scene("res://Scenes/Intro.tscn")        
 
 
 func _on_quit_pressed():
+	GameInstance.save_conf()
 	get_tree().quit()
 
 
 func _on_continue_pressed() -> void:
+	GameInstance.save_conf()
 	GameInstance.LoadGame()
 
 

@@ -10,8 +10,11 @@ var bombs:int = 0
 var KeysUsed:int = 0
 var BombsUsed:int = 0
 var GhostsKilled:int = 0
+
+#Config params
 var old_mode: bool = false
 var invert_control = false
+var conf_name = "user://labyrinth.conf"
 
 #scene temp values
 var SceneScore:int = 0
@@ -35,6 +38,8 @@ func _ready() -> void:
 	get_tree().set_quit_on_go_back(false)
 	
 	_detect_os_locate()
+	
+	read_conf()
 
 	_read_easy_question_db_by_lang(lang)
 	_read_ghost_question_db_by_lang(lang)
@@ -54,10 +59,10 @@ func SaveGame():
 	savefile.store_32(KeysUsed)
 	savefile.store_32(BombsUsed)
 	savefile.store_32(GhostsKilled)
-	if GameInstance.old_mode:
-		savefile.store_32(1)
-	else:
-		savefile.store_32(0)
+	#if GameInstance.old_mode:
+	#	savefile.store_32(1)
+	#else:
+	#	savefile.store_32(0)
 	savefile.close()
 
 
@@ -76,11 +81,11 @@ func LoadGame():
 	KeysUsed  = savedfile.get_32()
 	BombsUsed  = savedfile.get_32()
 	GhostsKilled = savedfile.get_32()
-	var mode = savedfile.get_32()
-	if mode==1:
-		GameInstance.old_mode = true
-	else:
-		GameInstance.old_mode = false
+	#var mode = savedfile.get_32()
+	#if mode==1:
+	#	GameInstance.old_mode = true
+	#else:
+	#	GameInstance.old_mode = false
 		
 	savedfile.close()
 	get_tree().change_scene(scene)
@@ -135,6 +140,7 @@ func _read_easy_question_db_by_lang(lang):
 	
 	var json_result = JSON.parse(file.get_as_text())
 	easy = json_result.result
+	print(easy.size())
 	error = json_result.error
 	
 	file.close()
@@ -147,12 +153,12 @@ func _read_ghost_question_db_by_lang(lang):
 	var json_result = JSON.parse(file.get_as_text())
 	ghost = json_result.result
 	error = json_result.error
-	
+	print(ghost.size())
 	file.close()
 
 
 func _manage_easy_stack(idx : int):
-	if PrevEasy.size() == 25:
+	if PrevEasy.size() == 65:
 		PrevEasy.remove(0)
 		PrevEasy.append(idx)
 	else:
@@ -160,7 +166,7 @@ func _manage_easy_stack(idx : int):
 
 
 func _manage_ghost_stack(idx : int):
-	if PrevGhost.size() == 10:
+	if PrevGhost.size() == 40:
 		PrevGhost.remove(0)
 		PrevGhost.append(idx)
 	else:
@@ -174,3 +180,38 @@ func _shuffle_question_choices(question):
 	question.choices = choices
 	
 	return question
+
+func read_conf():
+	var config = File.new()
+	if not config.file_exists(conf_name):
+		old_mode = false
+		invert_control = false
+		save_conf()
+	else:
+		var temp
+		config.open(conf_name, File.READ)
+		
+		temp = config.get_16()
+		if temp == 1:
+			old_mode = true
+		else:
+			old_mode = false
+		
+		temp = config.get_16()
+		if temp == 1:
+			invert_control = true
+		else:
+			invert_control = false
+
+
+func save_conf():
+	var config = File.new()
+	config.open(conf_name, File.WRITE)
+	if old_mode:
+		config.store_16(1)
+	else:
+		config.store_16(0)
+	if invert_control:
+		config.store_16(1)
+	else:
+		config.store_16(0)

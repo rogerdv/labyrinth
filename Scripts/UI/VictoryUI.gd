@@ -10,6 +10,7 @@ extends Control
 func _ready() -> void:
 	$VBoxContainer/ScoreContainer/score.text = String(GameInstance.score)
 	$VBoxContainer/KeysContainer/KeysUsed.text = String(GameInstance.KeysUsed)
+	$VBoxContainer/KeysContainer2/BombsUsed.text = str(GameInstance.BombsUsed)
 	$VBoxContainer/GhostkContainer/Gkilled.text = String(GameInstance.GhostsKilled)
 
 

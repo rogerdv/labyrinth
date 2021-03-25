@@ -10,17 +10,18 @@ var DelayCounter = 0
 
 func _ready() -> void:
 	$Sprite.visible = false
+	$Area2D.monitoring = false
 	#$AnimationPlayer.play("idle")
 
 
 func _process(delta: float) -> void:
-	var player_pos = get_node("../player").position
-	
+	var player_pos = get_node("../player").position	
 	
 	if !$Sprite.visible and PlayerVisible and !GameInstance.paused and position.distance_to(player_pos)<350:
 		var r = randi()%1000
 		if r < chance:
 			$Sprite.visible = true
+			$Area2D.monitoring = true
 			$AudioStreamPlayer2D.play()
 			$AnimationPlayer.play("spawn")
 
@@ -63,17 +64,16 @@ func move_along_path(distance):
 	var d = last_point.direction_to(get_node("../player").global_position)	
 	print(d)
 	if d.x>0 and d.x>abs(d.y):
-		$AnimationPlayer.play("walk_right")
-		print("Going right")
+		$AnimationPlayer.play("walk_right")		
 	elif d.x<0 and abs(d.x)>abs(d.y):
 		$AnimationPlayer.play("walk_left")
-		print("Going left")
+		
 	elif d.y<0 and abs(d.y)>abs(d.x):  #going up
 		$AnimationPlayer.play("walk_up")
-		print("Going up")
+		
 	elif d.y>0 and d.y>d.x:  #going up
 		$AnimationPlayer.play("walk_down")
-		print("Going dow")
+		
 	while path.size():
 		var distance_between_points = last_point.distance_to(path[0])
 
@@ -99,6 +99,7 @@ func _on_VisibilityNotifier2D_screen_entered() -> void:
 func _on_VisibilityNotifier2D_screen_exited() -> void:	
 	PlayerVisible = false
 	$Sprite.visible = false
+	$Area2D.monitoring = false
 	$AudioStreamPlayer2D.stop()
 
 
