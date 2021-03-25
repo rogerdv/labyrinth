@@ -35,12 +35,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 script = ExtResource( 4 )
 NextLevel = "res://Scenes/lab14.tscn"
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2560.63, 1192.22 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-max_distance = 4000.0
-attenuation = 0.68302
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 2500, 1280 )

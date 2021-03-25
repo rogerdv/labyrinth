@@ -126,11 +126,9 @@ position = Vector2( 2280.14, 2523.78 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomLimit"]
 shape = SubResource( 1 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2498.93, 1277.18 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
-max_distance = 4000.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )

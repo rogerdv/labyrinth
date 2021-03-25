@@ -54,7 +54,7 @@ position = Vector2( 1499.31, 1898.45 )
 position = Vector2( 3388.24, 154.858 )
 
 [node name="time2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2267.5, 1308.73 )
+position = Vector2( 2294.41, 1766.18 )
 
 [node name="Ghost4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2970.16, 1308.73 )
@@ -116,11 +116,9 @@ position = Vector2( 2067.2, 2648 )
 position = Vector2( 5.29724, 18.0109 )
 shape = SubResource( 1 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2304.44, 1147.46 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
-max_distance = 4000.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )

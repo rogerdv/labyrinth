@@ -35,12 +35,9 @@ tile_data = PoolIntArray( 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 
 script = ExtResource( 3 )
 NextLevel = "res://Scenes/lab15.tscn"
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2113.87, 1197.78 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
-max_distance = 4000.0
-attenuation = 0.784584
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )

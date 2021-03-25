@@ -100,11 +100,9 @@ position = Vector2( 1923.22, -39.0486 )
 position = Vector2( 25.4272, 2373.2 )
 shape = SubResource( 1 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2000, 1000 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
-max_distance = 4000.0
 
 [node name="Ghost" parent="." instance=ExtResource( 7 )]
 position = Vector2( 448.7, 239.405 )

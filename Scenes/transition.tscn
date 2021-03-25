@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/UI/TransitionUI.gd" type="Script" id=1]
 [ext_resource path="res://UI/lab_theme.tres" type="Theme" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Images/progress_bar/animated_bar.tres" type="Texture" id=4]
 [ext_resource path="res://Sounds/sfx_sounds_Blip7.wav" type="AudioStream" id=5]
 [ext_resource path="res://Scripts/UI/focus_control.gd" type="Script" id=6]
+[ext_resource path="res://Images/laberinto.png" type="Texture" id=7]
+[ext_resource path="res://Images/ignorance_room.png" type="Texture" id=8]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -80,5 +82,178 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -2.0
+volume_db = -4.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -217.0
+margin_right = 217.0
+margin_bottom = 259.0
+custom_constants/margin_top = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="levels" type="GridContainer" parent="MarginContainer"]
+margin_top = 5.0
+margin_right = 434.0
+margin_bottom = 259.0
+custom_constants/vseparation = 5
+custom_constants/hseparation = 10
+columns = 6
+
+[node name="01" type="TextureRect" parent="MarginContainer/levels"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="02" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 74.0
+margin_right = 138.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="03" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 148.0
+margin_right = 212.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="04" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 222.0
+margin_right = 286.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="05" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 296.0
+margin_right = 360.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="06" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 370.0
+margin_right = 434.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="07" type="TextureRect" parent="MarginContainer/levels"]
+margin_top = 69.0
+margin_right = 64.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="08" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 74.0
+margin_top = 69.0
+margin_right = 138.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="09" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 148.0
+margin_top = 69.0
+margin_right = 212.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="10" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 222.0
+margin_top = 69.0
+margin_right = 286.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="11" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 296.0
+margin_top = 69.0
+margin_right = 360.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="12" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 370.0
+margin_top = 69.0
+margin_right = 434.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="13" type="TextureRect" parent="MarginContainer/levels"]
+margin_top = 138.0
+margin_right = 64.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="14" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 74.0
+margin_top = 138.0
+margin_right = 138.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="15" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 148.0
+margin_top = 138.0
+margin_right = 212.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="16" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 222.0
+margin_top = 138.0
+margin_right = 286.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="17" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 296.0
+margin_top = 138.0
+margin_right = 360.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="18" type="TextureRect" parent="MarginContainer/levels"]
+margin_left = 370.0
+margin_top = 138.0
+margin_right = 434.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 4
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scenes/key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/time.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/bomb.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 130.662 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -38,12 +41,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 2416.82, 1236.64 )
 zoom = Vector2( 5.8, 5.4 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2523.26, 1128.14 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
-max_distance = 4000.0
-attenuation = 0.707107
 
 [node name="Ghost" parent="." instance=ExtResource( 6 )]
 position = Vector2( 387.926, 484.658 )
@@ -61,7 +61,7 @@ position = Vector2( 2000.17, 1625.74 )
 position = Vector2( 1685.14, 1342.75 )
 
 [node name="Ghost4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4227.14, 1856 )
+position = Vector2( 4307.14, 1760 )
 
 [node name="Ghost5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3923.14, 1132 )
@@ -77,3 +77,14 @@ position = Vector2( 2274.15, 2356.93 )
 
 [node name="bomb" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3181.84, 909.963 )
+
+[node name="time3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4222.3, 1766.31 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 4895.34, 2208.44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -15.874, 0 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Area2D" to="SceneInfo" method="_on_limit_body_entered"]

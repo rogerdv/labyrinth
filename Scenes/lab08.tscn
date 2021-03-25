@@ -24,7 +24,7 @@ position = Vector2( 536.542, 587.338 )
 
 [node name="SceneInfo" type="Node" parent="."]
 script = ExtResource( 4 )
-NextLevel = "res://Scenes/victory.tscn"
+NextLevel = "res://Scenes/lab09.tscn"
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
@@ -96,11 +96,9 @@ position = Vector2( 1855.04, 1112 )
 position = Vector2( 2076.46, 1302.8 )
 zoom = Vector2( 5, 5.6 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2000, 1000 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
-max_distance = 4000.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )

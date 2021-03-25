@@ -83,12 +83,9 @@ shape = SubResource( 1 )
 [node name="Ghost2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 144.313, 267.27 )
 
-[node name="fx" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 2000, 1000 )
+[node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-max_distance = 4000.0
-attenuation = 0.196146
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.25098, 0.25098, 0.231373, 1 )
