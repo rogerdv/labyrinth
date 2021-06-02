@@ -23,14 +23,13 @@ var SceneBombsUsed:int = 0
 var SceneGhostsKilled:int = 0
 var time:float
 
-
 var paused:bool = false
 var error
 var PrevEasy = []
 var PrevGhost = []
 var NextScene
 
-const MAXTIME = 180
+const MAXTIME = 150
 
 var sound_fx:AudioStreamPlayer2D
 
@@ -52,7 +51,7 @@ func SaveGame():
 	
 	savefile.open("user://savedgame", File.WRITE)
 	
-	print("name of scene to save: ", get_tree().current_scene.filename)
+	#print("name of scene to save: ", get_tree().current_scene.filename)
 	
 	savefile.store_pascal_string(get_tree().current_scene.filename)
 	savefile.store_32(score)
@@ -70,7 +69,7 @@ func LoadGame():
 	var savedfile = File.new()
 	
 	if not savedfile.file_exists("user://savedgame"):
-		print("error: you don't have a saved game!")
+		#print("error: you don't have a saved game!")
 		return # Error! We don't have a save to load.
 		
 	savedfile.open("user://savedgame", File.READ)

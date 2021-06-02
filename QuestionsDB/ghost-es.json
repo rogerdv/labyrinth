@@ -925,7 +925,7 @@
     },
     {
         "question": "Infante pesado griego, equipado con armas, coraza y escudo:",
-        "topic": "Hisotira militar",
+        "topic": "Militar",
         "choices": [
             {
                 "answer": "Hoplita",
@@ -941,6 +941,28 @@
             },
             {
                 "answer": "Peltasta",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Isla más grande del archipiélago de Japón:",
+        "topic": "Geografía",
+        "choices": [
+            {
+                "answer": "Honshu",
+                "correct": "yes"
+            },
+            {
+                "answer": "Hokkaido",
+                "correct": "no"
+            },
+            {
+                "answer": "Okinawa",
+                "correct": "no"
+            },
+            {
+                "answer": "Osaka",
                 "correct": "no"
             }
         ]

@@ -256,4 +256,5 @@ rect_min_size = Vector2( 64, 64 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 4
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1676,5 +1676,73 @@
 
             }
         ]
+    }, 
+    {
+        "question": "French military and politician who conquered most of Europe during early XIX century:",
+        "topic": "History",
+        "choices": [
+            {
+                "answer": "Napoleon",
+                "correct": "yes"
+            },
+            {
+                "answer": "Charles de Gaulle",
+                "correct": "no"
+            },
+            {
+                "answer": "Robespierre",
+                "correct": "no"
+            },
+            {
+                "answer": "Louis XV",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "One of the Three musketeers, Count de la Fère:",
+        "topic": "Literature",
+        "choices": [
+            {
+                "answer": "Athos",
+                "correct": "yes"
+            },
+            {
+                "answer": "Porthos",
+                "correct": "no"
+            },
+            {
+                "answer": "Aramis",
+                "correct": "no"
+            },
+            {
+                "answer": "D'Artagnan",
+                "correct": "no"
+
+            }
+        ]
+    }, 
+    {
+        "question": "French king who allegedly pronounced the phrase I am the state:",
+        "topic": "History",
+        "choices": [
+             {
+                "answer": "Luis XIV",
+                "correct": "yes"
+            },
+            {
+                "answer": "Luis XV",
+                "correct": "no"
+            },
+            {
+                "answer": "Richelieu",
+                "correct": "no"
+            },
+            {
+                "answer": "Luis XVI",
+                "correct": "no"
+            }
+        ]
     }
 ]

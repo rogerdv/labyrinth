@@ -67,6 +67,7 @@ shape = SubResource( 1 )
 
 [node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -2.0
 autoplay = true
 
 [node name="key2" parent="." instance=ExtResource( 9 )]

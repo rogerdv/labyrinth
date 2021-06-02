@@ -11,10 +11,13 @@ func _ready() -> void:
 	GameInstance.BombsUsed += GameInstance.SceneBombsUsed
 	GameInstance.GhostsKilled += GameInstance.SceneGhostsKilled
 	$TextureProgress.value = GameInstance.time / GameInstance.MAXTIME * 100	
-	var st = GameInstance.NextScene.left(GameInstance.NextScene.length()-5)
-	var num = st.right(st.length()-2)
-	print(num)
-	get_node("MarginContainer/levels/"+num).texture = player_icon
+	if GameInstance.NextScene.find("victory",0)==-1:
+		var st = GameInstance.NextScene.left(GameInstance.NextScene.length()-5)
+		var num = st.right(st.length()-2)	
+		get_node("MarginContainer/levels/"+num).texture = player_icon
+	else:
+		get_node("MarginContainer/levels/18").texture = player_icon
+	
 
 
 func _process(delta: float) -> void:

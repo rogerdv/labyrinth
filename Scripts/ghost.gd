@@ -61,8 +61,9 @@ func move_along_path(distance):
 	#correct orientation
 	#print(last_point)
 	#print(get_node("../player").global_position)
-	var d = last_point.direction_to(get_node("../player").global_position)	
-	print(d)
+	#var d = last_point.direction_to(get_node("../player").global_position)	
+	var d = last_point.direction_to(path[0])	
+	#print(d)
 	if d.x>0 and d.x>abs(d.y):
 		$AnimationPlayer.play("walk_right")		
 	elif d.x<0 and abs(d.x)>abs(d.y):
@@ -75,7 +76,7 @@ func move_along_path(distance):
 		$AnimationPlayer.play("walk_down")
 		
 	while path.size():
-		var distance_between_points = last_point.distance_to(path[0])
+		var distance_between_points = last_point.distance_to(path[0])		
 
 		# the position to move to falls between two points
 		if distance <= distance_between_points:

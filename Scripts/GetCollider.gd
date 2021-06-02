@@ -23,8 +23,8 @@ func _physics_process(_delta):
 					get_parent().ToggleCollision(true)
 					# pause and display question
 					var panel = preload("res://UI/QuestionPanel.tscn").instance()
-					panel.connect("correct",get_parent().get_node("../SceneInfo"),"correct")
-					panel.connect("wrong",get_parent().get_node("../SceneInfo"),"wrong")
+					#panel.connect("correct",get_parent().get_node("../SceneInfo"),"correct")
+					#panel.connect("wrong",get_parent().get_node("../SceneInfo"),"wrong")
 					panel.mode = 1
 					panel.x = map_point.x
 					panel.y = map_point.y

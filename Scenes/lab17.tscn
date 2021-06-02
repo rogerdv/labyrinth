@@ -94,4 +94,13 @@ shape = SubResource( 1 )
 
 [node name="Ghost6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3573.92, 1287.81 )
+
+[node name="Ghost7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 96.1793, 387.178 )
+
+[node name="Ghost8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4745.1, 183.761 )
+
+[node name="time3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2203.37, 194.605 )
 [connection signal="body_entered" from="Area2D" to="SceneInfo" method="_on_limit_body_entered"]

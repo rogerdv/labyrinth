@@ -19,6 +19,8 @@ var steps = preload("res://Sounds/stepstone_1.wav")
 var map_mode:bool = false
 var counter = 0
 
+var dir_vec= Vector2(0,0) 	#direction vector for keyboard based movement
+
 signal animation_finished
 
 func _ready():	
@@ -33,21 +35,25 @@ func _input(event):
 	#release events
 	if event is InputEventKey and not event.pressed: 
 		if event.scancode==KEY_UP:
+			dir_vec.y=0
 			UP = false
 			if $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_DOWN:
+			dir_vec.y=0
 			DOWN = false
 			if $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_LEFT:
+			dir_vec.x=0
 			LEFT = false
 			if $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.stop()
 			
 		if event.scancode==KEY_RIGHT:
+			dir_vec.x=0
 			RIGHT = false
 			if $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.stop()
@@ -57,27 +63,31 @@ func _input(event):
 		if event.scancode==KEY_SPACE:
 			FireBomb()
 		
-		if event.scancode==KEY_UP:						
-			UP = true			
+		if event.scancode==KEY_UP:					
+			dir_vec.y=-1
+			#UP = true			
 			LAST_DIR = DIR_UP
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
 			
-		if event.scancode==KEY_DOWN:			
-			DOWN = true
+		if event.scancode==KEY_DOWN:	
+			dir_vec.y=1		
+			#DOWN = true
 			LAST_DIR = DIR_DN
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
 				
 		if event.scancode==KEY_LEFT:
+			dir_vec.x=-1
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-			LEFT = true
+			#LEFT = true
 			LAST_DIR = DIR_LF
 		if event.scancode==KEY_RIGHT:
+			dir_vec.x=1
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-			RIGHT = true
+			#RIGHT = true
 			LAST_DIR = DIR_RG
 		
 		if not UP and not DOWN and not LEFT and not RIGHT:
@@ -90,77 +100,52 @@ func _physics_process(delta):
 
 	# mobile devices
 	if OS.has_touchscreen_ui_hint() and joystick:		
-		if !GameInstance.paused:
+		# get joystick value and normalize it
+		vec = joystick.get_value().normalized()
+	else:
+		# keyboard based movement
+		vec = dir_vec.normalized()
+		
+	if !GameInstance.paused:			
 			
-			# get joystick value and normalize it
-			vec = joystick.get_value().normalized()
-			move_and_slide(vec * 150)			
-
-			#play the animation according to direction
-			if vec.x > 0.1:								
-				if not $AudioStreamPlayer2D.playing: 
-					$AudioStreamPlayer2D.play()
+		move_and_slide(vec * 150)		
+		#play the animation according to direction
+		if vec.x > 0.1:								
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_right")
 				LAST_DIR = DIR_RG
-			elif vec.x < -0.1:
-				if not $AudioStreamPlayer2D.playing: 
-					$AudioStreamPlayer2D.play()
+		elif vec.x < -0.1:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_left")
 				LAST_DIR = DIR_LF
-			elif vec.y > 0.1:
-				if not $AudioStreamPlayer2D.playing: 
-					$AudioStreamPlayer2D.play()
+		elif vec.y > 0.1:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_down")
 				LAST_DIR = DIR_DN
-			elif vec.y < -0.1:
-				if not $AudioStreamPlayer2D.playing: 
-					$AudioStreamPlayer2D.play()
+		elif vec.y < -0.1:
+			if not $AudioStreamPlayer2D.playing: 
+				$AudioStreamPlayer2D.play()
 				$AnimationPlayer.play("walk_up")
 				LAST_DIR = DIR_UP
-			elif vec == Vector2(0,0):
-				$AnimationPlayer.stop()
-				$AudioStreamPlayer2D.stop()
-			if (get_slide_count() > 0):
-				coll = get_slide_collision(0)
-				#print("Collided with: ", coll.collider.name)
-				#print(vec.normalized())
-				$RayCast2D.cast_to = vec* Vector2(30,30)
+		elif vec == Vector2(0,0):
+			$AnimationPlayer.stop()
+			$AudioStreamPlayer2D.stop()	
 
-	else:
-		if !GameInstance.paused:
-			# keyboard based movement
-			if UP:			
-				move_and_slide(Vector2(0,-150), Vector2(0,0), true)
-				$AnimationPlayer.play("walk_up")
+			
+		if (get_slide_count() > 0):
+			coll = get_slide_collision(0)				
+			$AnimationPlayer.stop()
+			$AudioStreamPlayer2D.stop()	
+			$RayCast2D.cast_to = vec* Vector2(30,30)
+			#print("Collided with: ", coll.collider.name)
+				
 
-				if (get_slide_count() > 0):
-					coll = get_slide_collision(0)
-					#print("Collided with: ", coll.collider.name)
-					$RayCast2D.cast_to = Vector2(0,-30)
-
-			if DOWN:			
-				move_and_slide(Vector2(0,150), Vector2(0,0), true)
-				$AnimationPlayer.play("walk_down")
-				if  (get_slide_count()>0):
-					#coll = get_slide_collision(0)
-					$RayCast2D.cast_to = Vector2(0,30)
-
-			if LEFT:			
-				move_and_slide(Vector2(-150,0), Vector2(0,0), true)
-				$AnimationPlayer.play("walk_left")
-
-				if get_slide_count() > 0:
-					$RayCast2D.cast_to= Vector2(-25,0)
-
-			if RIGHT:			
-				move_and_slide(Vector2(150,0), Vector2(0,0), true)
-				$AnimationPlayer.play("walk_right")
-
-				if get_slide_count() > 0:
-					$RayCast2D.cast_to = Vector2(25,0)
-			if not UP and not DOWN and not LEFT and not RIGHT:
-				$AudioStreamPlayer2D.stop()
-				$AnimationPlayer.stop()		
+	#if not UP and not DOWN and not LEFT and not RIGHT:
+	#	$AudioStreamPlayer2D.stop()
+	#	$AnimationPlayer.stop()		
 		
 func _process(delta: float) -> void:
 	if map_mode:

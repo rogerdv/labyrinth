@@ -926,8 +926,8 @@
         ]
     },
     {
-        "question": "Greek reavy infantry soldiers, equipped with weapons, armor and shield:",
-        "topic": "History",
+        "question": "Greek heavy infantry soldiers, equipped with weapons, armor and shield:",
+        "topic": "Military",
         "choices": [
             {
                 "answer": "Hoplite",
@@ -943,6 +943,28 @@
             },
             {
                 "answer": "Skirmisher",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Largest island of Japan:",
+        "topic": "Geography",
+        "choices": [
+            {
+                "answer": "Honshu",
+                "correct": "yes"
+            },
+            {
+                "answer": "Hokkaido",
+                "correct": "no"
+            },
+            {
+                "answer": "Okinawa",
+                "correct": "no"
+            },
+            {
+                "answer": "Osaka",
                 "correct": "no"
             }
         ]

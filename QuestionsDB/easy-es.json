@@ -1672,5 +1672,71 @@
                 "correct": "no"
             }
         ]
+    },
+    {
+        "question": "Militar y político francés de principios del siglo XIX que llegó a conquistar buena parte de Europa:",
+        "topic": "Historia",
+        "choices": [
+            {
+                "answer": "Napoleón",
+                "correct": "yes"
+            },
+            {
+                "answer": "Charles de Gaulle",
+                "correct": "no"
+            },
+            {
+                "answer": "Robespierre",
+                "correct": "no"
+            },
+            {
+                "answer": "Luis XIV",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Rey francés a quien se atribuye la frase El Estado soy yo:",
+        "topic": "Historia",
+        "choices": [
+            {
+                "answer": "Luis XIV",
+                "correct": "yes"
+            },
+            {
+                "answer": "Luis XV",
+                "correct": "no"
+            },
+            {
+                "answer": "Richelieu",
+                "correct": "no"
+            },
+            {
+                "answer": "Luis XVI",
+                "correct": "no"
+            }
+        ]
+    },
+    {
+        "question": "Uno de los tres mosqueteros, el Conde de la Fere:",
+        "topic": "Literatura",
+        "choices": [
+            {
+                "answer": "Athos",
+                "correct": "yes"
+            },
+            {
+                "answer": "Porthos",
+                "correct": "no"
+            },
+            {
+                "answer": "Aramís",
+                "correct": "no"
+            },
+            {
+                "answer": "D'Artagnan",
+                "correct": "no"
+            }
+        ]
     }
 ]

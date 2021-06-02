@@ -106,6 +106,7 @@ shape = SubResource( 1 )
 
 [node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -2.0
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

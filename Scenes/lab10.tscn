@@ -36,6 +36,7 @@ NextLevel = "res://Scenes/lab11.tscn"
 
 [node name="fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -2.0
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -59,6 +60,12 @@ position = Vector2( 3662.59, 605.849 )
 
 [node name="Ghost5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3773.47, 1064.46 )
+
+[node name="Ghost10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2017.94, 2254.27 )
+
+[node name="Ghost11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2957.94, 2202.27 )
 
 [node name="time" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3365.25, 1301.33 )

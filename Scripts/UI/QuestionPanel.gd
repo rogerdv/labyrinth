@@ -5,7 +5,7 @@ var mode:int = 0
 var idx:int = 0
 var question
 var timer:float = 0
-var counter:int = 8
+var counter:int = 10
 var x:int
 var y:int
 var tmap
