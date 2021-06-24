@@ -109,35 +109,36 @@ func _physics_process(delta):
 	if !GameInstance.paused:			
 			
 		move_and_slide(vec * 150)		
+		$AnimationTree.set("parameters/move_vector/blend_position",vec)
 		#play the animation according to direction
 		if vec.x > 0.1:								
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-				$AnimationPlayer.play("walk_right")
+				#$AnimationPlayer.play("walk_right")
 				LAST_DIR = DIR_RG
 		elif vec.x < -0.1:
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-				$AnimationPlayer.play("walk_left")
+				#$AnimationPlayer.play("walk_left")
 				LAST_DIR = DIR_LF
 		elif vec.y > 0.1:
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-				$AnimationPlayer.play("walk_down")
+				#$AnimationPlayer.play("walk_down")
 				LAST_DIR = DIR_DN
 		elif vec.y < -0.1:
 			if not $AudioStreamPlayer2D.playing: 
 				$AudioStreamPlayer2D.play()
-				$AnimationPlayer.play("walk_up")
+				#$AnimationPlayer.play("walk_up")
 				LAST_DIR = DIR_UP
 		elif vec == Vector2(0,0):
-			$AnimationPlayer.stop()
+			#$AnimationPlayer.stop()
 			$AudioStreamPlayer2D.stop()	
 
 			
 		if (get_slide_count() > 0):
 			coll = get_slide_collision(0)				
-			$AnimationPlayer.stop()
+			#$AnimationPlayer.stop()
 			$AudioStreamPlayer2D.stop()	
 			$RayCast2D.cast_to = vec* Vector2(30,30)
 			#print("Collided with: ", coll.collider.name)
