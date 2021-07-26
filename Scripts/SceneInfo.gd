@@ -15,7 +15,8 @@ var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 
 func _ready() -> void:
 	Start = get_node("../player").position
-	get_node("../player").get_animator().connect("animation_finished", self, "animation_finished")
+	# No longer applies
+	get_node("../player").connect("animation_finished", self, "animation_finished")
 	GameInstance.time = GameInstance.MAXTIME
 	GameInstance.SceneScore = 0
 	GameInstance.SceneBombsUsed = 0
@@ -41,7 +42,11 @@ func _input(event: InputEvent) -> void:
 		elif event.scancode == KEY_ESCAPE:
 			GameInstance.paused = true			
 			get_node("../CanvasLayer").add_child(PauseMenuScene.instance())		
-
+	if Input.is_action_just_pressed("ui_cancel"):
+		GameInstance.paused = true			
+		get_node("../CanvasLayer").add_child(PauseMenuScene.instance())	
+	if Input.is_action_just_pressed("map"):
+		display_map()
 
 func _process(delta: float) -> void:
 	if mapmode:
@@ -58,11 +63,12 @@ func _process(delta: float) -> void:
 			get_node("../CanvasLayer/UI").update_time(perc)
 			timer=0
 			if GameInstance.time<=0:
+				#ran out of time
 				GameInstance.paused=true				
 				
 				var anim = get_node("../player").get_animator()
 				#anim.connect("animation_finished", self, "animation_finished")
-				anim.play("petrify")
+				anim.start("petrify")
 				#game over
 				if GameInstance.old_mode:	#if old school mode active, remove saved game
 					GameInstance.delete_game()
@@ -108,10 +114,11 @@ func _on_limit_body_entered(body: Node) -> void:
 	get_tree().change_scene("res://Scenes/Defeat.tscn")
 	
 func _gui_event(event: InputEvent):
-	print (event)
+	
 	if event is InputEventScreenTouch and event.pressed:
 		print("touched screen")
 		display_map()
 
 func animation_finished(animation):	
+	print(animation)
 	get_tree().change_scene("res://Scenes/Defeat.tscn")

@@ -12,8 +12,11 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func _process(delta: float) -> void:
+	#if Input.is_action_just_pressed("ui_cancel"):
+	#	GameInstance.paused=false
+	#	queue_free()
+	pass
 
 
 func _on_yes_pressed() -> void:

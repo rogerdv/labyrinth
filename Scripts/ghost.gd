@@ -7,6 +7,7 @@ var path
 onready var nav = get_node("../Navigation2D")
 const CHARACTER_SPEED = 110
 var DelayCounter = 0
+onready var anim_mode = $AnimationTree.get("parameters/playback")
 
 func _ready() -> void:
 	$Sprite.visible = false
@@ -23,7 +24,8 @@ func _process(delta: float) -> void:
 			$Sprite.visible = true
 			$Area2D.monitoring = true
 			$AudioStreamPlayer2D.play()
-			$AnimationPlayer.play("spawn")
+			anim_mode.start("spawn")
+			#$AnimationPlayer.play("spawn")
 
 	if $Sprite.visible and !GameInstance.paused:		#We are working
 		if DelayCounter<1:
@@ -58,22 +60,19 @@ func _update_navigation_path(start_position, end_position):
 
 func move_along_path(distance):
 	var last_point = global_position
-	#correct orientation
-	#print(last_point)
-	#print(get_node("../player").global_position)
-	#var d = last_point.direction_to(get_node("../player").global_position)	
+	
 	var d = last_point.direction_to(path[0])	
 	#print(d)
+	$AnimationTree.set("parameters/move/blend_position", d.normalized())
+	anim_mode.travel("move")
 	if d.x>0 and d.x>abs(d.y):
-		$AnimationPlayer.play("walk_right")		
+		print("walk_right")		
 	elif d.x<0 and abs(d.x)>abs(d.y):
-		$AnimationPlayer.play("walk_left")
-		
+		print("walk_left")	
 	elif d.y<0 and abs(d.y)>abs(d.x):  #going up
-		$AnimationPlayer.play("walk_up")
-		
+		print("walk_up")
 	elif d.y>0 and d.y>d.x:  #going up
-		$AnimationPlayer.play("walk_down")
+		print("walk_down")
 		
 	while path.size():
 		var distance_between_points = last_point.distance_to(path[0])		
@@ -90,7 +89,8 @@ func move_along_path(distance):
 	# the character reached the end of the path
 	global_position = last_point
 	set_process(false)
-	$AnimationPlayer.play("idle")
+	anim_mode.start("idle")
+	#$AnimationPlayer.play("idle")
 
 func _on_VisibilityNotifier2D_screen_entered() -> void:	
 	PlayerVisible = true
@@ -107,8 +107,8 @@ func _on_VisibilityNotifier2D_screen_exited() -> void:
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name=="player" and $Sprite.visible:
 		var panel = preload("res://UI/QuestionPanel.tscn").instance()
-		panel.connect("correct",get_node("../SceneInfo"),"correct")
-		panel.connect("wrong",get_node("../SceneInfo"),"wrong")
+		#panel.connect("correct",get_node("../SceneInfo"),"correct")
+		#panel.connect("wrong",get_node("../SceneInfo"),"wrong")
 		panel.mode = 2
 		panel.ghost = self
 		get_node("../CanvasLayer").add_child(panel)

@@ -13,7 +13,7 @@ var ghost
 var fail_sound = preload("res://Sounds/sfx_sounds_error8.wav")
 var correct_sound = preload("res://Sounds/sfx_sounds_fanfare3.wav")
 var door_anim = preload("res://Scenes/animated_door.tscn")
-
+var wrong=false
 
 func _ready() -> void:			
 	$PanelContainer/VBoxContainer/HBoxContainer/time.text = String(counter)	
@@ -56,11 +56,12 @@ func _process(delta: float) -> void:
 				GameInstance.paused = false
 				#queue_free()
 			else:
+				print("Time out")
 				# ghost mode, go back to start				
 				var start = get_parent().get_node("../SceneInfo").Start
 				get_parent().get_node("../player").position = start
 				get_parent().get_node("../player").ToggleCollision(false)
-				get_parent().get_node("../player").get_animator().play("teleport")
+				#get_parent().get_node("../player").get_animator().play("teleport")
 				GameInstance.paused = false
 				#queue_free()
 
@@ -107,6 +108,7 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		get_parent().get_node("../player").ToggleCollision(false)
 		emit_signal("correct")
 	else:	#failed 
+		wrong=true
 		$AudioStreamPlayer.stream = fail_sound
 		if not $AudioStreamPlayer.playing:			
 			$AudioStreamPlayer.play()
@@ -115,7 +117,9 @@ func AnswerPressed(extra_arg_0: int) -> void:
 		get_parent().get_node("../player").ToggleCollision(false)
 		if mode == 1:
 			tmap.set_cell(x, y, 0)		
-		else: 	# ghost mode			
+		else: 	# ghost mode		
+			print("Wrong answer")	
+			
 			var start = get_parent().get_node("../SceneInfo").Start
 			get_parent().get_node("../player").position = start			
 			ghost.queue_free()
@@ -139,6 +143,6 @@ func _on_UseKey_pressed() -> void:
 
 
 func _on_AudioStreamPlayer_finished():
-	if mode!=1:
-		get_parent().get_node("../player").get_animator().play("teleport")
+	if mode!=1 and wrong:
+		get_parent().get_node("../player").get_animator().start("teleport")
 	queue_free()

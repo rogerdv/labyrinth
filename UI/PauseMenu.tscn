@@ -82,5 +82,6 @@ custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "no"
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/no" to="." method="_on_no_pressed"]

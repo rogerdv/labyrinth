@@ -72,5 +72,6 @@ autoplay = true
 
 [node name="key2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 643.564, 163.101 )
+
 [connection signal="body_entered" from="UpLimit" to="SceneInfo" method="_on_limit_body_entered"]
 [connection signal="body_entered" from="BottomLimit" to="SceneInfo" method="_on_limit_body_entered"]

@@ -170,6 +170,7 @@ flat = true
 script = ExtResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a1" to="." method="AnswerPressed" binds= [ 0 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a2" to="." method="AnswerPressed" binds= [ 1 ]]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/a3" to="." method="AnswerPressed" binds= [ 2 ]]

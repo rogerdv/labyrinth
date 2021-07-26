@@ -2,22 +2,14 @@ extends KinematicBody2D
 
 
 onready var joystick = get_parent().get_node("CanvasLayer/UI").get_joystick()
+onready var anim_mode = $AnimationTree.get("parameters/playback")
 
-
-var UP:bool = false
-var DOWN:bool = false
-var LEFT:bool = false
-var RIGHT:bool = false
-var LAST_DIR:int = 2
-const DIR_UP = 1
-const DIR_DN = 2
-const DIR_LF = 3
-const DIR_RG = 4
 const bomb = preload("res://Scenes/bomb_projectile.tscn")
 var vec:Vector2
 var steps = preload("res://Sounds/stepstone_1.wav")
 var map_mode:bool = false
 var counter = 0
+var last_vector	#last movement vector
 
 var dir_vec= Vector2(0,0) 	#direction vector for keyboard based movement
 
@@ -27,72 +19,64 @@ func _ready():
 	pass
 
 func get_animator():
-	return $AnimationPlayer
+	return anim_mode
 	
 func _input(event):
 	# press events
 	
 	#release events
 	if event is InputEventKey and not event.pressed: 
-		if event.scancode==KEY_UP:
-			dir_vec.y=0
-			UP = false
-			if $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.stop()
+		if event.scancode==KEY_W:
+			dir_vec.y=0			
 			
-		if event.scancode==KEY_DOWN:
-			dir_vec.y=0
-			DOWN = false
-			if $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.stop()
+		if event.scancode==KEY_S:
+			dir_vec.y=0						
 			
-		if event.scancode==KEY_LEFT:
-			dir_vec.x=0
-			LEFT = false
-			if $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.stop()
+		if event.scancode==KEY_A:
+			dir_vec.x=0						
 			
-		if event.scancode==KEY_RIGHT:
-			dir_vec.x=0
-			RIGHT = false
-			if $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.stop()
+		if event.scancode==KEY_D:
+			dir_vec.x=0			
 	
 	#key pressed events
 	if event is InputEventKey and event.pressed: 
 		if event.scancode==KEY_SPACE:
 			FireBomb()
 		
-		if event.scancode==KEY_UP:					
-			dir_vec.y=-1
-			#UP = true			
-			LAST_DIR = DIR_UP
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+		if event.scancode==KEY_W:					
+			dir_vec.y=-1			
 			
-		if event.scancode==KEY_DOWN:	
-			dir_vec.y=1		
-			#DOWN = true
-			LAST_DIR = DIR_DN
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
+		if event.scancode==KEY_S:	
+			dir_vec.y=1								
 				
-		if event.scancode==KEY_LEFT:
-			dir_vec.x=-1
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-			#LEFT = true
-			LAST_DIR = DIR_LF
-		if event.scancode==KEY_RIGHT:
-			dir_vec.x=1
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-			#RIGHT = true
-			LAST_DIR = DIR_RG
-		
-		if not UP and not DOWN and not LEFT and not RIGHT:
-			$AudioStreamPlayer2D.stop()
-			$AnimationPlayer.stop()
+		if event.scancode==KEY_A:
+			dir_vec.x=-1			
+			
+		if event.scancode==KEY_D:
+			dir_vec.x=1			
+					
+	
+	# Controller actions	
+	if Input.is_action_pressed("ui_left"):
+		dir_vec.x=-1
+	elif Input.is_action_pressed("ui_right"):
+		dir_vec.x=1
+	if Input.is_action_pressed("ui_up"):
+		dir_vec.y=-1
+	elif Input.is_action_pressed("ui_down"):
+		dir_vec.y=1
+	
+	if Input.is_action_just_released("ui_left"):
+		dir_vec.x=0
+	elif Input.is_action_just_released("ui_right"):
+		dir_vec.x=0
+	if Input.is_action_just_released("ui_up"):
+		dir_vec.y=0
+	elif Input.is_action_just_released("ui_down"):
+		dir_vec.y=0
+	
+	if Input.is_action_just_pressed("fire"):
+		FireBomb()
 
 
 func _physics_process(delta):
@@ -109,31 +93,19 @@ func _physics_process(delta):
 	if !GameInstance.paused:			
 			
 		move_and_slide(vec * 150)		
-		$AnimationTree.set("parameters/move_vector/blend_position",vec)
-		#play the animation according to direction
-		if vec.x > 0.1:								
+		
+		if vec!=Vector2.ZERO:
+			last_vector = vec
 			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-				#$AnimationPlayer.play("walk_right")
-				LAST_DIR = DIR_RG
-		elif vec.x < -0.1:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-				#$AnimationPlayer.play("walk_left")
-				LAST_DIR = DIR_LF
-		elif vec.y > 0.1:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-				#$AnimationPlayer.play("walk_down")
-				LAST_DIR = DIR_DN
-		elif vec.y < -0.1:
-			if not $AudioStreamPlayer2D.playing: 
-				$AudioStreamPlayer2D.play()
-				#$AnimationPlayer.play("walk_up")
-				LAST_DIR = DIR_UP
-		elif vec == Vector2(0,0):
-			#$AnimationPlayer.stop()
-			$AudioStreamPlayer2D.stop()	
+				$AudioStreamPlayer2D.play()			
+			$AnimationTree.set("parameters/move_vector/blend_position",vec)
+			
+			$AnimationTree.set("parameters/idle/blend_position",vec)
+			anim_mode.travel("move_vector")
+			
+		else:			
+			anim_mode.travel("idle")
+			$AudioStreamPlayer2D.stop()		
 
 			
 		if (get_slide_count() > 0):
@@ -143,10 +115,6 @@ func _physics_process(delta):
 			$RayCast2D.cast_to = vec* Vector2(30,30)
 			#print("Collided with: ", coll.collider.name)
 				
-
-	#if not UP and not DOWN and not LEFT and not RIGHT:
-	#	$AudioStreamPlayer2D.stop()
-	#	$AnimationPlayer.stop()		
 		
 func _process(delta: float) -> void:
 	if map_mode:
@@ -178,29 +146,20 @@ func FireBomb():
 	GameInstance.bombs-=1
 	get_parent().get_node("CanvasLayer/UI").set_bombs(GameInstance.bombs)
 	GameInstance.BombsUsed+=1
-	var b = bomb.instance()
+	var b = bomb.instance()	
 	
-	#if OS.has_touchscreen_ui_hint():
-	#	b.dir = vec
-	#else:
-	vec = Vector2(0,0)
-	if LAST_DIR==DIR_UP:
-		vec.y = -1
-	if LAST_DIR==DIR_DN:
-		vec.y = 1
-	if LAST_DIR==DIR_LF:
-		vec.x = -1
-	if LAST_DIR==DIR_RG:
-		vec.x = 1
-	b.dir = vec
+	b.dir = last_vector
 
 	get_parent().add_child(b)
-	b.position = position + vec * 25
+	b.position = position + last_vector * 25
 
 func mute_sound():
 	$AudioStreamPlayer2D.stop()
 
+func _petrify():	
+	emit_signal("animation_finished","petrify")
 
-func _on_AnimationPlayer_animation_finished(anim_name):
-	print(anim_name)
-	emit_signal("animation_finished",anim_name)
+
+func _teleport():	
+	emit_signal("animation_finished","teleport")
+
