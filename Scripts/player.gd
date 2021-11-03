@@ -9,7 +9,7 @@ var vec:Vector2
 var steps = preload("res://Sounds/stepstone_1.wav")
 var map_mode:bool = false
 var counter = 0
-var last_vector	#last movement vector
+var last_vector = Vector2(1,0)	#last movement vector
 
 var dir_vec= Vector2(0,0) 	#direction vector for keyboard based movement
 

@@ -61,24 +61,18 @@ func _update_navigation_path(start_position, end_position):
 func move_along_path(distance):
 	var last_point = global_position
 	
-	var d = last_point.direction_to(path[0])	
-	#print(d)
-	$AnimationTree.set("parameters/move/blend_position", d.normalized())
-	anim_mode.travel("move")
-	if d.x>0 and d.x>abs(d.y):
-		print("walk_right")		
-	elif d.x<0 and abs(d.x)>abs(d.y):
-		print("walk_left")	
-	elif d.y<0 and abs(d.y)>abs(d.x):  #going up
-		print("walk_up")
-	elif d.y>0 and d.y>d.x:  #going up
-		print("walk_down")
+	
+	
 		
 	while path.size():
-		var distance_between_points = last_point.distance_to(path[0])		
+		var distance_between_points = last_point.distance_to(path[0])	
+		var d = last_point.direction_to(path[0])	
+		#print(d)
+		$AnimationTree.set("parameters/move/blend_position", d.normalized())
+		anim_mode.travel("move")			
 
 		# the position to move to falls between two points
-		if distance <= distance_between_points:
+		if distance <= distance_between_points and distance_between_points>0:
 			global_position = last_point.linear_interpolate(path[0], distance / distance_between_points)
 			return
 

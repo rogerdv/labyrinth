@@ -10,15 +10,13 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	#if Input.is_action_just_pressed("ui_cancel"):
-	#	GameInstance.paused=false
-	#	queue_free()
-	pass
-
-
+func _input(event):	
+	
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_ESCAPE:
+			GameInstance.paused=false
+			queue_free()
+		
 func _on_yes_pressed() -> void:
 	GameInstance.SaveGame()
 	get_tree().change_scene("res://Scenes/main_menu.tscn")
@@ -26,4 +24,4 @@ func _on_yes_pressed() -> void:
 
 func _on_no_pressed() -> void:
 	GameInstance.paused=false
-	queue_free()
+	queue_free()	

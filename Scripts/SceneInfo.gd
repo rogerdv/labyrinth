@@ -32,7 +32,7 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventScreenTouch and MapTimeCounter>1: 
 			display_map()
 		
-	if event is InputEventKey and event.pressed:
+	if event is InputEventKey and event.pressed and !GameInstance.paused:
 		if event.scancode == KEY_M:
 			display_map()			
 		elif event.scancode == KEY_F5:
@@ -42,11 +42,14 @@ func _input(event: InputEvent) -> void:
 		elif event.scancode == KEY_ESCAPE:
 			GameInstance.paused = true			
 			get_node("../CanvasLayer").add_child(PauseMenuScene.instance())		
-	if Input.is_action_just_pressed("ui_cancel"):
-		GameInstance.paused = true			
-		get_node("../CanvasLayer").add_child(PauseMenuScene.instance())	
+	
 	if Input.is_action_just_pressed("map"):
 		display_map()
+		
+	if Input.is_action_just_pressed("pause"):
+		GameInstance.paused = true			
+		get_node("../CanvasLayer").add_child(PauseMenuScene.instance())	
+	
 
 func _process(delta: float) -> void:
 	if mapmode:
