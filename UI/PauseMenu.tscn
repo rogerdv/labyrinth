@@ -65,10 +65,10 @@ custom_constants/separation = 5
 margin_right = 91.0
 margin_bottom = 48.4579
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
-custom_fonts/font = ExtResource( 3 )
 text = "yes"
 script = ExtResource( 6 )
 
@@ -77,10 +77,10 @@ margin_left = 96.0
 margin_right = 187.0
 margin_bottom = 48.4579
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
-custom_fonts/font = ExtResource( 3 )
 text = "no"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/yes" to="." method="_on_yes_pressed"]

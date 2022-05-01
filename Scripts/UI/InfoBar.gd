@@ -15,16 +15,16 @@ func _ready() -> void:
 			$Map.position.x  = BUTTONS_LEFT_X
 
 func update_time(percent):
-	$Cont/MarginContainer/progress.value = percent
+	$MarginContainer/Cont/MarginContainer/progress.value = percent
 
 func set_score(score):
-	$Cont/Score.text = String(score)
+	$MarginContainer/Cont/Score.text = String(score)
 
 func set_keys(keys):
-	$Cont/keys.text = String(keys)
+	$MarginContainer/Cont/keys.text = String(keys)
 	
 func set_bombs(bombs):
-	$Cont/bombs.text = String(bombs)
+	$MarginContainer/Cont/bombs.text = String(bombs)
 	
 func _on_Map_pressed() -> void:
 	get_node("../../SceneInfo").display_map()
@@ -32,7 +32,7 @@ func _on_Map_pressed() -> void:
 func ui_visible(toggle:bool):
 	$Fire.visible = toggle
 	$Map.visible = toggle
-	$Cont.visible = toggle
+	$MarginContainer/Cont.visible = toggle
 	if OS.has_touchscreen_ui_hint():
 		$Sprite.visible = toggle
 

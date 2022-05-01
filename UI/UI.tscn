@@ -19,8 +19,6 @@
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.51984
-margin_right = 2.51978
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -36,102 +34,6 @@ position = Vector2( 761.368, 389.882 )
 normal = ExtResource( 16 )
 pressed = ExtResource( 11 )
 
-[node name="Cont" type="HBoxContainer" parent="."]
-anchor_right = 0.993
-anchor_bottom = 0.067
-margin_left = -1.68176
-margin_right = -3.70367
-margin_bottom = 31.84
-rect_min_size = Vector2( 800, 64 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource( 10 )
-custom_constants/separation = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ScoreLabel" type="Label" parent="Cont"]
-margin_right = 60.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 60, 0 )
-size_flags_vertical = 3
-text = "score"
-align = 2
-valign = 1
-
-[node name="Score" type="Label" parent="Cont"]
-margin_left = 64.0
-margin_right = 79.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 15, 0 )
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 7 )
-text = "0"
-valign = 1
-script = ExtResource( 9 )
-
-[node name="TextureRect" type="TextureRect" parent="Cont"]
-margin_left = 83.0
-margin_right = 115.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 32, 32 )
-texture = ExtResource( 12 )
-expand = true
-stretch_mode = 6
-
-[node name="keys" type="Label" parent="Cont"]
-margin_left = 119.0
-margin_right = 135.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 16, 0 )
-size_flags_vertical = 3
-text = "0"
-valign = 1
-
-[node name="TextureRect2" type="TextureRect" parent="Cont"]
-margin_left = 139.0
-margin_right = 203.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 32, 32 )
-texture = ExtResource( 15 )
-
-[node name="bombs" type="Label" parent="Cont"]
-margin_left = 207.0
-margin_right = 223.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 16, 0 )
-size_flags_vertical = 3
-text = "0"
-valign = 1
-
-[node name="Control" type="Control" parent="Cont"]
-margin_left = 227.0
-margin_right = 277.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 50, 0 )
-
-[node name="MarginContainer" type="MarginContainer" parent="Cont"]
-margin_left = 281.0
-margin_right = 846.0
-margin_bottom = 64.0
-size_flags_horizontal = 3
-custom_constants/margin_right = 5
-custom_constants/margin_top = 11
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 5
-
-[node name="progress" type="TextureProgress" parent="Cont/MarginContainer"]
-margin_top = 11.0
-margin_right = 560.0
-margin_bottom = 59.0
-rect_min_size = Vector2( 258, 20 )
-size_flags_horizontal = 3
-value = 100.0
-texture_under = ExtResource( 5 )
-texture_progress = ExtResource( 6 )
-nine_patch_stretch = true
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 100, 385 )
 scale = Vector2( 1.2, 1.2 )
@@ -142,6 +44,105 @@ position = Vector2( -32.7, -32.744 )
 normal = ExtResource( 3 )
 pressed = ExtResource( 4 )
 script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cont" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 854.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 800, 64 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 10 )
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/Cont"]
+margin_right = 60.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 60, 0 )
+size_flags_vertical = 3
+text = "score"
+align = 2
+valign = 1
+
+[node name="Score" type="Label" parent="MarginContainer/Cont"]
+margin_left = 64.0
+margin_right = 79.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 15, 0 )
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+text = "0"
+valign = 1
+script = ExtResource( 9 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Cont"]
+margin_left = 83.0
+margin_right = 115.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="keys" type="Label" parent="MarginContainer/Cont"]
+margin_left = 119.0
+margin_right = 135.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 16, 0 )
+size_flags_vertical = 3
+text = "0"
+valign = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Cont"]
+margin_left = 139.0
+margin_right = 203.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 15 )
+
+[node name="bombs" type="Label" parent="MarginContainer/Cont"]
+margin_left = 207.0
+margin_right = 223.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 16, 0 )
+size_flags_vertical = 3
+text = "0"
+valign = 1
+
+[node name="Control" type="Control" parent="MarginContainer/Cont"]
+margin_left = 227.0
+margin_right = 277.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Cont"]
+margin_left = 281.0
+margin_right = 854.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 11
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="progress" type="TextureProgress" parent="MarginContainer/Cont/MarginContainer"]
+margin_top = 11.0
+margin_right = 568.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 258, 20 )
+size_flags_horizontal = 3
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 6 )
+nine_patch_stretch = true
 
 [connection signal="pressed" from="Fire" to="." method="_on_Fire_pressed"]
 [connection signal="pressed" from="Map" to="." method="_on_Map_pressed"]

@@ -51,7 +51,7 @@ __meta__ = {
 
 [node name="newgame" type="Button" parent="VBoxContainer"]
 margin_right = 207.0
-margin_bottom = 56.0
+margin_bottom = 46.4579
 focus_neighbour_top = NodePath("../quit")
 focus_neighbour_bottom = NodePath("../continue")
 size_flags_vertical = 3
@@ -63,9 +63,9 @@ text = "main_new"
 script = ExtResource( 7 )
 
 [node name="continue" type="Button" parent="VBoxContainer"]
-margin_top = 63.0
+margin_top = 53.0
 margin_right = 207.0
-margin_bottom = 120.0
+margin_bottom = 99.4579
 focus_neighbour_top = NodePath("../newgame")
 focus_neighbour_bottom = NodePath("../instructions")
 size_flags_vertical = 3
@@ -77,11 +77,11 @@ text = "main_cont"
 script = ExtResource( 8 )
 
 [node name="instructions" type="Button" parent="VBoxContainer"]
-margin_top = 127.0
+margin_top = 106.0
 margin_right = 207.0
-margin_bottom = 183.0
+margin_bottom = 152.458
 focus_neighbour_top = NodePath("../continue")
-focus_neighbour_bottom = NodePath("../scores")
+focus_neighbour_bottom = NodePath("../donate")
 size_flags_vertical = 3
 theme = ExtResource( 4 )
 custom_styles/hover = ExtResource( 2 )
@@ -89,8 +89,7 @@ custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 2 )
 text = "main_inst"
 
-[node name="scores" type="Button" parent="VBoxContainer"]
-visible = false
+[node name="donate" type="Button" parent="VBoxContainer"]
 margin_top = 159.0
 margin_right = 207.0
 margin_bottom = 205.458
@@ -101,13 +100,13 @@ theme = ExtResource( 4 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 2 )
-text = "main_score"
+text = "main_donate"
 
 [node name="credits" type="Button" parent="VBoxContainer"]
-margin_top = 190.0
+margin_top = 212.0
 margin_right = 207.0
-margin_bottom = 247.0
-focus_neighbour_top = NodePath("../scores")
+margin_bottom = 258.458
+focus_neighbour_top = NodePath("../donate")
 focus_neighbour_bottom = NodePath("../quit")
 size_flags_vertical = 3
 theme = ExtResource( 4 )
@@ -117,9 +116,9 @@ custom_styles/normal = ExtResource( 2 )
 text = "main_creds"
 
 [node name="quit" type="Button" parent="VBoxContainer"]
-margin_top = 254.0
+margin_top = 265.0
 margin_right = 207.0
-margin_bottom = 311.0
+margin_bottom = 311.458
 focus_neighbour_top = NodePath("../credits")
 focus_neighbour_bottom = NodePath("../newgame")
 size_flags_vertical = 3
@@ -294,6 +293,7 @@ autowrap = true
 [connection signal="pressed" from="VBoxContainer/newgame" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="VBoxContainer/donate" to="." method="_on_donate_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
