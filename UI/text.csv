@@ -20,7 +20,7 @@ program, Programación: Roger Durañona Vargas, Programmer: Roger Durañona Varg
 artist,"Gráficos: Yoendris Isaac Sierra, Ana Elena Pérez","Graphics: Yoendris Isaac Sierra, Ana Elena Pérez"
 audio,"Música y sonidos: RaynX, Juhani Junkala","Music and sounds: RaynX, Juhani Junkala"
 back_menu,Menú principal,Main menu
-inst2,"Encuentra la salida antes de que se acabe el tiempo. El tiempo que reste al completar el nivel será convertido en puntos.","Find the way out before the time runs out. Any time left when you finish the level will be converted to points."
+inst2,Encuentra la salida antes de que se acabe el tiempo. El tiempo que reste al completar el nivel será convertido en puntos.,Find the way out before the time runs out. Any time left when you finish the level will be converted to points.
 confirm_exit,¿Desea abandonar?,Do you want to quit?
 yes,Sí,Yes
 no,No,No

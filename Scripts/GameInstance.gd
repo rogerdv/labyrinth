@@ -33,6 +33,9 @@ const MAXTIME = 150
 
 var sound_fx:AudioStreamPlayer2D
 
+var token=""
+var premium=false
+
 func _ready() -> void:
 	get_tree().set_quit_on_go_back(false)
 	
@@ -185,6 +188,8 @@ func read_conf():
 	if not config.file_exists(conf_name):
 		old_mode = false
 		invert_control = false
+		premium = false
+		token=""
 		save_conf()
 	else:
 		var temp
@@ -201,6 +206,12 @@ func read_conf():
 			invert_control = true
 		else:
 			invert_control = false
+		temp = config.get_16()
+		if temp==1:
+			premium=true
+		else:
+			premium=false
+		token = config.get_pascal_string()
 
 
 func save_conf():
@@ -214,3 +225,8 @@ func save_conf():
 		config.store_16(1)
 	else:
 		config.store_16(0)
+	if premium:
+		config.store_16(1)
+	else:
+		config.store_16(0)
+	config.store_pascal_string(token)

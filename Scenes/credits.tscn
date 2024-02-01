@@ -7,14 +7,10 @@
 [ext_resource path="res://UI/buttonstyle_pressed.tres" type="StyleBox" id=5]
 [ext_resource path="res://UI/lab_theme.tres" type="Theme" id=6]
 
-
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -96,4 +92,5 @@ size_flags_horizontal = 4
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/normal = ExtResource( 4 )
 text = "close"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/close" to="." method="_on_close_pressed"]

@@ -58,10 +58,6 @@ pause={
  ]
 }
 
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
-
 [locale]
 
 translations=PoolStringArray( "res://UI/text.en.translation", "res://UI/text.es.translation" )

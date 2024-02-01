@@ -5,12 +5,7 @@ var plugin
 func _ready():	
 	$PanelContainer/VBoxContainer2/HBoxContainer/old_mode.pressed = GameInstance.old_mode
 	$PanelContainer/VBoxContainer2/HBoxContainer2/invert.pressed = GameInstance.invert_control
-	if !Engine.has_singleton("WiroforceGodotPlugin"):
-		$VBoxContainer/donate.disabled=true
-	else:
-		plugin=Engine.get_singleton("WiroforceGodotPlugin")
-		var tt= plugin.getHelloWorldNative()
-		$demo.text=tt
+	
 	if OS.has_touchscreen_ui_hint():
 			OS.request_permissions()
 		#print("Plugin loaded")
@@ -60,5 +55,4 @@ func _on_invert_toggled(button_pressed):
 
 
 func _on_donate_pressed():
-	var res = plugin.sendSms("53767263", "test plugin")
-	$demo.text=res
+	get_tree().change_scene("res://Scenes/Donate.tscn")
